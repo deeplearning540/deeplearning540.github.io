@@ -41,7 +41,9 @@ jobs:
         run: python -m poetry install 
 
       # - run: mkdocs build
-      - run: python -m poetry run make html
+      - run: |
+            python -m poetry run make html
+            ls docs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
