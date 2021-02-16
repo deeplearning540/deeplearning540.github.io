@@ -1,4 +1,4 @@
-Lesson 01: Diving into Regression
+Lesson 03: TBA
 ---------------------------------
 
 This paragraph describes the content to be taught.
