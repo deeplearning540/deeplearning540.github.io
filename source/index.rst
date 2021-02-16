@@ -7,15 +7,12 @@ Welcome to deeplearning in 540 minutes!
 =======================================
 
 .. toctree::
+   :glob:
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Lesson Modules
 
-   module-10/
-   module-20/
-   module-30/
-   module-40/
-   module-50/
-   module-60/
+   module-*/*
+   
 
 Indices and tables
 ==================
