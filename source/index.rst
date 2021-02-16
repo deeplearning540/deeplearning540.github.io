@@ -6,6 +6,8 @@
 Welcome to deeplearning in 540 minutes!
 =======================================
 
+The content below provides a high level overview on the content to teach.
+
 .. toctree::
    :glob:
    :maxdepth: 2
@@ -13,6 +15,15 @@ Welcome to deeplearning in 540 minutes!
 
    module-*/*
    
+For Instructors
+===============
+
+.. toctree::
+   :glob:
+   :maxdepth: 2
+   :caption: Extras
+
+   extras/*
 
 Indices and tables
 ==================
