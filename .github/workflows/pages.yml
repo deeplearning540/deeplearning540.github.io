@@ -43,7 +43,7 @@ jobs:
       # - run: mkdocs build
       - run: |
             python -m poetry run make html
-            ls docs
+            mv build/html/* docs/.
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
