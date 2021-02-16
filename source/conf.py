@@ -62,16 +62,16 @@ source_suffix = {
 html_theme = 'alabaster'
 
 html_theme_options = {
-    'logo_only': False,
-    'prev_next_buttons_location': 'bottom',
-    'style_external_links': False,
+#    'logo_only': False,
+#    'prev_next_buttons_location': 'bottom',
+#    'style_external_links': False,
 
     # Toc options
-    'collapse_navigation': False,
-    'sticky_navigation': True,
-    'navigation_depth': 4,
-    'includehidden': True,
-    'titles_only': False
+#    'collapse_navigation': False,
+#    'sticky_navigation': True,
+#    'navigation_depth': 4,
+#    'includehidden': True,
+#    'titles_only': False
 }
 
 html_context = {
