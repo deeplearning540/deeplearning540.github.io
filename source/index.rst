@@ -3,14 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to deeplearning540's documentation!
-===========================================
+Welcome to deeplearning in 540 minutes!
+=======================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
+   module-10/
+   module-20/
+   module-30/
+   module-40/
+   module-50/
+   module-60/
 
 Indices and tables
 ==================

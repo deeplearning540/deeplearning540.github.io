@@ -24,7 +24,7 @@ def setup(app):
 
 # -- Project information -----------------------------------------------------
 
-project = 'deeplearning540'
+project = 'deeplearning in 540 minutes'
 copyright = '2021, Peter Steinbach'
 author = 'Peter Steinbach'
 
