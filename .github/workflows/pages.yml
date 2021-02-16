@@ -25,10 +25,12 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install poetry
 
+      # TODO: not sure if I need this as I am using poetry
       - name: Get pip cache dir
         id: pip-cache
         run: echo "::set-output name=dir::$(pip cache dir)"
 
+      # TODO: not sure if I need this
       # - name: Cache dependencies
       #   uses: actions/cache@v2
       #   with:
@@ -40,11 +42,12 @@ jobs:
       - name: Install dependencies
         run: python -m poetry install 
 
-      # - run: mkdocs build
-      - run: |
+      - name: Build the page
+        run: |
             python -m poetry run make html
             mv build/html/* docs/.
 
+      # https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-static-site-generators-with-python
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
