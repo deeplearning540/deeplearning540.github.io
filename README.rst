@@ -10,7 +10,7 @@ The mission that this repo serves:
 - teach deep learning
 
 .. Note::
-   Visit `<https://psteinb.github.io/deeplearning540>`_.
+   Visit `<https://psteinb.github.io/deeplearning540>`_ to dive into the content.
 
 
 Build this project locally
