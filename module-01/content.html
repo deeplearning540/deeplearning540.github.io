@@ -48,41 +48,56 @@
 </div>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>This lesson is based on <cite>Regression &lt;https://carpentries-incubator.github.io/machine-learning-novice-sklearn/02-regression/index.html&gt;_</cite>.</p>
+<p>This lesson is based on <a class="reference external" href="https://carpentries-incubator.github.io/machine-learning-novice-sklearn/02-regression/index.html">Regression</a>.</p>
 </div>
 <div class="section" id="check-your-learning">
 <h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li></li>
+<li><p>The least squares method for an input data pair <cite>x</cite> and <cite>y</cite> derives it’s name as it …</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Minimizes the sum of the product of <cite>x*y</cite></p></li>
+<li><p>Minimizes the sum of the absolute difference between <cite>y</cite> and the predicted <cite>y_hat</cite></p></li>
+<li><p>Minimizes the sum of the squared difference between <cite>y</cite> and the predicted <cite>y_hat</cite></p></li>
+<li><p>Minimizes the sum of <cite>y**2</cite> and <cite>x**2</cite></p></li>
+</ol>
+<ul class="simple">
 <li></li>
 </ul>
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
-<p>Inspired by <cite>the sustainability math project &lt;http://sustainabilitymath.org/statistics-materials/&gt;_</cite>, perform a linear regression on the following data sets:</p>
+<p>Inspired by <a class="reference external" href="http://sustainabilitymath.org/statistics-materials/">the sustainability math project</a>, perform a linear regression on the following data sets:</p>
+<ul class="simple">
+<li><p>Arctic Ice Data</p>
 <ul>
-<li><p>Arctic Ice Data
-* <a class="reference external" href="http://sustainabilitymath.org/excel/ArcticIceDataMonth-R.csv">http://sustainabilitymath.org/excel/ArcticIceDataMonth-R.csv</a>
-* The file contains average Arctic Ice Extent from 1979 to present by month. It is excellent data for linear regression assignments.
-* March (winter peak month)
-* September (summer low month)</p></li>
-<li><p>World Grain
-* <a class="reference external" href="http://sustainabilitymath.org/excel/Grain-R.csv">http://sustainabilitymath.org/excel/Grain-R.csv</a> (csv only contains the grain totals, the xlsx file yields all)
-* The data contains grain (barley, corn, millet, oats, rice, rye, sorghum, &amp; wheat) production, consumption, and ending stocks, as well as totals and by per capita. Most of the production and consumption data is linear.
-* conduct a linear regression for each corn type, for production volume versus time
-* See also:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><code class="xref download docutils literal notranslate"><span class="pre">Grain</span> <span class="pre">Production</span></code></p></li>
-<li><p><code class="xref download docutils literal notranslate"><span class="pre">Grain</span> <span class="pre">End-of-year</span> <span class="pre">Stock</span></code></p></li>
-<li><p><code class="xref download docutils literal notranslate"><span class="pre">Grain</span> <span class="pre">Consumption</span></code></p></li>
+<li><p><a class="reference external" href="http://sustainabilitymath.org/excel/ArcticIceDataMonth-R.csv">http://sustainabilitymath.org/excel/ArcticIceDataMonth-R.csv</a></p></li>
+<li><p>The file contains average Arctic Ice Extent from 1979 to present by month. It is excellent data for linear regression assignments.</p></li>
+<li><p>March (winter peak month)</p></li>
+<li><p>September (summer low month)</p></li>
 </ul>
-</div></blockquote>
 </li>
-<li><p>Hourly Wage (by Race) and Gender
-* <a class="reference external" href="http://sustainabilitymath.org/excel/EPI-Wages-R.csv">http://sustainabilitymath.org/excel/EPI-Wages-R.csv</a>
-* The excel file contains a number of data sets suitable for linear regression. It contains median and average hourly wages (in 2019 dollars) with categories of men and women by White, Black, and Hispanic.
-* conduct a linear regression for wages earned versus year on this <code class="xref download docutils literal notranslate"><span class="pre">reduced</span> <span class="pre">wages</span> <span class="pre">dataset</span></code></p></li>
+<li><p>World Grain</p>
+<ul>
+<li><p><a class="reference external" href="http://sustainabilitymath.org/excel/Grain-R.csv">http://sustainabilitymath.org/excel/Grain-R.csv</a> (csv only contains the grain totals, the xlsx file yields all)</p></li>
+<li><p>The data contains grain (barley, corn, millet, oats, rice, rye, sorghum, &amp; wheat) production, consumption, and ending stocks, as well as totals and by per capita. Most of the production and consumption data is linear.</p></li>
+<li><p>conduct a linear regression for each corn type, for production volume versus time</p></li>
+<li><p>See also:</p>
+<ul>
+<li><p><a class="reference download internal" download="" href="../_downloads/daf8c7a831acb03efbdd44cea7ccd3be/US-Grain-Production.csv"><code class="xref download docutils literal notranslate"><span class="pre">Grain</span> <span class="pre">Production</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/59c9461f14d6b7db901f36ea3ba57a97/US-Grain-EndOfYearStock.csv"><code class="xref download docutils literal notranslate"><span class="pre">Grain</span> <span class="pre">End-of-year</span> <span class="pre">Stock</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/aabbbf40977ce652ad9af8b2f48e3b4d/US-Grain-Consumption.csv"><code class="xref download docutils literal notranslate"><span class="pre">Grain</span> <span class="pre">Consumption</span></code></a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Hourly Wage (by Race) and Gender</p>
+<ul>
+<li><p><a class="reference external" href="http://sustainabilitymath.org/excel/EPI-Wages-R.csv">http://sustainabilitymath.org/excel/EPI-Wages-R.csv</a></p></li>
+<li><p>The excel file contains a number of data sets suitable for linear regression. It contains median and average hourly wages (in 2019 dollars) with categories of men and women by White, Black, and Hispanic.</p></li>
+<li><p>conduct a linear regression for wages earned versus year on this <a class="reference download internal" download="" href="../_downloads/d6a3af8e8a1370ef996cd4b62bd20e70/EPI-Wages-subset.csv"><code class="xref download docutils literal notranslate"><span class="pre">reduced</span> <span class="pre">wages</span> <span class="pre">dataset</span></code></a></p></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
