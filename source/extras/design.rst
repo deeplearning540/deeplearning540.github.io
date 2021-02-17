@@ -7,25 +7,30 @@ Audience
 Inspired by the `Carpentries' Deciding what to teach <https://cdh.carpentries.org/deciding-what-to-teach.html#target-audience>_`:
 
 * What is the expected educational level of your audience?
+
   * majority are PhD students (80-90%)
   * minority will be master students
 
 * What type of exposure do your audience members have to the technologies you plan to teach?
+
   * the exposure is typically very mixed or very low, HEP has been working with root (i.e. C/C++ based data science frameworks) for a long time
   * use of python for machine learning is not wide spread
   * use of GPUs is very rare
 
 * What types of tools do they already use?
+
   * root and C REPL it provides
   * (more rare) python based data analysis (`pandas`, `matplotlib`, ...) 
 
 * What are the pain points they are currently experiencing?
+
   * data analysis is focussed on root
   * knowledge about machine learning is present only as pieces of a puzzle
   * some students might have seen `keras` through `TMVA`
   * pattern extraction is limited to the use of `ROOT` based tools (sometimes under the lack of deeper understanding)
 
 * What types of data does your target audience work with? What are the commonalities in the datasets your target audience will encounter?
+
   * `ROOT` files with `TTree` structures that represent a big table, where each row has the same number of columns, but each column can have different width
   * learners will not be used to working with fixed size tables
   * learners will not be used to working with images
