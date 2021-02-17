@@ -16,20 +16,25 @@ Learning Objectives
 Content
 ~~~~~~~
 
-This lesson is based on `Regression <https://carpentries-incubator.github.io/machine-learning-novice-sklearn/02-regression/index.html>_`.
+This lesson is based on `Regression <https://carpentries-incubator.github.io/machine-learning-novice-sklearn/02-regression/index.html>`_.
 
 
 Check your Learning
 ~~~~~~~~~~~~~~~~~~~
 
-* 
+* The least squares method for an input data pair `x` and `y` derives it's name as it ...
+
+1. Minimizes the sum of the product of `x*y`
+2. Minimizes the sum of the absolute difference between `y` and the predicted `y_hat`
+3. Minimizes the sum of the squared difference between `y` and the predicted `y_hat`
+4. Minimizes the sum of `y**2` and `x**2`
 
 * 
 
 Exercises
 ~~~~~~~~~
 
-Inspired by `the sustainability math project <http://sustainabilitymath.org/statistics-materials/>_`, perform a linear regression on the following data sets:
+Inspired by `the sustainability math project <http://sustainabilitymath.org/statistics-materials/>`_, perform a linear regression on the following data sets:
 
 * Arctic Ice Data
 
@@ -45,12 +50,12 @@ Inspired by `the sustainability math project <http://sustainabilitymath.org/stat
   * conduct a linear regression for each corn type, for production volume versus time
   * See also:
 
-    * :download:`Grain Production <../../_static/data/csv/US-Grain-Production.csv>`
-    * :download:`Grain End-of-year Stock <../../_static/data/csv/US-Grain-EndOfYearStock.csv>`
-    * :download:`Grain Consumption <../../_static/data/csv/US-Grain-Consumption.csv>`
+    * :download:`Grain Production </_static/data/csv/US-Grain-Production.csv>`
+    * :download:`Grain End-of-year Stock </_static/data/csv/US-Grain-EndOfYearStock.csv>`
+    * :download:`Grain Consumption </_static/data/csv/US-Grain-Consumption.csv>`
 
 * Hourly Wage (by Race) and Gender
 
   * http://sustainabilitymath.org/excel/EPI-Wages-R.csv
   * The excel file contains a number of data sets suitable for linear regression. It contains median and average hourly wages (in 2019 dollars) with categories of men and women by White, Black, and Hispanic.
-  * conduct a linear regression for wages earned versus year on this :download:`reduced wages dataset <../../_static/data/csv/EPI-Wages-subset.csv>`
+  * conduct a linear regression for wages earned versus year on this :download:`reduced wages dataset </_static/data/csv/EPI-Wages-subset.csv>`
