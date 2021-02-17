@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 03: Clustering &#8212; deeplearning in 540 minutes  documentation</title>
+    <title>Lesson 04: Classification with Clustering &#8212; deeplearning in 540 minutes  documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lesson 05: Neural Networks as Code" href="../module-05/content.html" />
-    <link rel="prev" title="Lesson 04: Classification with Clustering" href="../module-03/content.html" />
+    <link rel="prev" title="Lesson 03: Clustering" href="../module-03/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -32,26 +32,21 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="lesson-03-clustering">
-<h1>Lesson 03: Clustering<a class="headerlink" href="#lesson-03-clustering" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lesson-04-classification-with-clustering">
+<h1>Lesson 04: Classification with Clustering<a class="headerlink" href="#lesson-04-classification-with-clustering" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Clustering is a form of unsupervised learning</p></li>
-<li><p>Unsupervised learning algorithms don’t need training</p></li>
-<li><p>Kmeans is a popular clustering algorithm.</p></li>
-<li><p>Kmeans struggles where one cluster exists within another, such as concentric circles.</p></li>
-<li><p>Spectral clustering is another technique which can overcome some of the limitations of Kmeans.</p></li>
-<li><p>Spectral clustering is much slower than Kmeans.</p></li>
-<li><p>As well as providing machine learning algorithms scikit learn also has functions to make example data</p></li>
+<li><p>Use clustering for classification.</p></li>
+<li><p>introduce accuracy, precision and recall as quality metrics</p></li>
+<li><p>explain how a cut-off value can be used to (for kmeans classification) can be used to produce a ROC curve</p></li>
+<li><p>show <cite>plot_roc_curve</cite> in sklearn</p></li>
 </ul>
 </div>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>This lesson is based on <a class="reference external" href="https://carpentries-incubator.github.io/machine-learning-novice-sklearn/04-clustering/index.html">Regression</a> and will be shared as a video.</p>
-<ul class="simple">
-<li><p>nice quick notebook available <a class="reference external" href="https://www.kaggle.com/khotijahs1/k-means-clustering-of-iris-dataset">on kaggle</a> that may be used as support</p></li>
-</ul>
+<p>This content doesn’t exist yet. Clustering can be used for classification. This would pick up the knowledge from previous lesson and focus on classification accuracy and ROC curves.</p>
+<p><a class="reference external" href="https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_roc_curve_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-roc-curve-visualization-api-py">https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_roc_curve_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-roc-curve-visualization-api-py</a></p>
 </div>
 <div class="section" id="check-your-learning">
 <h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
@@ -101,8 +96,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../module-01/content.html">Lesson 01: Diving into Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module-02/content.html">Lesson 02: Enter Sklearn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-03/content.html">Lesson 04: Classification with Clustering</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 03: Clustering</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../module-03/content.html">Lesson 03: Clustering</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 04: Classification with Clustering</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
@@ -110,10 +105,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../module-05/content.html">Lesson 05: Neural Networks as Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-06/content.html">Lesson 06: TBA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-07/content.html">Lesson 07: TBA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-08/content.html">Lesson 08: TBA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-09/content.html">Lesson 09: TBA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module-06/content.html">Lesson 06: Going Deep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module-07/content.html">Lesson 07: Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module-08/content.html">Lesson 08: Visualize and Monitor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module-09/content.html">Lesson 09: Bonus Session</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Extras</span></p>
 <ul>
@@ -124,7 +119,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../module-03/content.html" title="previous chapter">Lesson 04: Classification with Clustering</a></li>
+      <li>Previous: <a href="../module-03/content.html" title="previous chapter">Lesson 03: Clustering</a></li>
       <li>Next: <a href="../module-05/content.html" title="next chapter">Lesson 05: Neural Networks as Code</a></li>
   </ul></li>
 </ul>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 07: TBA &#8212; deeplearning in 540 minutes  documentation</title>
+    <title>Lesson 07: Monitoring &#8212; deeplearning in 540 minutes  documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -14,8 +14,8 @@
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lesson 08: TBA" href="../module-08/content.html" />
-    <link rel="prev" title="Lesson 06: TBA" href="../module-06/content.html" />
+    <link rel="next" title="Lesson 08: Visualize and Monitor" href="../module-08/content.html" />
+    <link rel="prev" title="Lesson 06: Going Deep" href="../module-06/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -32,15 +32,60 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="lesson-07-tba">
-<h1>Lesson 07: TBA<a class="headerlink" href="#lesson-07-tba" title="Permalink to this headline">¶</a></h1>
-<p>This paragraph describes the content to be taught.</p>
+  <div class="section" id="lesson-07-monitoring">
+<h1>Lesson 07: Monitoring<a class="headerlink" href="#lesson-07-monitoring" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<p><strong>To be updated, overdue content might come in from from lesson 06</strong></p>
+<ul class="simple">
+<li><p>define precision and recall/accuracy for a classification task</p></li>
+<li><p>state that cross-validation is used in Deep Learning too</p></li>
+<li><p>describe how to split a dataset into training/test/validation set</p></li>
+<li><p>describe how Drop-Out Layers work</p></li>
+<li><p>execute a plot to draw the loss per epoch for training and test set</p></li>
+<li><p>compare values of precision and recall</p></li>
+<li><p>differentiate a overfitting network from a well-behaved network</p></li>
+<li><p>detect when a network is underfitting or overfitting</p></li>
+<li><p>design countermeasures for overfitting (e.g. more dropout layers, reduce model size)</p></li>
+<li><p>design countermeasures for underfitting (e.g. larger model)</p></li>
+<li><p>critique a provided network design</p></li>
+</ul>
+</div>
+<div class="section" id="content">
+<h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
+<p>This lesson may be based on ???</p>
+<p>TODOS:</p>
+<ul class="simple">
+<li><p>search for lesson in keras</p></li>
+<li><p>consider working entirely with images for the time being</p></li>
+<li><p>content might spill from lesson 06</p></li>
+</ul>
+</div>
 <div class="section" id="check-your-learning">
 <h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
-<p>questions for learners and the group to answer</p>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p><strong>TBA</strong></p>
+<ol class="arabic simple">
+<li><p>???</p></li>
+<li><p>???</p></li>
+<li><p>???</p></li>
+<li><p>???</p></li>
+</ol>
+</div>
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>through <a class="reference external" href="https://docs.openml.org/Datasets/">OpenML</a> or <a class="reference external" href="https://keras.io/api/datasets/">keras datasets</a></dt><dd><ul>
+<li><p><a class="reference external" href="https://sci2s.ugr.es/keel/datasets.php">https://sci2s.ugr.es/keel/datasets.php</a></p></li>
+<li><p><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table">https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </div>
 </div>
 
@@ -65,17 +110,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../module-01/content.html">Lesson 01: Diving into Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module-02/content.html">Lesson 02: Enter Sklearn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-03/content.html">Lesson 04: Classification with Clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-04/content.html">Lesson 03: Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module-03/content.html">Lesson 03: Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module-04/content.html">Lesson 04: Classification with Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module-05/content.html">Lesson 05: Neural Networks as Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-06/content.html">Lesson 06: TBA</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 07: TBA</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../module-06/content.html">Lesson 06: Going Deep</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 07: Monitoring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../module-08/content.html">Lesson 08: TBA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-09/content.html">Lesson 09: TBA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module-08/content.html">Lesson 08: Visualize and Monitor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../module-09/content.html">Lesson 09: Bonus Session</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Extras</span></p>
 <ul>
@@ -86,8 +133,8 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../module-06/content.html" title="previous chapter">Lesson 06: TBA</a></li>
-      <li>Next: <a href="../module-08/content.html" title="next chapter">Lesson 08: TBA</a></li>
+      <li>Previous: <a href="../module-06/content.html" title="previous chapter">Lesson 06: Going Deep</a></li>
+      <li>Next: <a href="../module-08/content.html" title="next chapter">Lesson 08: Visualize and Monitor</a></li>
   </ul></li>
 </ul>
 </div>
