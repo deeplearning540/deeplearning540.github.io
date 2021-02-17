@@ -1,32 +1,24 @@
-Lesson 03: Clustering
-*********************
+Lesson 04: Classification with Clustering
+*****************************************
 
 Learning Objectives
 ===================
 
-* Clustering is a form of unsupervised learning
+* Use clustering for classification.
 
-* Unsupervised learning algorithms don’t need training
+* introduce accuracy, precision and recall as quality metrics
 
-* Kmeans is a popular clustering algorithm.
+* explain how a cut-off value can be used to (for kmeans classification) can be used to produce a ROC curve
 
-* Kmeans struggles where one cluster exists within another, such as concentric circles.
-
-* Spectral clustering is another technique which can overcome some of the limitations of Kmeans.
-
-* Spectral clustering is much slower than Kmeans.
-
-* As well as providing machine learning algorithms scikit learn also has functions to make example data
-
+* show `plot_roc_curve` in sklearn
 
 
 Content
 =======
 
-This lesson is based on `Regression <https://carpentries-incubator.github.io/machine-learning-novice-sklearn/04-clustering/index.html>`_ and will be shared as a video.
+This content doesn't exist yet. Clustering can be used for classification. This would pick up the knowledge from previous lesson and focus on classification accuracy and ROC curves.
 
-* nice quick notebook available `on kaggle <https://www.kaggle.com/khotijahs1/k-means-clustering-of-iris-dataset>`_ that may be used as support
-
+https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_roc_curve_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-roc-curve-visualization-api-py
 
 Check your Learning
 ===================
