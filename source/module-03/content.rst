@@ -44,7 +44,8 @@ Check your Learning
 Exercises
 =========
 
-* cluster the `penguin dataset <https://github.com/allisonhorst/palmerpenguins>`_ into 3 classes when looking at bill length vs flipper length
+* cluster the `penguin dataset <https://github.com/allisonhorst/palmerpenguins>`_ into 3 classes when looking at bill length vs flipper length; the data is available `here <https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata>`_
+
 * `sklearn based datasets <https://scikit-learn.org/stable/datasets.html>`_:
 
   * https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset into 3 classes when looking at petal_length vs. petal_width
