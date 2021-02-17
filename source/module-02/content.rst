@@ -1,4 +1,4 @@
-Lesson 01: Enter Sklearn
+Lesson 02: Enter Sklearn
 ************************
 
 Learning Objectives
