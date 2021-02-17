@@ -24,15 +24,6 @@ Check your Learning
 
 .. admonition:: Exercise 1
 
-   **The least squares method for an input data pair `x` and `y` derives it's name as it ...**
-
-   1. Minimizes the sum of the product of `x*y`
-   2. Minimizes the sum of the absolute difference between `y` and the predicted `y_hat`
-   3. Minimizes the sum of the squared difference between `y` and the predicted `y_hat`
-   4. Minimizes the sum of `y**2` and `x**2`
-
-.. admonition:: Exercise 2
-
    **In the following, the order of steps was confused, please rearrange:**
    **predict new data, collect training data, fit training data, compute accuracy**
 
@@ -40,7 +31,16 @@ Check your Learning
    2. compute accuracy, collect training data, predict new data, fit training data
    3. collect training data, fit training data, compute accuracy, predict new data
    4. collect training data, predict new data, fit training data, compute accuracy
- 
+
+
+.. admonition:: Exercise 2
+
+   **The least squares method for an input data pair `x` and `y` derives it's name as it ...**
+
+   1. Minimizes the sum of the product of `x*y`
+   2. Minimizes the sum of the absolute difference between `y` and the predicted `y_hat`
+   3. Minimizes the sum of the squared difference between `y` and the predicted `y_hat`
+   4. Minimizes the sum of `y**2` and `x**2`
 
 Exercises
 =========
