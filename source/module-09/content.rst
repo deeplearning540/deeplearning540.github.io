@@ -1,13 +1,30 @@
-Lesson 09: TBA
----------------------------------
+Lesson 09: Bonus Session
+************************
 
-This paragraph describes the content to be taught.
+Learning Objectives
+===================
+
+TBA
+
+Content
+=======
+
+TBA
 
 Check your Learning
-~~~~~~~~~~~~~~~~~~~
+===================
 
-questions for learners and the group to answer
+.. admonition:: Exercise 1
+
+   **TBA**
+
+   1. ???
+   2. ???
+   3. ???
+   4. ???
+
 
 Exercises
-~~~~~~~~~
+=========
 
+TBA
