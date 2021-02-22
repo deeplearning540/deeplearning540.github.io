@@ -59,7 +59,7 @@ Inspired by `the sustainability math project <http://sustainabilitymath.org/stat
   * Content: grain production, consumption, and ending stocks, totals and by per capita.
   * Task: conduct a linear regression for grain production and grain consumption versus time (60 years)
   
-  * Optional: more data about different grains and their production, end-of-year-stock and sonsumption in the US can be downloaded here:
+  * Optional: more data about different grains and their production, end-of-year-stock and consumption in the US can be downloaded here:
 
     * :download:`Grain Production </_static/data/csv/US-Grain-Production.csv>`
     * :download:`Grain End-of-year Stock </_static/data/csv/US-Grain-EndOfYearStock.csv>`
@@ -67,6 +67,6 @@ Inspired by `the sustainability math project <http://sustainabilitymath.org/stat
 
 * Hourly Wage (by Race) and Gender
 
-  * http://sustainabilitymath.org/excel/EPI-Wages-R.csv
-  * The excel file contains a number of data sets suitable for linear regression. It contains median and average hourly wages (in 2019 dollars) with categories of men and women by White, Black, and Hispanic.
-  * conduct a linear regression for wages earned versus year on this :download:`reduced wages dataset </_static/data/csv/EPI-Wages-subset.csv>`
+  * Data source: http://sustainabilitymath.org/excel/EPI-Wages-R.csv
+  * Content: median and average hourly wages (in 2019 dollars) with categories of men and women by White, Black, and Hispanic.
+  * Task: conduct a linear regression for wages earned versus time (47 years) on this subset: :download:`reduced wages dataset </_static/data/csv/EPI-Wages-subset.csv>`
