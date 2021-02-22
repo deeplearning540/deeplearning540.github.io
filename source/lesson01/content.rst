@@ -51,14 +51,15 @@ Inspired by `the sustainability math project <http://sustainabilitymath.org/stat
 
   * Data source: http://sustainabilitymath.org/excel/ArcticIceDataMonth-R.csv 
   * Content: average Arctic Ice Extent (in millions of km^2) from 1979 to present by month.
-  * Task: perform a linear regression for the months March (winter peak month) and September (summer low month) over the entire given time preiod (40 years)
+  * Task: perform a linear regression for the months March (winter peak month) and September (summer low month) for the entire given time period (40 years)
 
 * World Grain
 
-  * http://sustainabilitymath.org/excel/Grain-R.csv (csv only contains the grain totals, the xlsx file yields all)
-  * The data contains grain (barley, corn, millet, oats, rice, rye, sorghum, & wheat) production, consumption, and ending stocks, as well as totals and by per capita. Most of the production and consumption data is linear.
-  * conduct a linear regression for each corn type, for production volume versus time
-  * See also:
+  * Data source: http://sustainabilitymath.org/excel/Grain-R.csv 
+  * Content: grain production, consumption, and ending stocks, totals and by per capita.
+  * Task: conduct a linear regression for grain production and grain consumption versus time (60 years)
+  
+  * Optional: more data about different grains and their production, end-of-year-stock and sonsumption in the US can be downloaded here:
 
     * :download:`Grain Production </_static/data/csv/US-Grain-Production.csv>`
     * :download:`Grain End-of-year Stock </_static/data/csv/US-Grain-EndOfYearStock.csv>`
