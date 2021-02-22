@@ -1,22 +1,15 @@
-Lesson 03: Clustering
-*********************
+Lesson 03: Clustering For Classification
+****************************************
 
 Learning Objectives
 ===================
 
-* Clustering is a form of unsupervised learning
-
-* Unsupervised learning algorithms don’t need training
-
-* Kmeans is a popular clustering algorithm.
-
-* Kmeans struggles where one cluster exists within another, such as concentric circles.
-
-* Spectral clustering is another technique which can overcome some of the limitations of Kmeans.
-
-* Spectral clustering is much slower than Kmeans.
-
-* As well as providing machine learning algorithms scikit learn also has functions to make example data
+* remember how clustering works
+* recognize that once clustering is trained/used, it can be used for classification
+* Centroid Clustering is used only to save memory
+* Apply clustering for classification
+* execute a counting experiment to see which items have been properly categorized
+* use accuracy, precision and recall to describe the classifiers performance
 
 
 

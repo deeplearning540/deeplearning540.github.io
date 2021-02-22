@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 03: Clustering &#8212; deeplearning in 540 minutes  documentation</title>
+    <title>Lesson 03: Clustering For Classification &#8212; deeplearning in 540 minutes  documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lesson 04: Classification with Clustering" href="../lesson04/content.html" />
-    <link rel="prev" title="Lesson 02: Enter Sklearn" href="../lesson02/content.html" />
+    <link rel="prev" title="Lesson 02: Enter Clustering" href="../lesson02/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -32,18 +32,17 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="lesson-03-clustering">
-<h1>Lesson 03: Clustering<a class="headerlink" href="#lesson-03-clustering" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lesson-03-clustering-for-classification">
+<h1>Lesson 03: Clustering For Classification<a class="headerlink" href="#lesson-03-clustering-for-classification" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Clustering is a form of unsupervised learning</p></li>
-<li><p>Unsupervised learning algorithms don’t need training</p></li>
-<li><p>Kmeans is a popular clustering algorithm.</p></li>
-<li><p>Kmeans struggles where one cluster exists within another, such as concentric circles.</p></li>
-<li><p>Spectral clustering is another technique which can overcome some of the limitations of Kmeans.</p></li>
-<li><p>Spectral clustering is much slower than Kmeans.</p></li>
-<li><p>As well as providing machine learning algorithms scikit learn also has functions to make example data</p></li>
+<li><p>remember how clustering works</p></li>
+<li><p>recognize that once clustering is trained/used, it can be used for classification</p></li>
+<li><p>Centroid Clustering is used only to save memory</p></li>
+<li><p>Apply clustering for classification</p></li>
+<li><p>execute a counting experiment to see which items have been properly categorized</p></li>
+<li><p>use accuracy, precision and recall to describe the classifiers performance</p></li>
 </ul>
 </div>
 <div class="section" id="content">
@@ -101,8 +100,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../lesson00/content.html">Lesson 00: Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson01/content.html">Lesson 01: Diving into Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson02/content.html">Lesson 02: Enter Sklearn</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 03: Clustering</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson02/content.html">Lesson 02: Enter Clustering</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 03: Clustering For Classification</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
@@ -125,7 +124,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../lesson02/content.html" title="previous chapter">Lesson 02: Enter Sklearn</a></li>
+      <li>Previous: <a href="../lesson02/content.html" title="previous chapter">Lesson 02: Enter Clustering</a></li>
       <li>Next: <a href="../lesson04/content.html" title="next chapter">Lesson 04: Classification with Clustering</a></li>
   </ul></li>
 </ul>
