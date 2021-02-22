@@ -41,6 +41,18 @@ Check your Learning
    3. Minimizes the sum of the squared difference between `y` and the predicted `y_hat`
    4. Minimizes the sum of `y**2` and `x**2`
 
+
+.. admonition:: Exercise 3
+
+   **NaN stands for not-a-number and is commonly met in data science workflows if ...**
+
+   1. Input files contain string values in a column
+   2. Computational Problems occurred, like computing the square root of a negative number
+   3. Data could not be parsed correctly when reading input files into memory
+   4. Predictions for unseen data are off the charts
+
+
+
 Exercises
 =========
 
