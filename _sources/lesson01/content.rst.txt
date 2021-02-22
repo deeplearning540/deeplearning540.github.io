@@ -7,10 +7,9 @@ Learning Objectives
 * Define regression as a very general concept in data science and statistics.
 * describe the 3 steps in regression: data, model optimisation/fit and prediction on new data
 * explain that regression provides a result with uncertainty (inductive inference)
-* use RMS to quantify the uncertainty/error of a regression result
-* implement a least squares regression for a linear function
-* implement a least squares regression for a non-linear function by reusing linear modelling and a feature transform
-* use linear regression on real-world data
+* use MSE to quantify the uncertainty/error of a regression result
+* use a least squares regression for a linear function with sklearn
+* describe the PPDAC cycle of data science
 
 
 Content
@@ -41,6 +40,18 @@ Check your Learning
    2. Minimizes the sum of the absolute difference between `y` and the predicted `y_hat`
    3. Minimizes the sum of the squared difference between `y` and the predicted `y_hat`
    4. Minimizes the sum of `y**2` and `x**2`
+
+
+.. admonition:: Exercise 3
+
+   **NaN stands for not-a-number and is commonly met in data science workflows if ...**
+
+   1. Input files contain string values in a column
+   2. Computational Problems occurred, like computing the square root of a negative number
+   3. Data could not be parsed correctly when reading input files into memory
+   4. Predictions for unseen data are off the charts
+
+
 
 Exercises
 =========
