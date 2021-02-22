@@ -16,7 +16,7 @@ Learning Objectives
 Content
 =======
 
-This lesson is based on `Regression <https://carpentries-incubator.github.io/machine-learning-novice-sklearn/02-regression/index.html>`_ and will be shared as a video.
+This lesson is based on `Regression <https://carpentries-incubator.github.io/machine-learning-novice-sklearn/02-regression/index.html>`_ and will be shared as a video. The video script is available `here </source/lesson01/script.ipynb>`_.
 
 
 Check your Learning
