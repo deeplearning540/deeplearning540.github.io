@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 06: Going Deep &#8212; deeplearning in 540 minutes  documentation</title>
+    <title>Lesson 05: Neural Networks as Code &#8212; deeplearning in 540 minutes  documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -14,8 +14,8 @@
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lesson 07: Monitoring" href="../module-07/content.html" />
-    <link rel="prev" title="Lesson 05: Neural Networks as Code" href="../module-05/content.html" />
+    <link rel="next" title="Lesson 06: Going Deep" href="../lesson06/content.html" />
+    <link rel="prev" title="Lesson 04: Classification with Clustering" href="../lesson04/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -32,41 +32,25 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="lesson-06-going-deep">
-<h1>Lesson 06: Going Deep<a class="headerlink" href="#lesson-06-going-deep" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lesson-05-neural-networks-as-code">
+<h1>Lesson 05: Neural Networks as Code<a class="headerlink" href="#lesson-05-neural-networks-as-code" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
-<p><strong>To be updated, content might spill into lesson 07</strong></p>
+<p><strong>To be updated</strong></p>
 <ul class="simple">
-<li><p>list/repeat the three ingredients to a feed forward network: input, hidden layers, output</p></li>
-<li><p>classify/categorize parts of a feed forward network when presented a network architecture (as from <cite>keras.model.summary()</cite>)</p></li>
-<li><p>describe a fully connected (dense) layer</p></li>
-<li><p>describe a convolutional layer</p></li>
-<li><p>describe a max pooling layer</p></li>
-<li><p>describe an activation function</p></li>
-<li><p>describe a softmax layer</p></li>
-<li><p>argue against abundant use of the sigmoid function (exploding/vanishing gradients)</p></li>
-<li><p>calculate the output data shape of an image when transformed by a fixed convolutional layer</p></li>
-<li><p>interpret errors with convolutional layers</p></li>
-<li><p>execute a 3 layer network on the MNIST data (or similar)</p></li>
-<li><p>differentiate a dense layer and a convolutional layer</p></li>
-<li><p>experiment with values of dense layer and a convolutional layer</p></li>
-<li><p>select a layer type depending on the input data</p></li>
-<li><p>develop a 5 layer network that comprises both layer types</p></li>
+<li><p>Perceptrons are artificial neurons which build neural networks.</p></li>
+<li><p>A perceptron takes multiple inputs, multiplies each by a weight value and sums the weighted inputs. It then applies an activation function to the sum.</p></li>
+<li><p>Multiple perceptrons can be combined to form a neural network which can solve functions that aren’t linearly separable.</p></li>
+<li><p>We can train a whole neural network with the back propagation algorithm. Scikit-learn includes an implementation of this algorithm.</p></li>
+<li><p>Training a neural network requires some training data to show the network examples of what to learn.</p></li>
+<li><p>To validate our training we split the the training data into a training set and a test set.</p></li>
+<li><p>To ensure the whole dataset can be used in training and testing we can train multiple times with different subsets of the data acting as training/testing data. This is called cross validation.</p></li>
 </ul>
 </div>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>This lesson may be based on
-* <a class="reference external" href="https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/NMA2020/tutorials/W3D4_DeepLearning1/student/W3D4_Tutorial1.ipynb#scrollTo=xlJ8CTzdqrws">Neural Networks</a>
-* <a class="reference external" href="https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/NMA2020/tutorials/W3D4_DeepLearning1/student/W3D4_Tutorial3.ipynb#scrollTo=SHJQmLVbsDT4">Building CNNs</a>
-and will be shared as a video.</p>
-<p>TODOS:</p>
-<ul class="simple">
-<li><p>search for alternative lesson in keras</p></li>
-<li><p>consider working entirely with images for the time being</p></li>
-<li><p>content might spill into lesson 07</p></li>
-</ul>
+<p>This lesson is based on <a class="reference external" href="https://carpentries-incubator.github.io/machine-learning-novice-sklearn/05-neural-networks/index.html">Neural Networks</a> and will be shared as a video.</p>
+<p>The content should start with the heading <strong>Multi Layer Perceptrons</strong> directly.</p>
 </div>
 <div class="section" id="check-your-learning">
 <h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
@@ -85,7 +69,7 @@ and will be shared as a video.</p>
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><dl class="simple">
-<dt>through <a class="reference external" href="https://docs.openml.org/Datasets/">OpenML</a> or <a class="reference external" href="https://keras.io/api/datasets/">keras datasets</a></dt><dd><ul>
+<dt>through OpenML <a class="reference external" href="https://docs.openml.org/Datasets/">https://docs.openml.org/Datasets/</a></dt><dd><ul>
 <li><p><a class="reference external" href="https://sci2s.ugr.es/keel/datasets.php">https://sci2s.ugr.es/keel/datasets.php</a></p></li>
 <li><p><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table">https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table</a></p></li>
 </ul>
@@ -115,21 +99,21 @@ and will be shared as a video.</p>
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Lesson Modules</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../module-01/content.html">Lesson 01: Diving into Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-02/content.html">Lesson 02: Enter Sklearn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-03/content.html">Lesson 03: Clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-04/content.html">Lesson 04: Classification with Clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-05/content.html">Lesson 05: Neural Networks as Code</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 06: Going Deep</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson01/content.html">Lesson 01: Diving into Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson02/content.html">Lesson 02: Enter Sklearn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson03/content.html">Lesson 03: Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson04/content.html">Lesson 04: Classification with Clustering</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 05: Neural Networks as Code</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../module-07/content.html">Lesson 07: Monitoring</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-08/content.html">Lesson 08: Visualize and Monitor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../module-09/content.html">Lesson 09: Bonus Session</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: Going Deep</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 08: Visualize and Monitor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson09/content.html">Lesson 09: Bonus Session</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Extras</span></p>
 <ul>
@@ -140,8 +124,8 @@ and will be shared as a video.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../module-05/content.html" title="previous chapter">Lesson 05: Neural Networks as Code</a></li>
-      <li>Next: <a href="../module-07/content.html" title="next chapter">Lesson 07: Monitoring</a></li>
+      <li>Previous: <a href="../lesson04/content.html" title="previous chapter">Lesson 04: Classification with Clustering</a></li>
+      <li>Next: <a href="../lesson06/content.html" title="next chapter">Lesson 06: Going Deep</a></li>
   </ul></li>
 </ul>
 </div>
@@ -175,7 +159,7 @@ and will be shared as a video.</p>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="../_sources/module-06/content.rst.txt"
+      <a href="../_sources/lesson05/content.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
