@@ -7,10 +7,9 @@ Learning Objectives
 * Define regression as a very general concept in data science and statistics.
 * describe the 3 steps in regression: data, model optimisation/fit and prediction on new data
 * explain that regression provides a result with uncertainty (inductive inference)
-* use RMS to quantify the uncertainty/error of a regression result
-* implement a least squares regression for a linear function
-* implement a least squares regression for a non-linear function by reusing linear modelling and a feature transform
-* use linear regression on real-world data
+* use MSE to quantify the uncertainty/error of a regression result
+* use a least squares regression for a linear function with sklearn
+* describe the PPDAC cycle of data science
 
 
 Content
