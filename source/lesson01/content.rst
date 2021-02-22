@@ -49,10 +49,9 @@ Inspired by `the sustainability math project <http://sustainabilitymath.org/stat
 
 * Arctic Ice Data
 
-  * http://sustainabilitymath.org/excel/ArcticIceDataMonth-R.csv 
-  * The file contains average Arctic Ice Extent from 1979 to present by month. It is excellent data for linear regression assignments.
-  * March (winter peak month)
-  * September (summer low month) 
+  * Data source: http://sustainabilitymath.org/excel/ArcticIceDataMonth-R.csv 
+  * Content: average Arctic Ice Extent (in millions of km^2) from 1979 to present by month.
+  * Task: perform a linear regression for the months March (winter peak month) and September (summer low month) over the entire given time preiod (40 years)
 
 * World Grain
 
