@@ -14,7 +14,7 @@
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lesson 02: Enter Sklearn" href="../lesson02/content.html" />
+    <link rel="next" title="Lesson 02: Enter Clustering" href="../lesson02/content.html" />
     <link rel="prev" title="Lesson 00: Preface" href="../lesson00/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -40,10 +40,9 @@
 <li><p>Define regression as a very general concept in data science and statistics.</p></li>
 <li><p>describe the 3 steps in regression: data, model optimisation/fit and prediction on new data</p></li>
 <li><p>explain that regression provides a result with uncertainty (inductive inference)</p></li>
-<li><p>use RMS to quantify the uncertainty/error of a regression result</p></li>
-<li><p>implement a least squares regression for a linear function</p></li>
-<li><p>implement a least squares regression for a non-linear function by reusing linear modelling and a feature transform</p></li>
-<li><p>use linear regression on real-world data</p></li>
+<li><p>use MSE to quantify the uncertainty/error of a regression result</p></li>
+<li><p>use a least squares regression for a linear function with sklearn</p></li>
+<li><p>describe the PPDAC cycle of data science</p></li>
 </ul>
 </div>
 <div class="section" id="content">
@@ -71,6 +70,16 @@
 <li><p>Minimizes the sum of the absolute difference between <cite>y</cite> and the predicted <cite>y_hat</cite></p></li>
 <li><p>Minimizes the sum of the squared difference between <cite>y</cite> and the predicted <cite>y_hat</cite></p></li>
 <li><p>Minimizes the sum of <cite>y**2</cite> and <cite>x**2</cite></p></li>
+</ol>
+</div>
+<div class="admonition-exercise-3 admonition">
+<p class="admonition-title">Exercise 3</p>
+<p><strong>NaN stands for not-a-number and is commonly met in data science workflows if …</strong></p>
+<ol class="arabic simple">
+<li><p>Input files contain string values in a column</p></li>
+<li><p>Computational Problems occurred, like computing the square root of a negative number</p></li>
+<li><p>Data could not be parsed correctly when reading input files into memory</p></li>
+<li><p>Predictions for unseen data are off the charts</p></li>
 </ol>
 </div>
 </div>
@@ -137,8 +146,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson02/content.html">Lesson 02: Enter Sklearn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson03/content.html">Lesson 03: Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson02/content.html">Lesson 02: Enter Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson03/content.html">Lesson 03: Clustering For Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson04/content.html">Lesson 04: Classification with Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson05/content.html">Lesson 05: Neural Networks as Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: Going Deep</a></li>
@@ -156,7 +165,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
       <li>Previous: <a href="../lesson00/content.html" title="previous chapter">Lesson 00: Preface</a></li>
-      <li>Next: <a href="../lesson02/content.html" title="next chapter">Lesson 02: Enter Sklearn</a></li>
+      <li>Next: <a href="../lesson02/content.html" title="next chapter">Lesson 02: Enter Clustering</a></li>
   </ul></li>
 </ul>
 </div>

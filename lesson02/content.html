@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 02: Enter Sklearn &#8212; deeplearning in 540 minutes  documentation</title>
+    <title>Lesson 02: Enter Clustering &#8212; deeplearning in 540 minutes  documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -14,7 +14,7 @@
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lesson 03: Clustering" href="../lesson03/content.html" />
+    <link rel="next" title="Lesson 03: Clustering For Classification" href="../lesson03/content.html" />
     <link rel="prev" title="Lesson 01: Diving into Regression" href="../lesson01/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -32,14 +32,17 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="lesson-02-enter-sklearn">
-<h1>Lesson 02: Enter Sklearn<a class="headerlink" href="#lesson-02-enter-sklearn" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lesson-02-enter-clustering">
+<h1>Lesson 02: Enter Clustering<a class="headerlink" href="#lesson-02-enter-clustering" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Scikit Learn is a Python library with lots of useful machine learning functions.</p></li>
-<li><p>Scikit Learn includes a linear regression function.</p></li>
-<li><p>It also includes a polynomial modelling function which is useful for modelling non-linear data.</p></li>
+<li><p>Understand that there are two main modes of training a ML algorithm: supervised/unsupervised training</p></li>
+<li><p>understand that unsupervised training does not require ground truth data labels</p></li>
+<li><p>identify problems that are not backed up by a model (apply ML to fit an arbitrary model)</p></li>
+<li><p>relate nearest neighbor clustering to an algorithm in <cite>sklearn</cite></p></li>
+<li><p>examine a dataset and search for features that show a clear separation between samples</p></li>
+<li><p>argue in favor of clustering for a provided dataset, e.g. if simple decision boundaries are sufficient</p></li>
 </ul>
 </div>
 <div class="section" id="content">
@@ -50,46 +53,29 @@
 <h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-exercise-1 admonition">
 <p class="admonition-title">Exercise 1</p>
-<p><strong>TBA</strong></p>
+<p>You are provided a table of measurements from a weather station. Each measurements comes with values for temperature, precipation, cloud structure, date, humidity, and a quality ID. The latter tells you if the instrument was performing OK. You’d like to learn a predictor that is able to predict the quality ID for any new data coming in. This falls into …</p>
 <ol class="arabic simple">
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
+<li><p>Supervised Learning</p></li>
+<li><p>Unsupervised Learning</p></li>
+</ol>
+</div>
+<div class="admonition-nearest-neighbor-clustering admonition">
+<p class="admonition-title">Nearest Neighbor Clustering</p>
+<p>Nearest Neighbor clustering builds a tree like structure from the dataset.</p>
+<ol class="arabic simple">
+<li><p>Supervised Learning</p></li>
+<li><p>Unsupervised Learning</p></li>
 </ol>
 </div>
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
-<p>Inspired by <a class="reference external" href="http://sustainabilitymath.org/statistics-materials/">the sustainability math project</a>, perform a linear regression on the following data sets:</p>
 <ul class="simple">
-<li><p>Arctic Ice Data</p>
+<li><p>cluster the <a class="reference external" href="https://github.com/allisonhorst/palmerpenguins">penguin dataset</a> into 3 classes when looking at bill length vs flipper length; the data is available <a class="reference external" href="https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata">here</a></p></li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets.html">sklearn based datasets</a>:</p>
 <ul>
-<li><p><a class="reference external" href="http://sustainabilitymath.org/excel/ArcticIceDataMonth-R.csv">http://sustainabilitymath.org/excel/ArcticIceDataMonth-R.csv</a></p></li>
-<li><p>The file contains average Arctic Ice Extent from 1979 to present by month. It is excellent data for linear regression assignments.</p></li>
-<li><p>March (winter peak month)</p></li>
-<li><p>September (summer low month)</p></li>
-</ul>
-</li>
-<li><p>World Grain</p>
-<ul>
-<li><p><a class="reference external" href="http://sustainabilitymath.org/excel/Grain-R.csv">http://sustainabilitymath.org/excel/Grain-R.csv</a> (csv only contains the grain totals, the xlsx file yields all)</p></li>
-<li><p>The data contains grain (barley, corn, millet, oats, rice, rye, sorghum, &amp; wheat) production, consumption, and ending stocks, as well as totals and by per capita. Most of the production and consumption data is linear.</p></li>
-<li><p>conduct a linear regression for each corn type, for production volume versus time</p></li>
-<li><p>See also:</p>
-<ul>
-<li><p><a class="reference download internal" download="" href="../_downloads/daf8c7a831acb03efbdd44cea7ccd3be/US-Grain-Production.csv"><code class="xref download docutils literal notranslate"><span class="pre">Grain</span> <span class="pre">Production</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../_downloads/59c9461f14d6b7db901f36ea3ba57a97/US-Grain-EndOfYearStock.csv"><code class="xref download docutils literal notranslate"><span class="pre">Grain</span> <span class="pre">End-of-year</span> <span class="pre">Stock</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../_downloads/aabbbf40977ce652ad9af8b2f48e3b4d/US-Grain-Consumption.csv"><code class="xref download docutils literal notranslate"><span class="pre">Grain</span> <span class="pre">Consumption</span></code></a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Hourly Wage (by Race) and Gender</p>
-<ul>
-<li><p><a class="reference external" href="http://sustainabilitymath.org/excel/EPI-Wages-R.csv">http://sustainabilitymath.org/excel/EPI-Wages-R.csv</a></p></li>
-<li><p>The excel file contains a number of data sets suitable for linear regression. It contains median and average hourly wages (in 2019 dollars) with categories of men and women by White, Black, and Hispanic.</p></li>
-<li><p>conduct a linear regression for wages earned versus year on this <a class="reference download internal" download="" href="../_downloads/d6a3af8e8a1370ef996cd4b62bd20e70/EPI-Wages-subset.csv"><code class="xref download docutils literal notranslate"><span class="pre">reduced</span> <span class="pre">wages</span> <span class="pre">dataset</span></code></a></p></li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset</a> into 3 classes when looking at petal_length vs. petal_width</p></li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine">https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine</a> not sure yet which features to use</p></li>
 </ul>
 </li>
 </ul>
@@ -117,14 +103,14 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../lesson00/content.html">Lesson 00: Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson01/content.html">Lesson 01: Diving into Regression</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 02: Enter Sklearn</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 02: Enter Clustering</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson03/content.html">Lesson 03: Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson03/content.html">Lesson 03: Clustering For Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson04/content.html">Lesson 04: Classification with Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson05/content.html">Lesson 05: Neural Networks as Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: Going Deep</a></li>
@@ -142,7 +128,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
       <li>Previous: <a href="../lesson01/content.html" title="previous chapter">Lesson 01: Diving into Regression</a></li>
-      <li>Next: <a href="../lesson03/content.html" title="next chapter">Lesson 03: Clustering</a></li>
+      <li>Next: <a href="../lesson03/content.html" title="next chapter">Lesson 03: Clustering For Classification</a></li>
   </ul></li>
 </ul>
 </div>
