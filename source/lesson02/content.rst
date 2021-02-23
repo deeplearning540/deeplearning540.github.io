@@ -15,7 +15,8 @@ Learning Objectives
 Content
 =======
 
-This lesson is based on `Regression <https://carpentries-incubator.github.io/machine-learning-novice-sklearn/03-introducing-sklearn/index.html>`_ and will be shared as a video.
+* for learners: a stub notebook to get you started can be obtained from `the lesson02 repo <https://github.com/deeplearning540/lesson02/blob/main/lesson.ipynb>`_.
+* for instructors: the video script is available `here </source/lesson02/script.ipynb>`_.
 
 
 Check your Learning
