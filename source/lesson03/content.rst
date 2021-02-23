@@ -1,12 +1,12 @@
-Lesson 03: Clustering For Classification
-****************************************
+Lesson 03: From Clustering To Classification
+********************************************
 
 Learning Objectives
 ===================
 
 * remember how clustering works
 * recognize that once clustering is trained/used, it can be used for classification
-* Centroid Clustering is used only to save memory
+* Centroid Clustering is used to save memory
 * Apply clustering for classification
 * execute a counting experiment to see which items have been properly categorized
 * use accuracy, precision and recall to describe the classifiers performance
