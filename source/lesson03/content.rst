@@ -39,9 +39,15 @@ Exercises
 
 Use the dataset you used for `lesson02 </source/lesson02/content.rst>`_ or be brave and choose a different one. Complete the following steps in order:
 
+For part a
+----------
+
 - Split your dataset into train and test set at a fixed ratio.
 
 - Train a kNN classification on the training set with a fixed value of `k`. 
+
+For part b
+----------
 
 - Run the prediction and compute accuracy, precision, recall.
 
