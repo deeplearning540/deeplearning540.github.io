@@ -4,8 +4,6 @@ Lesson 04: Classification Performance ROCs
 Learning Objectives
 ===================
 
-* Return to classification
-
 * discuss true positive rate and true false positive rate
 
 * explain how a cut-off value can be used to (for kmeans classification) can be used to produce a ROC curve
