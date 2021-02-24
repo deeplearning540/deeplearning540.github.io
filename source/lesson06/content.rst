@@ -1,5 +1,5 @@
-Lesson 06: Going Deep
-*********************
+Lesson 06: How did we train
+***************************
 
 Learning Objectives
 ===================
