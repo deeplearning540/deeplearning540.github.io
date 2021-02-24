@@ -77,10 +77,10 @@ Datasets
 
 * `iris plants <https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset>`_ dataset. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this dataset do the following:
 
-  ```
-    import pandas as pd
-    from sklearn.datasets import load_iris
-    iris = load_iris()
-    df = pd.DataFrame(data= np.c_[iris['data'], iris['target']],
-                      columns= iris['feature_names'] + ['target'])
-  ```
+.. code-block:: python
+
+  import pandas as pd
+  from sklearn.datasets import load_iris
+  iris = load_iris()
+  df = pd.DataFrame(data= np.c_[iris['data'], iris['target']],
+                    columns= iris['feature_names'] + ['target'])
