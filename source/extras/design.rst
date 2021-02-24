@@ -1,8 +1,19 @@
 Lesson Design
--------------
+*************
+
+Lesson
+======
+
+Each lesson always follows the same structure and is expected to last about 1h.
+
+1. learners watch the video
+2. learners answer the `check your learning` questions as a team (at best in a hackmd/codimd document)
+3. learners dive into the exercise on their own 
+
+Instructors help with show stoppers like syntax errors where they can. 
 
 Audience
-~~~~~~~~
+========
 
 Inspired by the `Carpentries' Deciding what to teach <https://cdh.carpentries.org/deciding-what-to-teach.html#target-audience>_`:
 
@@ -37,7 +48,7 @@ Inspired by the `Carpentries' Deciding what to teach <https://cdh.carpentries.or
 
 
 Pre-Workshop Survey
-~~~~~~~~~~~~~~~~~~~
+===================
 
 All learners were offered this pre-workshop survey. Every question is a multiple choice question. 
 
