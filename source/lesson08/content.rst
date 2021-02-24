@@ -1,14 +1,20 @@
-Lesson 08: Visualize and Monitor
-********************************
+Lesson 08: Deep Learning is ML too
+**********************************
 
 Learning Objectives
 ===================
 
-- identify important plots to create at the end of training (provide selected samples and their prediction)
-- execute plotting of important variables during training (loss, ROC)
-- use tensorboard and related callbacks during training 
-- examine the results of a partners network
-- critique the results of a partners network
+- define precision and recall/accuracy for a classification task
+- state that cross-validation is used in Deep Learning too
+- describe how to split a dataset into training/test/validation set
+- describe how Drop-Out Layers work
+- execute a plot to draw the loss per epoch for training and test set
+- compare values of precision and recall
+- differentiate a overfitting network from a well-behaved network
+- detect when a network is underfitting or overfitting
+- design countermeasures for overfitting (e.g. more dropout layers, reduce model size)
+- design countermeasures for underfitting (e.g. larger model)
+- critique a provided network design
 
 Content
 =======
