@@ -16,9 +16,10 @@ Learning Objectives
 Content
 =======
 
-This lesson is based on `Clustering <https://carpentries-incubator.github.io/machine-learning-novice-sklearn/04-clustering/index.html>`_ and will be shared as a video.
+This lesson will be shared as a video.
 
-* nice quick notebook available `on kaggle <https://www.kaggle.com/khotijahs1/k-means-clustering-of-iris-dataset>`_ that may be used as support
+* for learners: a stub notebook to get you started can be obtained from `the lesson03 repo <https://github.com/deeplearning540/lesson03/blob/main/lesson.ipynb>`_.
+* for instructors: the video script is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson03/script.ipynb>`_.
 
 
 Check your Learning
@@ -44,3 +45,4 @@ Exercises
   * https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset into 3 classes when looking at petal_length vs. petal_width
 
   * https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine not sure yet which features to use
+

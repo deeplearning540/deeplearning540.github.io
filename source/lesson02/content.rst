@@ -16,7 +16,7 @@ Content
 =======
 
 * for learners: a stub notebook to get you started can be obtained from `the lesson02 repo <https://github.com/deeplearning540/lesson02/blob/main/lesson.ipynb>`_.
-* for instructors: the video script is available `here </source/lesson02/script.ipynb>`_.
+* for instructors: the video script is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson02/script.ipynb>`_.
 
 
 Check your Learning
