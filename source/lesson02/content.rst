@@ -42,10 +42,27 @@ Check your Learning
 Exercises
 =========
 
-* cluster the `penguin dataset <https://github.com/allisonhorst/palmerpenguins>`_ into 3 classes when looking at bill length vs flipper length; the data is available `here <https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata>`_
+* Cluster the `penguin dataset <https://github.com/allisonhorst/palmerpenguins>`_ into 3 classes when looking at bill length vs flipper length; the data is available `here <https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata>`_!
 
-* `sklearn based datasets <https://scikit-learn.org/stable/datasets.html>`_:
+* Cluster at least one of the following synthetic datasets in the `x1` and `x2` plane. Each dataset yields multiple clusters given 2 class labels in the `label` column.
 
-  * https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset into 3 classes when looking at petal_length vs. petal_width
+  * `clustering_data_00.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_00.csv>`_
+  * `clustering_data_01.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_01.csv>`_
+  * `clustering_data_02.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_02.csv>`_
+  * `clustering_data_03.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_03.csv>`_
+  * `clustering_data_04.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_04.csv>`_
+  * `clustering_data_05.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_05.csv>`_
+  * `clustering_data_06.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_06.csv>`_
+  * `clustering_data_07.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_07.csv>`_
+  * `clustering_data_08.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_08.csv>`_
+  * `clustering_data_09.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_09.csv>`_
 
-  * https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine not sure yet which features to use
+* Cluster the `iris plants <https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset>`_ dataaset into 3 classes when looking at `petal_length` vs. `petal_width`. To obtain the dataframe from this dataset do the following:
+
+  ```
+    import pandas as pd
+    from sklearn.datasets import load_iris
+    iris = load_iris()
+    df = pd.DataFrame(data= np.c_[iris['data'], iris['target']],
+                      columns= iris['feature_names'] + ['target'])
+  ```

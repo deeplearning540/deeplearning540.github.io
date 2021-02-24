@@ -44,5 +44,5 @@ Exercises
 
   * https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset into 3 classes when looking at petal_length vs. petal_width
 
-  * https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine not sure yet which features to use
+  * https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#
 
