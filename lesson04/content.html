@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 04: Classification with Clustering &#8212; deeplearning in 540 minutes  documentation</title>
+    <title>Lesson 04: Classification Performance ROCs &#8212; deeplearning in 540 minutes  documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -32,15 +32,17 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="lesson-04-classification-with-clustering">
-<h1>Lesson 04: Classification with Clustering<a class="headerlink" href="#lesson-04-classification-with-clustering" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lesson-04-classification-performance-rocs">
+<h1>Lesson 04: Classification Performance ROCs<a class="headerlink" href="#lesson-04-classification-performance-rocs" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Use clustering for classification.</p></li>
-<li><p>introduce accuracy, precision and recall as quality metrics</p></li>
+<li><p>Return to classification</p></li>
+<li><p>discuss true positive rate and true false positive rate</p></li>
 <li><p>explain how a cut-off value can be used to (for kmeans classification) can be used to produce a ROC curve</p></li>
+<li><p>demo how to construct a ROC curve</p></li>
 <li><p>show <cite>plot_roc_curve</cite> in sklearn</p></li>
+<li><p>discuss extremes of a ROC curve</p></li>
 </ul>
 </div>
 <div class="section" id="content">
@@ -63,15 +65,39 @@
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>produce a ROC curve for the classifyer you trained in <a class="reference external" href="/source/lesson03/content.rst">lesson03</a>.</p></li>
+<li><p>take another NN based classifyer, e.g. <cite>sklearn.neighbors.RadiusNeighborsClassifier</cite> or <cite>sklearn.neighbors.NearestCentroid</cite> and train it</p></li>
+<li><p>make predictions on the testset with it and produce a ROC</p></li>
+<li><p>combine the 2 ROC curves and discuss</p></li>
+</ol>
+</div>
+<div class="section" id="datasets">
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>cluster the <a class="reference external" href="https://github.com/allisonhorst/palmerpenguins">penguin dataset</a> into 3 classes when looking at bill length vs flipper length; the data is available <a class="reference external" href="https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata">here</a></p></li>
-<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets.html">sklearn based datasets</a>:</p>
+<li><p>Datasets for clustering. Each of the following synthetic datasets contains several features <cite>x1</cite>, <cite>x2</cite>, … and a <cite>label</cite> column which comprises (2 classes).</p>
 <ul>
-<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset</a> into 3 classes when looking at petal_length vs. petal_width</p></li>
-<li><p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine">https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine</a> not sure yet which features to use</p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_00.csv">clustering_data_00.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_01.csv">clustering_data_01.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_02.csv">clustering_data_02.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_03.csv">clustering_data_03.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_04.csv">clustering_data_04.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_05.csv">clustering_data_05.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_06.csv">clustering_data_06.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_07.csv">clustering_data_07.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_08.csv">clustering_data_08.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_09.csv">clustering_data_09.csv</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">iris plants</a> dataset. Use the columns <cite>petal_length</cite> vs. <cite>petal_width</cite>. The class label is provided as the <cite>target</cite> column. To obtain the dataframe from this dataset do the following:</p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> <span class="n">iris</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]],</span>
+                  <span class="n">columns</span><span class="o">=</span> <span class="n">iris</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -98,18 +124,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../lesson01/content.html">Lesson 01: Diving into Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson02/content.html">Lesson 02: Enter Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson03/content.html">Lesson 03: From Clustering To Classification</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 04: Classification with Clustering</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 04: Classification Performance ROCs</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datasets">Datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson05/content.html">Lesson 05: Neural Networks as Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: Going Deep</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: Monitoring</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 08: Visualize and Monitor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson09/content.html">Lesson 09: Bonus Session</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: How did we train</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: CNNs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 08: Deep Learning is ML too</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Extras</span></p>
 <ul>

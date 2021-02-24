@@ -1,22 +1,24 @@
-Lesson 07: Monitoring
+Lesson 07: CNNs
 *********************
 
 Learning Objectives
 ===================
 
-**To be updated, overdue content might come in from from lesson 06**
-
-- define precision and recall/accuracy for a classification task
-- state that cross-validation is used in Deep Learning too
-- describe how to split a dataset into training/test/validation set
-- describe how Drop-Out Layers work
-- execute a plot to draw the loss per epoch for training and test set
-- compare values of precision and recall
-- differentiate a overfitting network from a well-behaved network
-- detect when a network is underfitting or overfitting
-- design countermeasures for overfitting (e.g. more dropout layers, reduce model size)
-- design countermeasures for underfitting (e.g. larger model)
-- critique a provided network design
+- list/repeat the three ingredients to a feed forward network: input, hidden layers, output
+- classify/categorize parts of a feed forward network when presented a network architecture (as from `keras.model.summary()`)
+- describe a fully connected (dense) layer
+- describe a convolutional layer
+- describe a max pooling layer
+- describe an activation function
+- describe a softmax layer
+- argue against abundant use of the sigmoid function (exploding/vanishing gradients)
+- calculate the output data shape of an image when transformed by a fixed convolutional layer
+- interpret errors with convolutional layers
+- execute a 3 layer network on the MNIST data (or similar)
+- differentiate a dense layer and a convolutional layer
+- experiment with values of dense layer and a convolutional layer
+- select a layer type depending on the input data
+- develop a 5 layer network that comprises both layer types
 
 Content
 =======

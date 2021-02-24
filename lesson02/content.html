@@ -73,15 +73,38 @@
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<p>Choose any exercise from the two categories below. Regarding the dataset, consult the corresponding section.</p>
 <ul class="simple">
-<li><p>cluster the <a class="reference external" href="https://github.com/allisonhorst/palmerpenguins">penguin dataset</a> into 3 classes when looking at bill length vs flipper length; the data is available <a class="reference external" href="https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata">here</a></p></li>
-<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets.html">sklearn based datasets</a>:</p>
+<li><p>Cluster at least one of the synthetic datasets in the <cite>x1</cite> and <cite>x2</cite> plane.</p></li>
+<li><p>Cluster the <a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">iris plants</a> dataset. Use the columns <cite>petal_length</cite> vs. <cite>petal_width</cite>. The class label is provided as the <cite>target</cite> column.</p></li>
+</ul>
+</div>
+<div class="section" id="datasets">
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Datasets for clustering. Each of the following synthetic datasets contains several features <cite>x1</cite>, <cite>x2</cite>, … and a <cite>label</cite> column which comprises (2 classes).</p>
 <ul>
-<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset</a> into 3 classes when looking at petal_length vs. petal_width</p></li>
-<li><p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine">https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine</a> not sure yet which features to use</p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_00.csv">clustering_data_00.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_01.csv">clustering_data_01.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_02.csv">clustering_data_02.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_03.csv">clustering_data_03.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_04.csv">clustering_data_04.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_05.csv">clustering_data_05.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_06.csv">clustering_data_06.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_07.csv">clustering_data_07.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_08.csv">clustering_data_08.csv</a></p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_09.csv">clustering_data_09.csv</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">iris plants</a> dataset. Use the columns <cite>petal_length</cite> vs. <cite>petal_width</cite>. The class label is provided as the <cite>target</cite> column. To obtain the dataframe from this dataset do the following:</p></li>
 </ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> <span class="n">iris</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]],</span>
+                  <span class="n">columns</span><span class="o">=</span> <span class="n">iris</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -111,15 +134,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datasets">Datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson03/content.html">Lesson 03: From Clustering To Classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson04/content.html">Lesson 04: Classification with Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson04/content.html">Lesson 04: Classification Performance ROCs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson05/content.html">Lesson 05: Neural Networks as Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: Going Deep</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: Monitoring</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 08: Visualize and Monitor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson09/content.html">Lesson 09: Bonus Session</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: How did we train</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: CNNs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 08: Deep Learning is ML too</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Extras</span></p>
 <ul>

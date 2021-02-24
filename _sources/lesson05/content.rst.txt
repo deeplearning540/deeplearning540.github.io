@@ -6,7 +6,6 @@ Learning Objectives
 
 **To be updated**
 
-* Perceptrons are artificial neurons which build neural networks.
 * A perceptron takes multiple inputs, multiplies each by a weight value and sums the weighted inputs. It then applies an activation function to the sum.
 * Multiple perceptrons can be combined to form a neural network which can solve functions that aren’t linearly separable.
 * We can train a whole neural network with the back propagation algorithm. Scikit-learn includes an implementation of this algorithm.
