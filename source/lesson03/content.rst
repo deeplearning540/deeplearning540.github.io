@@ -26,12 +26,35 @@ Check your Learning
 
 .. admonition:: Exercise 1
 
-   **TBA**
+   When going through tutorials and exercises that discuss the k-Nearest-Neighbor (kNN) method, you observe that `k` is typically chosen to be an odd number. Checking the code, `sklearn` also access even numbers for `k`. Why do people tend to choose odd numbers?
 
-   1. ???
-   2. ???
-   3. ???
-   4. ???
+   1. tradition that often works best in practice
+   4. odd numbers prevent ties from happening with the majaority vote
+   3. this way, the total number of samples in the neighborhood is always even as one has to add the query sample
+   4. odd numbers prevent ties from happening with the plurarity vote
+
+.. admonition:: Exercise 2
+
+   Find the three hidden bug(s)!
+
+   .. code-block:: python
+
+      from sklearn.neighbors import KNeighborsClassifier as knn
+      from sklearn.model_selection import train_test_split
+      from sklearn.metrics import confusion_matrix
+
+      X_train, X_test, y_train, y_test = train_test_split(X, y,
+                                                    test_size = 1.5,
+                                                    random_state = 42)
+      kmeans = knn(n_neighbors=5)
+      kmeans = kmeans.fit(X_train, y_train)
+      y_test_hat = kmeans.predict(X_train)
+
+      cm = confusion_matrix(y_test, y_test_hat)
+
+      accuracy = (cm[0,0]+cm[0,1]) / cm.sum()
+      assert accuracy < 1. #this fails!! why?
+
 
 
 Exercises
