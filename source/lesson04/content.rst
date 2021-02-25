@@ -4,11 +4,15 @@ Lesson 04: Classification Performance ROCs
 Learning Objectives
 ===================
 
-* discuss true positive rate and true false positive rate
+* discuss true positive rate and false positive rate
 
-* explain how a cut-off value can be used to (for kmeans classification) can be used to produce a ROC curve
+* explain how a cut-off value (for kmeans classification) is used to produce a ROC curve
+
+* assert that a ROC curve is an envelope produced for a fixed test set
 
 * demo how to construct a ROC curve
+
+* contrast the difference between adding individual points into a ROC plot and producing a ROC curve
 
 * show `plot_roc_curve` in sklearn
 
@@ -18,16 +22,18 @@ Learning Objectives
 Content
 =======
 
-This content doesn't exist yet. Clustering can be used for classification. This would pick up the knowledge from previous lesson and focus on classification accuracy and ROC curves.
+This lesson will be shared as a video.
 
-https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_roc_curve_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-roc-curve-visualization-api-py
+* for learners: a stub notebook to get you started can be obtained from `the lesson03 repo <https://github.com/deeplearning540/lesson04/blob/main/lesson.ipynb>`_.
+* for instructors: the video script is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson04/script.ipynb>`_.
+
 
 Check your Learning
 ===================
 
 .. admonition:: Exercise 1
 
-   **TBA**
+   You write a classifyer and train it on data to perform binary classification. 
 
    1. ???
    2. ???
@@ -38,13 +44,15 @@ Check your Learning
 Exercises
 =========
 
+For this lesson, please complete the following steps in order:
+
 1. produce a ROC curve for the classifyer you trained in `lesson03 </source/lesson03/content.rst>`_.
 
 2. take another NN based classifyer, e.g. `sklearn.neighbors.RadiusNeighborsClassifier` or `sklearn.neighbors.NearestCentroid` and train it
 
 3. make predictions on the testset with it and produce a ROC 
 
-4. combine the 2 ROC curves and discuss
+4. combine the 2 ROC curves in a plot and discuss which classifyer is better!
 
 Datasets
 ========
