@@ -1,0 +1,20 @@
+name: keras-cpu
+
+channels:
+ - conda-forge
+ 
+dependencies:
+- tensorflow=*=mkl*
+- keras
+- numpy
+- scipy
+- scikit-image
+- scikit-learn
+- pandas
+- matplotlib
+- seaborn
+- jupyterlab
+- jupyter
+- jupyter_contrib_nbextensions
+- pydot
+- mamba
