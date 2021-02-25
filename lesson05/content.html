@@ -79,15 +79,21 @@
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>reproduce the training with a small ANN with the iris dataset using all 4 feature columns.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>import pandas as pd
+import seaborn as sns</p>
+<p>iris = sns.load_iris()
+X = df_iris[[‘sepal_length’,’sepal_width’,’petal_length’,’petal_width’]].values
+y = df_iris[‘species’].values</p>
 <ul class="simple">
-<li><dl class="simple">
-<dt>through OpenML <a class="reference external" href="https://docs.openml.org/Datasets/">https://docs.openml.org/Datasets/</a></dt><dd><ul>
-<li><p><a class="reference external" href="https://sci2s.ugr.es/keel/datasets.php">https://sci2s.ugr.es/keel/datasets.php</a></p></li>
-<li><p><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table">https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table</a></p></li>
+<li><p>compare the loss plot and the accuracy with the penguins dataset: what do you see? Is the MLP overkill here too?</p></li>
 </ul>
-</dd>
-</dl>
 </li>
+<li><p>(optional) We built an extremely simple feed-forward network model. To experiment more, load the [MNIST database of handwritten digits](<a class="reference external" href="http://keras.io/datasets/">http://keras.io/datasets/</a>) and see if you can beat a standard scikit-learn classifier. Unlike the Iris dataset, this is a situation where the power and relative complexity of neural networks is justified. Try it yourself first, but if you get stuck, take a look at [this notebook](<a class="reference external" href="https://github.com/wxs/keras-mnist-tutorial/blob/master/MNIST%20in%20Keras.ipynb">https://github.com/wxs/keras-mnist-tutorial/blob/master/MNIST%20in%20Keras.ipynb</a>).</p></li>
 </ul>
 </div>
 </div>

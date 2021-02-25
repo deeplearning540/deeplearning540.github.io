@@ -48,7 +48,17 @@ Check your Learning
 Exercises
 =========
 
-* through OpenML https://docs.openml.org/Datasets/
-   * https://sci2s.ugr.es/keel/datasets.php
-   * https://archive.ics.uci.edu/ml/datasets.php?format=&task=cla&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table
+* reproduce the training with a small ANN with the iris dataset using all 4 feature columns.
 
+  .. code-block:: python
+
+  import pandas as pd
+  import seaborn as sns
+  
+  iris = sns.load_iris()
+  X = df_iris[['sepal_length','sepal_width','petal_length','petal_width']].values
+  y = df_iris['species'].values
+
+  * compare the loss plot and the accuracy with the penguins dataset: what do you see? Is the MLP overkill here too?
+
+* (optional) We built an extremely simple feed-forward network model. To experiment more, load the [MNIST database of handwritten digits](http://keras.io/datasets/) and see if you can beat a standard scikit-learn classifier. Unlike the Iris dataset, this is a situation where the power and relative complexity of neural networks is justified. Try it yourself first, but if you get stuck, take a look at [this notebook](https://github.com/wxs/keras-mnist-tutorial/blob/master/MNIST%20in%20Keras.ipynb).
