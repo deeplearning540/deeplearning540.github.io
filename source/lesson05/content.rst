@@ -8,9 +8,7 @@ Learning Objectives
 
 * A perceptron takes multiple inputs, multiplies each by a weight value and sums the weighted inputs. It then applies an activation function to the sum.
 * Multiple perceptrons can be combined to form a neural network which can solve functions that aren’t linearly separable.
-* We can train a whole neural network with the back propagation algorithm. Scikit-learn includes an implementation of this algorithm.
-* Training a neural network requires some training data to show the network examples of what to learn.
-* To validate our training we split the the training data into a training set and a test set.
+* We can train a whole neural network with the back propagation algorithm. keras includes an implementation of this algorithm.
 * To ensure the whole dataset can be used in training and testing we can train multiple times with different subsets of the data acting as training/testing data. This is called cross validation.
 
 
