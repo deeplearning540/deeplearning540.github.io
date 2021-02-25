@@ -26,14 +26,46 @@ Check your Learning
 
 .. admonition:: Exercise 1
 
+When using the k-Nearest-Neighbor (kNN) algorithm to predict the class of an unknown data point the `k` stands for:
+
+ 1. the radius around the new point, in which to count all occurring classes
+
+ 2. the number of classes occurring in the data set
+
+ 3. the number of nearest labeled data points to look at for reaching a decision
+ 
+ 
+.. admonition:: Exercise 2
+
    When going through tutorials and exercises that discuss the k-Nearest-Neighbor (kNN) method, you observe that `k` is typically chosen to be an odd number. Checking the code, `sklearn` also access even numbers for `k`. Why do people tend to choose odd numbers?
 
    1. tradition that often works best in practice
-   4. odd numbers prevent ties from happening with the majaority vote
+   
+   2. odd numbers prevent ties from happening with the majaority vote
+   
    3. this way, the total number of samples in the neighborhood is always even as one has to add the query sample
+   
    4. odd numbers prevent ties from happening with the plurarity vote
+   
+   
+.. admonition:: Exercise 3
 
-.. admonition:: Exercise 2
+What is the majority vote and the plurality vote if the 8 nearest neighbors to your unknown data point are of the following classes:
+First example: ::
+
+- class 1: 3
+- class 2: 2
+- class 3: 2
+- class 4: 1
+
+Second example: ::
+
+- class 1: 5
+- class 2: 2
+- class 3: 1
+
+
+.. admonition:: Exercise 4
 
    Find the three hidden bug(s)!
 
