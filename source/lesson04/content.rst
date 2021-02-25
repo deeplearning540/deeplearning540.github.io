@@ -33,12 +33,20 @@ Check your Learning
 
 .. admonition:: Exercise 1
 
-   You write a classifyer and train it on data to perform binary classification. 
+   The `ROC` acronym stands for
 
-   1. ???
-   2. ???
-   3. ???
-   4. ???
+   1. Receiver Operator Curve
+   2. Receiving Operates Curves
+   3. Receiver Operating Characteristic
+   4. Reception Occlusion Characteristic
+
+.. admonition:: Exercise 2
+
+   Fill in the blanks!
+
+   A k-Nearest-Neighbor (kNN) classifier can produce a probability when predicting the class label of an unseen sample `x_q`. This can be achieved by counting class `_______` in the training set neighborhood of this query point.
+
+   For a `k=7` neighborhood, the threshold to decide for any given class in this neighborhood is calculated as `4/__`. In the same setting (`k=7`), let's assume we find `5` labels for class `1` and `2` labels for class `0`. This means, that we get two probabilities, which are `_____` for class `1` and `_____` for class `0`. 
 
 
 Exercises
