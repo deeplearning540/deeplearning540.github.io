@@ -4,11 +4,15 @@ Lesson 04: Classification Performance ROCs
 Learning Objectives
 ===================
 
-* discuss true positive rate and true false positive rate
+* discuss true positive rate and false positive rate
 
-* explain how a cut-off value can be used to (for kmeans classification) can be used to produce a ROC curve
+* explain how a cut-off value (for kmeans classification) is used to produce a ROC curve
+
+* assert that a ROC curve is an envelope produced for a fixed test set
 
 * demo how to construct a ROC curve
+
+* contrast the difference between adding individual points into a ROC plot and producing a ROC curve
 
 * show `plot_roc_curve` in sklearn
 
@@ -18,25 +22,37 @@ Learning Objectives
 Content
 =======
 
-This content doesn't exist yet. Clustering can be used for classification. This would pick up the knowledge from previous lesson and focus on classification accuracy and ROC curves.
+This lesson will be shared as a video.
 
-https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_roc_curve_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-roc-curve-visualization-api-py
+* for learners: a stub notebook to get you started can be obtained from `the lesson03 repo <https://github.com/deeplearning540/lesson04/blob/main/lesson.ipynb>`_.
+* for instructors: the video script is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson04/script.ipynb>`_.
+
 
 Check your Learning
 ===================
 
 .. admonition:: Exercise 1
 
-   **TBA**
+   The `ROC` acronym stands for
 
-   1. ???
-   2. ???
-   3. ???
-   4. ???
+   1. Receiver Operator Curve
+   2. Receiving Operates Curves
+   3. Receiver Operating Characteristic
+   4. Reception Occlusion Characteristic
+
+.. admonition:: Exercise 2
+
+   Fill in the blanks!
+
+   A k-Nearest-Neighbor (kNN) classifier can produce a probability when predicting the class label of an unseen sample `x_q`. This can be achieved by counting class `_______` in the training set neighborhood of this query point.
+
+   For a `k=7` neighborhood, the threshold to decide for any given class in this neighborhood is calculated as `4/__`. In the same setting (`k=7`), let's assume we find `5` labels for class `1` and `2` labels for class `0`. This means, that we get two probabilities, which are `_____` for class `1` and `_____` for class `0`. 
 
 
 Exercises
 =========
+
+For this lesson, please complete the following steps in order:
 
 1. produce a ROC curve for the classifyer you trained in `lesson03 </source/lesson03/content.rst>`_.
 
@@ -44,7 +60,7 @@ Exercises
 
 3. make predictions on the testset with it and produce a ROC 
 
-4. combine the 2 ROC curves and discuss
+4. combine the 2 ROC curves in a plot and discuss which classifyer is better!
 
 Datasets
 ========

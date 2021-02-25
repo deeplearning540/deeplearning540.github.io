@@ -37,38 +37,50 @@
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>discuss true positive rate and true false positive rate</p></li>
-<li><p>explain how a cut-off value can be used to (for kmeans classification) can be used to produce a ROC curve</p></li>
+<li><p>discuss true positive rate and false positive rate</p></li>
+<li><p>explain how a cut-off value (for kmeans classification) is used to produce a ROC curve</p></li>
+<li><p>assert that a ROC curve is an envelope produced for a fixed test set</p></li>
 <li><p>demo how to construct a ROC curve</p></li>
+<li><p>contrast the difference between adding individual points into a ROC plot and producing a ROC curve</p></li>
 <li><p>show <cite>plot_roc_curve</cite> in sklearn</p></li>
 <li><p>discuss extremes of a ROC curve</p></li>
 </ul>
 </div>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>This content doesn’t exist yet. Clustering can be used for classification. This would pick up the knowledge from previous lesson and focus on classification accuracy and ROC curves.</p>
-<p><a class="reference external" href="https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_roc_curve_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-roc-curve-visualization-api-py">https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_roc_curve_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-roc-curve-visualization-api-py</a></p>
+<p>This lesson will be shared as a video.</p>
+<ul class="simple">
+<li><p>for learners: a stub notebook to get you started can be obtained from <a class="reference external" href="https://github.com/deeplearning540/lesson04/blob/main/lesson.ipynb">the lesson03 repo</a>.</p></li>
+<li><p>for instructors: the video script is available <a class="reference external" href="https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson04/script.ipynb">here</a>.</p></li>
+</ul>
 </div>
 <div class="section" id="check-your-learning">
 <h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-exercise-1 admonition">
 <p class="admonition-title">Exercise 1</p>
-<p><strong>TBA</strong></p>
+<p>The <cite>ROC</cite> acronym stands for</p>
 <ol class="arabic simple">
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
+<li><p>Receiver Operator Curve</p></li>
+<li><p>Receiving Operates Curves</p></li>
+<li><p>Receiver Operating Characteristic</p></li>
+<li><p>Reception Occlusion Characteristic</p></li>
 </ol>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>Fill in the blanks!</p>
+<p>A k-Nearest-Neighbor (kNN) classifier can produce a probability when predicting the class label of an unseen sample <cite>x_q</cite>. This can be achieved by counting class <cite>_______</cite> in the training set neighborhood of this query point.</p>
+<p>For a <cite>k=7</cite> neighborhood, the threshold to decide for any given class in this neighborhood is calculated as <cite>4/__</cite>. In the same setting (<cite>k=7</cite>), let’s assume we find <cite>5</cite> labels for class <cite>1</cite> and <cite>2</cite> labels for class <cite>0</cite>. This means, that we get two probabilities, which are <cite>_____</cite> for class <cite>1</cite> and <cite>_____</cite> for class <cite>0</cite>.</p>
 </div>
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<p>For this lesson, please complete the following steps in order:</p>
 <ol class="arabic simple">
 <li><p>produce a ROC curve for the classifyer you trained in <a class="reference external" href="/source/lesson03/content.rst">lesson03</a>.</p></li>
 <li><p>take another NN based classifyer, e.g. <cite>sklearn.neighbors.RadiusNeighborsClassifier</cite> or <cite>sklearn.neighbors.NearestCentroid</cite> and train it</p></li>
 <li><p>make predictions on the testset with it and produce a ROC</p></li>
-<li><p>combine the 2 ROC curves and discuss</p></li>
+<li><p>combine the 2 ROC curves in a plot and discuss which classifyer is better!</p></li>
 </ol>
 </div>
 <div class="section" id="datasets">
