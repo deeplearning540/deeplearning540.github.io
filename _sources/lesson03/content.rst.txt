@@ -78,13 +78,15 @@ The following questions serve as a help for learners to reflect on the content o
 
 .. admonition:: Exercise 4
 
-   Find the three hidden bug(s)!
+   Find the four hidden bug(s)!
 
    .. code-block:: python
 
       from sklearn.neighbors import KNeighborsClassifier as knn
       from sklearn.model_selection import train_test_split
       from sklearn.metrics import confusion_matrix
+
+      # ... load dataset ...
 
       X_train, X_test, y_train, y_test = train_test_split(X, y,
                                                     test_size = 1.5,
@@ -93,10 +95,10 @@ The following questions serve as a help for learners to reflect on the content o
       kmeans = kmeans.fit(X_train, y_train)
       y_test_hat = kmeans.predict(X_train)
 
-      cm = confusion_matrix(y_test, y_test_hat)
+      cm = confusion_matrix(y_train, y_test_hat)
 
       accuracy = (cm[0,0]+cm[0,1]) / cm.sum()
-      assert accuracy < 1. #this fails!! why?
+      
 
 
 
