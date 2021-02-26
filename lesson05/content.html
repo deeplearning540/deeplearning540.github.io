@@ -12,6 +12,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lesson 06: How did we train" href="../lesson06/content.html" />
@@ -40,41 +41,59 @@
 <ul class="simple">
 <li><p>A perceptron takes multiple inputs, multiplies each by a weight value and sums the weighted inputs. It then applies an activation function to the sum.</p></li>
 <li><p>Multiple perceptrons can be combined to form a neural network which can solve functions that aren’t linearly separable.</p></li>
-<li><p>We can train a whole neural network with the back propagation algorithm. Scikit-learn includes an implementation of this algorithm.</p></li>
-<li><p>Training a neural network requires some training data to show the network examples of what to learn.</p></li>
-<li><p>To validate our training we split the the training data into a training set and a test set.</p></li>
+<li><p>We can train a whole neural network with the back propagation algorithm. keras includes an implementation of this algorithm.</p></li>
 <li><p>To ensure the whole dataset can be used in training and testing we can train multiple times with different subsets of the data acting as training/testing data. This is called cross validation.</p></li>
 </ul>
 </div>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>This lesson is based on <a class="reference external" href="https://carpentries-incubator.github.io/machine-learning-novice-sklearn/05-neural-networks/index.html">Neural Networks</a> and will be shared as a video.</p>
-<p>The content should start with the heading <strong>Multi Layer Perceptrons</strong> directly.</p>
+<p>This lesson will be shared as a video.</p>
+<ul class="simple">
+<li><p>for learners: a stub notebook to get you started can be obtained from <a class="reference external" href="https://github.com/deeplearning540/lesson04/blob/main/lesson.ipynb">the lesson03 repo</a>.</p></li>
+<li><p>for instructors: the video script is available <a class="reference external" href="https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson04/script.ipynb">here</a>.</p></li>
+</ul>
+<p>The lesson is based on the wonderful keras introduction by Walter de Back available <a class="reference external" href="https://gitlab.com/wdeback/dl-keras-tutorial">here</a>.</p>
 </div>
 <div class="section" id="check-your-learning">
 <h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-exercise-1 admonition">
 <p class="admonition-title">Exercise 1</p>
-<p><strong>TBA</strong></p>
+<p>A hidden layer of an artificial neural network consists a fixed set of parts. These are …</p>
 <ol class="arabic simple">
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
+<li><p>weights <span class="math notranslate nohighlight">\(W\)</span> and a bias term <span class="math notranslate nohighlight">\(\vec{b}\)</span></p></li>
+<li><p>weights <span class="math notranslate nohighlight">\(W\)</span> and a non-linear activation function <span class="math notranslate nohighlight">\(F\)</span></p></li>
+<li><p>a bias term <span class="math notranslate nohighlight">\(\vec{b}\)</span> and a non-linear activation function <span class="math notranslate nohighlight">\(F\)</span></p></li>
+<li><p>weights <span class="math notranslate nohighlight">\(W\)</span>, a bias term <span class="math notranslate nohighlight">\(\vec{b}\)</span> and a non-linear activation function <span class="math notranslate nohighlight">\(F\)</span></p></li>
+</ol>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>Unlike <cite>scikit-learn</cite>, <cite>keras</cite> is a machine learning framework that …</p>
+<ol class="arabic simple">
+<li><p>offers one-stop-shop prepared networks that are already published</p></li>
+<li><p>offers building blocks to construct neural networks on CPU or GPU architectures</p></li>
+<li><p>offers an API to either wrap around backends (keras library) or represents the high-level API for <cite>tensorflow</cite></p></li>
+<li><p>all of the above</p></li>
 </ol>
 </div>
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>reproduce the training with a small ANN with the iris dataset using all 4 feature columns.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>import pandas as pd
+import seaborn as sns</p>
+<p>iris = sns.load_iris()
+X = df_iris[[‘sepal_length’,’sepal_width’,’petal_length’,’petal_width’]].values
+y = df_iris[‘species’].values</p>
 <ul class="simple">
-<li><dl class="simple">
-<dt>through OpenML <a class="reference external" href="https://docs.openml.org/Datasets/">https://docs.openml.org/Datasets/</a></dt><dd><ul>
-<li><p><a class="reference external" href="https://sci2s.ugr.es/keel/datasets.php">https://sci2s.ugr.es/keel/datasets.php</a></p></li>
-<li><p><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table">https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table</a></p></li>
+<li><p>compare the loss plot and the accuracy with the penguins dataset: what do you see? Is the MLP overkill here too?</p></li>
 </ul>
-</dd>
-</dl>
 </li>
+<li><p>(optional) We built an extremely simple feed-forward network model. To experiment more, load the [MNIST database of handwritten digits](<a class="reference external" href="http://keras.io/datasets/">http://keras.io/datasets/</a>) and see if you can beat a standard scikit-learn classifier. Unlike the Iris dataset, this is a situation where the power and relative complexity of neural networks is justified. Try it yourself first, but if you get stuck, take a look at [this notebook](<a class="reference external" href="https://github.com/wxs/keras-mnist-tutorial/blob/master/MNIST%20in%20Keras.ipynb">https://github.com/wxs/keras-mnist-tutorial/blob/master/MNIST%20in%20Keras.ipynb</a>).</p></li>
 </ul>
 </div>
 </div>
