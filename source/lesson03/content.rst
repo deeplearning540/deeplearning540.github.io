@@ -28,13 +28,15 @@ The following questions serve as a help for learners to reflect on the content o
 
 .. admonition:: Exercise 1
 
-   When using the k-Nearest-Neighbor (kNN) algorithm to predict the class of an unknown data point the `k` stands for:
+   When using the k-Nearest-Neighbor (kNN) algorithm for classifying a query point `x_q`, the `k` stands for:
 
-   1. the radius around the new point, in which to count all occurring classes
+   1. the number of neighbors that must have a given label for the query point to get this label assigned
    
    2. the number of classes occurring in the data set
    
-   3. the number of nearest labeled data points to look at for reaching a decision
+   3. the number of observations that define a neighborhood
+
+   4. the number of clusters in the dataset
  
  
 .. admonition:: Exercise 2
