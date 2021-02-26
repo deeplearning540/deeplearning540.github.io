@@ -31,6 +31,8 @@ This lesson will be shared as a video.
 Check your Learning
 ===================
 
+The following questions serve as a help for learners to reflect on the content of the videos. Answer at least one question. At best you want to answer these questions as a team.
+
 .. admonition:: Exercise 1
 
    The `ROC` acronym stands for
