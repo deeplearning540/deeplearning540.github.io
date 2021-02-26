@@ -57,16 +57,16 @@ Datasets
 
 * Datasets for clustering. Each of the following synthetic datasets contains several features `x1`, `x2`, ... and a `label` column which comprises (2 classes).
 
-  * `clustering_data_00.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_00.csv>`_
-  * `clustering_data_01.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_01.csv>`_
-  * `clustering_data_02.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_02.csv>`_
-  * `clustering_data_03.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_03.csv>`_
-  * `clustering_data_04.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_04.csv>`_
-  * `clustering_data_05.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_05.csv>`_
-  * `clustering_data_06.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_06.csv>`_
-  * `clustering_data_07.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_07.csv>`_
-  * `clustering_data_08.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_08.csv>`_
-  * `clustering_data_09.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_09.csv>`_
+  * `clustering_data_00.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_00.csv>`_
+  * `clustering_data_01.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_01.csv>`_
+  * `clustering_data_02.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_02.csv>`_
+  * `clustering_data_03.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_03.csv>`_
+  * `clustering_data_04.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_04.csv>`_
+  * `clustering_data_05.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_05.csv>`_
+  * `clustering_data_06.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_06.csv>`_
+  * `clustering_data_07.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_07.csv>`_
+  * `clustering_data_08.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_08.csv>`_
+  * `clustering_data_09.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/blob/main/data/clustering_data_09.csv>`_
 
 * `iris plants <https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset>`_ dataset. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this dataset do the following:
 
