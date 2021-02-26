@@ -24,29 +24,19 @@ Check your Learning
 
 .. admonition:: Exercise 1
 
-   You are provided a table of measurements from a weather station. Each measurements comes with values for temperature, precipation, cloud structure, date, humidity, and a quality ID. The latter tells you if the instrument was performing OK. You'd like to learn an algorithm that is able to predict the quality ID (5 possible integer values from 0 to 4) for any new data coming in. This falls into ...
+   You are provided a table of measurements from a weather station. Each measurements comes with values for temperature, precipation, cloud structure, date, humidity, and a quality ID. The latter tells you if the instrument was performing OK. You'd like to learn a predictor that is able to predict the quality ID for any new data coming in. This falls into ...
 
    1. Supervised Learning
    2. Unsupervised Learning
-   3. Reinforcement Learning
 
 
-.. admonition:: Exercise 2
+.. admonition:: Nearest Neighbor Clustering 
 
-   You are given a dataset of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See `this overview plot <https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_dataset_scatterplot.svg>`_ for help.
-
-   1. Sepal.Length versus Sepal.Width
-   2. Sepal.Length versus Petal.Width
-   3. Petal.Length versus Petal.Width
-   4. Sepal.Width versus Petal.Width
-
-.. admonition:: Exercise 3
-
-   You are helping to organize a conference of more than 1000 attendants. All participants have already paid and are expecting to pick up their conference t-shirt on the first day. Your team is in shock as it discovers that t-shirt sizes have not been recorded during online registration. However, all participants were asked to provide their age, gender, body height and weight. To help out, you sit down to write a python script that predicts the t-shirt size for each participant using a clustering algorithm. You know that you can only get 7 t-shirt sizes (XS, S, M, L, XL, XXL). This falls into:
+   Nearest Neighbor clustering builds a tree like structure from the dataset.
 
    1. Supervised Learning
    2. Unsupervised Learning
-   3. Reinforcement Learning
+
 
 
 Exercises

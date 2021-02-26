@@ -22,11 +22,12 @@ Content
 Check your Learning
 ===================
 
+The following questions serve as a help for learners to reflect on the content of the videos.
+
 .. admonition:: Exercise 1
 
    **In the following, the order of steps was confused, please rearrange:**
-   **predict new data, collect training data, fit training data, compute accuracy**
-
+   
    1. collect training data, compute accuracy, predict new data, fit training data
    2. compute accuracy, collect training data, predict new data, fit training data
    3. collect training data, fit training data, compute accuracy, predict new data
@@ -45,12 +46,12 @@ Check your Learning
 
 .. admonition:: Exercise 3
 
-   **NaN stands for not-a-number and is commonly met in data science workflows if ...**
+   **NaN stands for not-a-number. When loading a dataset with `pandas`, NaN values occur in the loaded data because ...**
 
    1. Input files contain string values in a column
    2. Computational Problems occurred, like computing the square root of a negative number
    3. Data could not be parsed correctly when reading input files into memory
-   4. Predictions for unseen data are off the charts
+   4. there was no internet connection
 
 
 
@@ -67,16 +68,16 @@ Inspired by `the sustainability math project <http://sustainabilitymath.org/stat
 
 * World Grain
 
-  * Data source: http://sustainabilitymath.org/excel/Grain-R.csv 
+  * Data source: about different grains and their production, end-of-year-stock and consumption in the US can be downloaded here:
+
+    * :download:`Grain Production CSV </_static/data/csv/US-Grain-Production.csv>`
+    * :download:`Grain End-of-year Stock CSV </_static/data/csv/US-Grain-EndOfYearStock.csv>`
+    * :download:`Grain Consumption CSV </_static/data/csv/US-Grain-Consumption.csv>`
+
   * Content: grain production, consumption, and ending stocks, totals and by per capita.
-  * Task: conduct a linear regression for grain production and grain consumption versus time (60 years)
+  * Task: conduct a linear regression for grain production/consumption/stock versus time for a grain kind of your liking (60 years)
   
-  * Optional: more data about different grains and their production, end-of-year-stock and consumption in the US can be downloaded here:
-
-    * :download:`Grain Production </_static/data/csv/US-Grain-Production.csv>`
-    * :download:`Grain End-of-year Stock </_static/data/csv/US-Grain-EndOfYearStock.csv>`
-    * :download:`Grain Consumption </_static/data/csv/US-Grain-Consumption.csv>`
-
+  
 * Hourly Wage (by Race) and Gender
 
   * Data source: http://sustainabilitymath.org/excel/EPI-Wages-R.csv
