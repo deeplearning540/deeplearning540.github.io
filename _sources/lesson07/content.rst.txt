@@ -6,13 +6,10 @@ Learning Objectives
 
 - list/repeat the three ingredients to a feed forward network: input, hidden layers, output
 - classify/categorize parts of a feed forward network when presented a network architecture (as from `keras.model.summary()`)
-- describe a fully connected (dense) layer
 - describe a convolutional layer
 - describe a max pooling layer
-- describe an activation function
-- describe a softmax layer
-- argue against abundant use of the sigmoid function (exploding/vanishing gradients)
 - calculate the output data shape of an image when transformed by a fixed convolutional layer
+
 - interpret errors with convolutional layers
 - execute a 3 layer network on the MNIST data (or similar)
 - differentiate a dense layer and a convolutional layer
@@ -23,13 +20,9 @@ Learning Objectives
 Content
 =======
 
-This lesson may be based on ???
-
-TODOS:
-
-* search for lesson in keras
-* consider working entirely with images for the time being
-* content might spill from lesson 06
+Adapt
+- https://gitlab.com/wdeback/dl-keras-tutorial/-/blob/master/notebooks/2-convolution.ipynb
+- https://gitlab.com/wdeback/dl-keras-tutorial/-/blob/master/notebooks/3-cnn-mnist.ipynb
 
 Check your Learning
 ===================
