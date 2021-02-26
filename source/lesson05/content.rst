@@ -22,6 +22,7 @@ This lesson will be shared as a video.
 
 The lesson is based on the wonderful keras introduction by Walter de Back available `here <https://gitlab.com/wdeback/dl-keras-tutorial>`_.
 
+
 Check your Learning
 ===================
 
