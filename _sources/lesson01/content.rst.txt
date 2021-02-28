@@ -82,4 +82,5 @@ Inspired by `the sustainability math project <http://sustainabilitymath.org/stat
 
   * Data source: http://sustainabilitymath.org/excel/EPI-Wages-R.csv
   * Content: median and average hourly wages (in 2019 dollars) with categories of men and women by White, Black, and Hispanic.
-  * Task: conduct a linear regression for wages earned versus time (47 years) on this subset: :download:`reduced wages dataset </_static/data/csv/EPI-Wages-subset.csv>`
+  * Task: conduct a linear regression for wages earned versus time (47 years) for both men and women on this subset: :download:`reduced wages dataset </_static/data/csv/EPI-Wages-subset.csv>`
+  * At which year will equal pay be achieved? At what wage?
