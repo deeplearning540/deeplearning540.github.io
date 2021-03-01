@@ -59,7 +59,8 @@ Check your Learning
 Exercises
 =========
 
-* perform the same backpropagation as in the video but using the `sigmoid activation <https://en.wikipedia.org/wiki/Sigmoid_function>`_ function. Use `b=1`, `x=.5` and `w=3` for the inputs.
+* perform the same single-neuron backpropagation as in the video but using the `sigmoid activation <https://en.wikipedia.org/wiki/Sigmoid_function>`_ function. Use `b=1`, `x=.5` and `w=3` for the inputs.
 
+* perform the same single-neuron backpropagation as in the video but include the loss function for the two sample pairs (a) `{y=1, y_hat=1}` and (b) `{y=1, y_hat=0}`. How would your single weight be changed for (b) with respect to (a)? 
 
 
