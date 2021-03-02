@@ -21,7 +21,8 @@ This lesson takes references to lesson 06.
 Content
 =======
 
-Based on discussions in `Mathematics for Machine Learning book <https://mml-book.github.io/>`_ by Deisenroth, A. Aldo Faisal, and Cheng Soon Ong.
+This content is based on discussions in `Mathematics for Machine Learning book <https://mml-book.github.io/>`_ by Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, as well as the wonderful presentation in Sebastian Raschka's `lecture L6.2 Understanding Automatic Differentiation via Computation Graphs <https://youtu.be/oY6-i2Ybin4>`_.
+       
 
 Check your Learning
 ===================
@@ -33,12 +34,12 @@ Check your Learning
    1. a mini-batch represents the entire dataset and hence is enough to optimize on
    2. the optimisation converges faster
    3. the optimisation can be performed in memory independent of the dataset size
-   4. the optimisation will converge always in a global optimum
+   4. the optimisation will converge always into a global optimum
 
 
 .. admonition:: Exercise 2
 
-   Categorical Cross-Entropy is part of a well-known divergence in statistics. A divergence is a method to compare two probability density functions. It provides a large value if two distributions are not similar. This well-known divergance that spurrs the Categorical Cross-Entropy is ...
+   Categorical Cross-Entropy is part of a well-known divergence in statistics. A divergence is a method to compare two probability density functions. It provides a large value if two distributions are different and a small value if they are similar. This well-known divergance that spurrs the Categorical Cross-Entropy is ...
 
    1. Mean-Squared-Error divergence
    2. Negative-Log-Likelihood divergence
