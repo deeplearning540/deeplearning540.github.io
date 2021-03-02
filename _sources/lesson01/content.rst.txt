@@ -46,7 +46,8 @@ The following questions serve as a help for learners to reflect on the content o
 
 .. admonition:: Exercise 3
 
-   **NaN stands for not-a-number. When loading a dataset with `pandas`, NaN values occur in the loaded data because ...**
+   **NaN stands for not-a-number. When loading a data set with `pandas`, NaN values occur in the loaded data because ...**
+   **NaN stands for not-a-number. When loading a data set with `pandas`, NaN values occur in the loaded data because ...**
 
    1. Input files contain string values in a column
    2. Computational Problems occurred, like computing the square root of a negative number
@@ -82,5 +83,6 @@ Inspired by `the sustainability math project <http://sustainabilitymath.org/stat
 
   * Data source: http://sustainabilitymath.org/excel/EPI-Wages-R.csv
   * Content: median and average hourly wages (in 2019 dollars) with categories of men and women by White, Black, and Hispanic.
-  * Task: conduct a linear regression for wages earned versus time (47 years) for both men and women on this subset: :download:`reduced wages dataset </_static/data/csv/EPI-Wages-subset.csv>`
+  * Task: conduct a linear regression for wages earned versus time (47 years) for both men and women on this subset: :download:`reduced wages data set </_static/data/csv/EPI-Wages-subset.csv>`
+  * Task: conduct a linear regression for wages earned versus time (47 years) for both men and women on this subset: :download:`reduced wages data set </_static/data/csv/EPI-Wages-subset.csv>`
   * At which year will equal pay be achieved? At what wage?

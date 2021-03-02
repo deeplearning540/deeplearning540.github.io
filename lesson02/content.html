@@ -41,8 +41,9 @@
 <li><p>understand that unsupervised training does not require ground truth data labels</p></li>
 <li><p>identify problems that are not backed up by a model (apply ML to fit an arbitrary model)</p></li>
 <li><p>relate nearest neighbor clustering to an algorithm in <cite>sklearn</cite></p></li>
-<li><p>examine a dataset and search for features that show a clear separation between samples</p></li>
-<li><p>argue in favor of clustering for a provided dataset, e.g. if simple decision boundaries are sufficient</p></li>
+<li><p>examine a data set and search for features that show a clear separation between samples</p></li>
+<li><p>examine a data set and search for features that show a clear separation between samples</p></li>
+<li><p>argue in favor of clustering for a provided data set, e.g. if simple decision boundaries are sufficient</p></li>
 </ul>
 </div>
 <div class="section" id="content">
@@ -67,7 +68,8 @@
 </div>
 <div class="admonition-exercise-2 admonition">
 <p class="admonition-title">Exercise 2</p>
-<p>You are given a dataset of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See <a class="reference external" href="https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_dataset_scatterplot.svg">this overview plot</a> for help.</p>
+<p>You are given a data set of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See <a class="reference external" href="https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_dataset_scatterplot.svg">this overview plot</a> for help.
+You are given a data set of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See <a class="reference external" href="https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_dataset_scatterplot.svg">this overview plot</a> for help.</p>
 <ol class="arabic simple">
 <li><p>Sepal.Length versus Sepal.Width</p></li>
 <li><p>Sepal.Length versus Petal.Width</p></li>
@@ -87,16 +89,16 @@
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
-<p>Choose any exercise from the two categories below. Regarding the dataset, consult the corresponding section.</p>
+<p>Choose any exercise from the two categories below. Regarding the data set, consult the corresponding section.</p>
 <ul class="simple">
-<li><p>Cluster at least one of the synthetic datasets in the <cite>x1</cite> and <cite>x2</cite> plane.</p></li>
-<li><p>Cluster the <a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">iris plants</a> dataset. Use the columns <cite>petal_length</cite> vs. <cite>petal_width</cite>. The class label is provided as the <cite>target</cite> column.</p></li>
+<li><p>Cluster at least one of the synthetic data sets in the <cite>x1</cite> and <cite>x2</cite> plane.</p></li>
+<li><p>Cluster the <a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">iris plants</a> data set. Use the columns <cite>petal_length</cite> vs. <cite>petal_width</cite>. The class label is provided as the <cite>target</cite> column.</p></li>
 </ul>
 </div>
 <div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Datasets for clustering. Each of the following synthetic datasets contains several features <cite>x1</cite>, <cite>x2</cite>, … and a <cite>label</cite> column which comprises (2 classes).</p>
+<li><p>Datasets for clustering. Each of the following synthetic data sets contains several features <cite>x1</cite>, <cite>x2</cite>, … and a <cite>label</cite> column which comprises (2 classes).</p>
 <ul>
 <li><p><a class="reference external" href="https://raw.githubusercontent.com/deeplearning540/lesson02/main/data/clustering_data_00.csv">clustering_data_00.csv</a></p></li>
 <li><p><a class="reference external" href="https://raw.githubusercontent.com/deeplearning540/lesson02/main/data/clustering_data_01.csv">clustering_data_01.csv</a></p></li>
@@ -110,7 +112,8 @@
 <li><p><a class="reference external" href="https://raw.githubusercontent.com/deeplearning540/lesson02/main/data/clustering_data_09.csv">clustering_data_09.csv</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">iris plants</a> dataset. Use the columns <cite>petal_length</cite> vs. <cite>petal_width</cite>. The class label is provided as the <cite>target</cite> column. To obtain the dataframe from this dataset do the following:</p></li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">iris plants</a> data set. Use the columns <cite>petal_length</cite> vs. <cite>petal_width</cite>. The class label is provided as the <cite>target</cite> column. To obtain the dataframe from this data set do the following:</p></li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset">iris plants</a> data set. Use the columns <cite>petal_length</cite> vs. <cite>petal_width</cite>. The class label is provided as the <cite>target</cite> column. To obtain the dataframe from this data set do the following:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>

@@ -36,16 +36,16 @@ The following questions serve as a help for learners to reflect on the content o
    
    3. the number of observations that define a neighborhood
 
-   4. the number of clusters in the dataset
+   4. the number of clusters in the data set
  
  
 .. admonition:: Exercise 2
 
-   When going through tutorials and exercises that discuss the k-Nearest-Neighbor (kNN) method, you observe that `k` is typically chosen to be an odd number. Checking the code, `sklearn` also access even numbers for `k`. Why do people tend to choose odd numbers?
+   When going through tutorials and exercises that discuss the k-Nearest-Neighbor (kNN) method, you observe that `k` is typically chosen to be an odd number. Checking the code, `sklearn` also allows even numbers for `k`! Why do people tend to choose odd numbers?
 
    1. tradition that often works best in practice
    
-   2. odd numbers prevent ties from happening with the majaority vote
+   2. odd numbers prevent ties from happening with the majority vote
    
    3. this way, the total number of samples in the neighborhood is always even as one has to add the query sample
    
@@ -86,7 +86,8 @@ The following questions serve as a help for learners to reflect on the content o
       from sklearn.model_selection import train_test_split
       from sklearn.metrics import confusion_matrix
 
-      # ... load dataset ...
+      # ... load data set ...
+      # ... load data set ...
 
       X_train, X_test, y_train, y_test = train_test_split(X, y,
                                                     test_size = 1.5,
@@ -105,12 +106,14 @@ The following questions serve as a help for learners to reflect on the content o
 Exercises
 =========
 
-Use the dataset you used for `lesson02 </source/lesson02/content.rst>`_ or be brave and choose a different one. Complete the following steps in order:
+Use the data set you used for `lesson02 </source/lesson02/content.rst>`_ or be brave and choose a different one. Complete the following steps in order:
+Use the data set you used for `lesson02 </source/lesson02/content.rst>`_ or be brave and choose a different one. Complete the following steps in order:
 
 For part a
 ----------
 
-- Split your dataset into train and test set at a fixed ratio.
+- Split your data set into train and test set at a fixed ratio.
+- Split your data set into train and test set at a fixed ratio.
 
 - Train a kNN classification on the training set with a fixed value of `k`. 
 
@@ -136,7 +139,7 @@ For part b
 Datasets
 ========
 
-* Datasets for clustering. Each of the following synthetic datasets contains several features `x1`, `x2`, ... and a `label` column which comprises (2 classes).
+* Datasets for clustering. Each of the following synthetic data sets contains several features `x1`, `x2`, ... and a `label` column which comprises (2 classes).
 
   * `clustering_data_00.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_00.csv>`_
   * `clustering_data_01.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_01.csv>`_
@@ -149,7 +152,8 @@ Datasets
   * `clustering_data_08.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_08.csv>`_
   * `clustering_data_09.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_09.csv>`_
 
-* `iris plants <https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset>`_ dataset. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this dataset do the following:
+* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-data set>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
+* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-data set>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
 
 .. code-block:: python
 

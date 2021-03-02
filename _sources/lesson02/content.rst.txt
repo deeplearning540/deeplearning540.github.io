@@ -8,8 +8,9 @@ Learning Objectives
 * understand that unsupervised training does not require ground truth data labels
 * identify problems that are not backed up by a model (apply ML to fit an arbitrary model)
 * relate nearest neighbor clustering to an algorithm in `sklearn`
-* examine a dataset and search for features that show a clear separation between samples
-* argue in favor of clustering for a provided dataset, e.g. if simple decision boundaries are sufficient
+* examine a data set and search for features that show a clear separation between samples
+* examine a data set and search for features that show a clear separation between samples
+* argue in favor of clustering for a provided data set, e.g. if simple decision boundaries are sufficient
 
 
 Content
@@ -36,7 +37,8 @@ The following questions serve as a help for learners to reflect on the content o
 
 .. admonition:: Exercise 2
 
-   You are given a dataset of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See `this overview plot <https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_dataset_scatterplot.svg>`_ for help.
+   You are given a data set of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See `this overview plot <https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_data set_scatterplot.svg>`_ for help.
+   You are given a data set of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See `this overview plot <https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_data set_scatterplot.svg>`_ for help.
 
    1. Sepal.Length versus Sepal.Width
    2. Sepal.Length versus Petal.Width
@@ -55,17 +57,17 @@ The following questions serve as a help for learners to reflect on the content o
 Exercises
 =========
 
-Choose any exercise from the two categories below. Regarding the dataset, consult the corresponding section.
+Choose any exercise from the two categories below. Regarding the data set, consult the corresponding section.
 
-* Cluster at least one of the synthetic datasets in the `x1` and `x2` plane. 
+* Cluster at least one of the synthetic data sets in the `x1` and `x2` plane. 
 
-* Cluster the `iris plants <https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset>`_ dataset. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column.
+* Cluster the `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-data set>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column.
 
 
 Datasets
 ========
 
-* Datasets for clustering. Each of the following synthetic datasets contains several features `x1`, `x2`, ... and a `label` column which comprises (2 classes).
+* Datasets for clustering. Each of the following synthetic data sets contains several features `x1`, `x2`, ... and a `label` column which comprises (2 classes).
 
   * `clustering_data_00.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/main/data/clustering_data_00.csv>`_
   * `clustering_data_01.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/main/data/clustering_data_01.csv>`_
@@ -78,7 +80,8 @@ Datasets
   * `clustering_data_08.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/main/data/clustering_data_08.csv>`_
   * `clustering_data_09.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/main/data/clustering_data_09.csv>`_
 
-* `iris plants <https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset>`_ dataset. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this dataset do the following:
+* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-data set>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
+* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-data set>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
 
 .. code-block:: python
 

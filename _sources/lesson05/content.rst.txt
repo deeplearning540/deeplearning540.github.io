@@ -9,7 +9,8 @@ Learning Objectives
 * A perceptron takes multiple inputs, multiplies each by a weight value and sums the weighted inputs. It then applies an activation function to the sum.
 * Multiple perceptrons can be combined to form a neural network which can solve functions that aren’t linearly separable.
 * We can train a whole neural network with the back propagation algorithm. keras includes an implementation of this algorithm.
-* To ensure the whole dataset can be used in training and testing we can train multiple times with different subsets of the data acting as training/testing data. This is called cross validation.
+* To ensure the whole data set can be used in training and testing we can train multiple times with different subsets of the data acting as training/testing data. This is called cross validation.
+* To ensure the whole data set can be used in training and testing we can train multiple times with different subsets of the data acting as training/testing data. This is called cross validation.
 
 
 Content
@@ -51,7 +52,8 @@ The following questions serve as a help for learners to reflect on the content o
 Exercises
 =========
 
-* Reproduce the training with a small ANN using the iris dataset including all 4 feature columns. Follow the steps below to load the dataset. Compare the loss plot and the accuracy with the penguins dataset: what do you see? Is the MLP overkill here too?
+* Reproduce the training with a small ANN using the iris data set including all 4 feature columns. Follow the steps below to load the data set. Compare the loss plot and the accuracy with the penguins data set: what do you see? Is the MLP overkill here too?
+* Reproduce the training with a small ANN using the iris data set including all 4 feature columns. Follow the steps below to load the data set. Compare the loss plot and the accuracy with the penguins data set: what do you see? Is the MLP overkill here too?
 
   .. code-block:: python
 
@@ -63,4 +65,4 @@ Exercises
   y = df_iris['species'].values
 
 
-* (optional) We built an extremely simple feed-forward network model. To experiment more, load the [MNIST database of handwritten digits](http://keras.io/datasets/) and see if you can beat a standard scikit-learn classifier. Unlike the Iris dataset, this is a situation where the power and relative complexity of neural networks is justified. Try it yourself first, but if you get stuck, take a look at [this notebook](https://github.com/wxs/keras-mnist-tutorial/blob/master/MNIST%20in%20Keras.ipynb).
+* (optional) We built an extremely simple feed-forward network model. To experiment more, load the [MNIST database of handwritten digits](http://keras.io/data sets/) and see if you can beat a standard scikit-learn classifier. Unlike the Iris data set, this is a situation where the power and relative complexity of neural networks is justified. Try it yourself first, but if you get stuck, take a look at [this notebook](https://github.com/wxs/keras-mnist-tutorial/blob/master/MNIST%20in%20Keras.ipynb).
