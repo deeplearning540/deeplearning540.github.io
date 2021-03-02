@@ -4,41 +4,67 @@ Lesson 06: How did we train
 Learning Objectives
 ===================
 
-**To be updated, content might spill into lesson 07**
+This lesson takes references to lesson 06.
 
 - list/repeat the three ingredients to a feed forward network: input, hidden layers, output
 
 - describe training with mini-batched based weight-update rule
 
 - describe a softmax layer
-- motivate the loss function of categorical crossentropy
+- motivate the loss function of categorical crossentropy (information theory vs. statistics)
 
 - define backpropagation
 - calculate example backpropagation
+- generalize to full network
 
 
 Content
 =======
 
-based on discussion in `Mathematics for Machine Learning` book
+**The slides** shown in the video can be obtained from `the lesson repo <https://github.com/deeplearning540/lesson06/releases/download/v2021.03.03-a/refs.tags.v2021.03.03-a-slides.pdf>`_.
+
+This content is based on discussions in `Mathematics for Machine Learning book <https://mml-book.github.io/>`_ by Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, as well as the wonderful presentation in Sebastian Raschka's `lecture L6.2 Understanding Automatic Differentiation via Computation Graphs <https://youtu.be/oY6-i2Ybin4>`_.
+
+
 
 Check your Learning
 ===================
 
 .. admonition:: Exercise 1
 
-   **TBA**
+   The advantage of mini-batched based optimisation is ...
 
-   1. ???
-   2. ???
-   3. ???
-   4. ???
+   1. a mini-batch represents the entire dataset and hence is enough to optimize on
+   2. the optimisation converges faster
+   3. the optimisation can be performed in memory independent of the dataset size
+   4. the optimisation will converge always into a global optimum
+
+
+.. admonition:: Exercise 2
+
+   Categorical Cross-Entropy is part of a well-known divergence in statistics. A divergence is a method to compare two probability density functions. It provides a large value if two distributions are different and a small value if they are similar. This well-known divergance that spurrs the Categorical Cross-Entropy is ...
+
+   1. Mean-Squared-Error divergence
+   2. Negative-Log-Likelihood divergence
+   3. Kullback-Leibler divergence
+   4. Maximum-Mean-Discreptancy divergence
+
+
+.. admonition:: Exercise 3
+
+   The gradient that is required for gradient descent is the gradient ...
+
+   1. of the loss function `L` with respect to the testset input data, `df/dx`, given the network parameters `theta`
+   2. of the network `f` with respect to the input data, `df/dx`, given the network parameters `theta`
+   3. of the network `f` with respect to the network parameters, `df/dtheta`, given the training data `x`
+   4. of the loss function `L` with respect to the network parameters, `df/dtheta`, given the training data `x`
 
 
 Exercises
 =========
 
-* through `OpenML <https://docs.openml.org/Datasets/>`_ or `keras datasets <https://keras.io/api/datasets/>`_
-   * https://sci2s.ugr.es/keel/datasets.php
-   * https://archive.ics.uci.edu/ml/datasets.php?format=&task=cla&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table
+* perform the same single-neuron backpropagation as in the video but using the `sigmoid activation <https://en.wikipedia.org/wiki/Sigmoid_function>`_ function. Use `b=1`, `x=.5` and `w=3` for the inputs.
+
+* perform the same single-neuron backpropagation as in the video but include the loss function for the two sample pairs (a) `{y=1, y_hat=1}` and (b) `{y=1, y_hat=0}`. How would your single weight be changed for (b) with respect to (a)? 
+
 
