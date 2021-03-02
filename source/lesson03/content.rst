@@ -36,7 +36,7 @@ The following questions serve as a help for learners to reflect on the content o
    
    3. the number of observations that define a neighborhood
 
-   4. the number of clusters in the dataset
+   4. the number of clusters in the data set
  
  
 .. admonition:: Exercise 2
@@ -139,7 +139,7 @@ For part b
 Datasets
 ========
 
-* Datasets for clustering. Each of the following synthetic datasets contains several features `x1`, `x2`, ... and a `label` column which comprises (2 classes).
+* Datasets for clustering. Each of the following synthetic data sets contains several features `x1`, `x2`, ... and a `label` column which comprises (2 classes).
 
   * `clustering_data_00.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_00.csv>`_
   * `clustering_data_01.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_01.csv>`_
