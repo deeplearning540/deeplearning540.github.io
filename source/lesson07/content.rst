@@ -46,7 +46,7 @@ Check your Learning
    #define the network
    conv1 = Conv2D(16, kernel_size=(3,3), activation='______', input_shape=X_train.shape[1:])
    conv2 = ______(32, kernel_size=(3,3), activation='relu')
-   mpool = MaxPooling2D(pool_size=(2,2))
+   mpool = _________(pool_size=(2,2))
 
    ## MLP layers
    flat = Flatten()
@@ -66,6 +66,25 @@ Check your Learning
    output_yhat = dense2(x)
 
    model = keras.Model(inputs = _______, outputs = _______, name="hello-world-cnn")
+
+
+.. admonition:: Exercise 2
+
+   The `Flatten` operation rearranges an input image (or feature map) into a sequence of numbers. How does it perform this?
+
+   1. the pixel intensities are averaged per row and concatenated
+   2. all rows of the input are added and provided as a result
+   3. all columns of the input are concatenated (from top to bottom)
+   4. all rows of the input are concatenated (from top to bottom)
+
+.. admonition:: Exercise 3
+
+   For an input image shape of `28x28` what is the shape of the feature map after running the image through a single `5x5` convolutional filter?
+
+   1. `24x28`
+   2. `20x28`
+   3. `26x26`
+   4. `24x24`
 
 .. admonition:: Exercise 4
 
