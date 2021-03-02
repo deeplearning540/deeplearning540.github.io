@@ -36,44 +36,60 @@
 <h1>Lesson 06: How did we train<a class="headerlink" href="#lesson-06-how-did-we-train" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
-<p><strong>To be updated, content might spill into lesson 07</strong></p>
+<p>This lesson takes references to lesson 06.</p>
 <ul class="simple">
 <li><p>list/repeat the three ingredients to a feed forward network: input, hidden layers, output</p></li>
 <li><p>describe training with mini-batched based weight-update rule</p></li>
 <li><p>describe a softmax layer</p></li>
-<li><p>motivate the loss function of categorical crossentropy</p></li>
+<li><p>motivate the loss function of categorical crossentropy (information theory vs. statistics)</p></li>
 <li><p>define backpropagation</p></li>
 <li><p>calculate example backpropagation</p></li>
+<li><p>generalize to full network</p></li>
 </ul>
 </div>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>based on discussion in <cite>Mathematics for Machine Learning</cite> book</p>
+<p><strong>The slides</strong> shown in the video can be obtained from <a class="reference external" href="https://github.com/deeplearning540/lesson06/releases/download/v2021.03.03-a/refs.tags.v2021.03.03-a-slides.pdf">the lesson repo</a>.</p>
+<p>This content is based on discussions in <a class="reference external" href="https://mml-book.github.io/">Mathematics for Machine Learning book</a> by Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, as well as the wonderful presentation in Sebastian Raschka’s <a class="reference external" href="https://youtu.be/oY6-i2Ybin4">lecture L6.2 Understanding Automatic Differentiation via Computation Graphs</a>.</p>
 </div>
 <div class="section" id="check-your-learning">
 <h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-exercise-1 admonition">
 <p class="admonition-title">Exercise 1</p>
-<p><strong>TBA</strong></p>
+<p>The advantage of mini-batched based optimisation is …</p>
 <ol class="arabic simple">
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
+<li><p>a mini-batch represents the entire dataset and hence is enough to optimize on</p></li>
+<li><p>the optimisation converges faster</p></li>
+<li><p>the optimisation can be performed in memory independent of the dataset size</p></li>
+<li><p>the optimisation will converge always into a global optimum</p></li>
+</ol>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>Categorical Cross-Entropy is part of a well-known divergence in statistics. A divergence is a method to compare two probability density functions. It provides a large value if two distributions are different and a small value if they are similar. This well-known divergance that spurrs the Categorical Cross-Entropy is …</p>
+<ol class="arabic simple">
+<li><p>Mean-Squared-Error divergence</p></li>
+<li><p>Negative-Log-Likelihood divergence</p></li>
+<li><p>Kullback-Leibler divergence</p></li>
+<li><p>Maximum-Mean-Discreptancy divergence</p></li>
+</ol>
+</div>
+<div class="admonition-exercise-3 admonition">
+<p class="admonition-title">Exercise 3</p>
+<p>The gradient that is required for gradient descent is the gradient …</p>
+<ol class="arabic simple">
+<li><p>of the loss function <cite>L</cite> with respect to the testset input data, <cite>df/dx</cite>, given the network parameters <cite>theta</cite></p></li>
+<li><p>of the network <cite>f</cite> with respect to the input data, <cite>df/dx</cite>, given the network parameters <cite>theta</cite></p></li>
+<li><p>of the network <cite>f</cite> with respect to the network parameters, <cite>df/dtheta</cite>, given the training data <cite>x</cite></p></li>
+<li><p>of the loss function <cite>L</cite> with respect to the network parameters, <cite>df/dtheta</cite>, given the training data <cite>x</cite></p></li>
 </ol>
 </div>
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><dl class="simple">
-<dt>through <a class="reference external" href="https://docs.openml.org/Datasets/">OpenML</a> or <a class="reference external" href="https://keras.io/api/datasets/">keras datasets</a></dt><dd><ul>
-<li><p><a class="reference external" href="https://sci2s.ugr.es/keel/datasets.php">https://sci2s.ugr.es/keel/datasets.php</a></p></li>
-<li><p><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table">https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table</a></p></li>
-</ul>
-</dd>
-</dl>
-</li>
+<li><p>perform the same single-neuron backpropagation as in the video but using the <a class="reference external" href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoid activation</a> function. Use <cite>b=1</cite>, <cite>x=.5</cite> and <cite>w=3</cite> for the inputs.</p></li>
+<li><p>perform the same single-neuron backpropagation as in the video but include the loss function for the two sample pairs (a) <cite>{y=1, y_hat=1}</cite> and (b) <cite>{y=1, y_hat=0}</cite>. How would your single weight be changed for (b) with respect to (a)?</p></li>
 </ul>
 </div>
 </div>
