@@ -21,8 +21,11 @@ This lesson takes references to lesson 06.
 Content
 =======
 
+**The slides** shown in the video can be obtained from `the lesson repo <https://github.com/deeplearning540/lesson06/releases/download/v2021.03.03-a/refs.tags.v2021.03.03-a-slides.pdf>`_.
+
 This content is based on discussions in `Mathematics for Machine Learning book <https://mml-book.github.io/>`_ by Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, as well as the wonderful presentation in Sebastian Raschka's `lecture L6.2 Understanding Automatic Differentiation via Computation Graphs <https://youtu.be/oY6-i2Ybin4>`_.
-       
+
+
 
 Check your Learning
 ===================
