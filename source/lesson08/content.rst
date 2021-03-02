@@ -1,50 +1,23 @@
-Lesson 08: Deep Learning is ML too
-**********************************
+Lesson 08: Capstone
+*******************
 
 Learning Objectives
 ===================
 
-- define precision and recall/accuracy for a classification task
-- state that cross-validation is used in Deep Learning too
-- describe how to split a data set into training/test/validation set
-- describe how to split a data set into training/test/validation set
-- describe how Drop-Out Layers work
-- execute a plot to draw the loss per epoch for training and test set
-- compare values of precision and recall
-- differentiate a overfitting network from a well-behaved network
-- detect when a network is underfitting or overfitting
-- design countermeasures for overfitting (e.g. more dropout layers, reduce model size)
-- design countermeasures for underfitting (e.g. larger model)
-- critique a provided network design
+- experiment with different methods of machine learning
+- structure the project on your own or in a team
+- compare your results in a team
 
-Content
+Physics
 =======
 
-This lesson may be based on ???
+The top quark was the last being discovered. Final states with top quarks remain a very effective field to probe new or known physics. In this capstone project, you are to classify events containing a top quark or not.
 
-TODOS:
+The event signature of top quarks can be quite distinct from other processes. In this capstone project, 2 types of events have been isolated: 1-prong and 3-prong events. 1-prong events mark the background process that is to be discarded. 3-prong events mark the signal process and are to be found.
 
-* search for lesson in keras
-* consider working entirely with images for the time being
+For this, two notebooks have been prepared that mark the basis for an analysis:
 
+- `Top Tagging 1 notebook <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/TopTagging_1.ipynb>`_ allows you to conduct the analysis using the tabular features of the events only
+- `Top Tagging 2 notebook <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/TopTagging_2.ipynb>`_ allows you to conduct the analysis using the events features as images
 
-Check your Learning
-===================
-
-.. admonition:: Exercise 1
-
-   **TBA**
-
-   1. ???
-   2. ???
-   3. ???
-   4. ???
-
-
-Exercises
-=========
-
-* through `OpenML <https://docs.openml.org/Datasets/>`_ or `keras data sets <https://keras.io/api/data sets/>`_
-   * https://sci2s.ugr.es/keel/datasets.php
-   * https://archive.ics.uci.edu/ml/datasets.php?format=&task=cla&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table
-
+It is for you to decide which dataset you'd like to experiment with: tabular or image like data. Please compose a classification algorithm that provides a area-under-the-curve of a ROC curve as high as possible.
