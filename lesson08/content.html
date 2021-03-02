@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 08: Deep Learning is ML too &#8212; deeplearning in 540 minutes  documentation</title>
+    <title>Lesson 08: Capstone &#8212; deeplearning in 540 minutes  documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -32,59 +32,27 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="lesson-08-deep-learning-is-ml-too">
-<h1>Lesson 08: Deep Learning is ML too<a class="headerlink" href="#lesson-08-deep-learning-is-ml-too" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lesson-08-capstone">
+<h1>Lesson 08: Capstone<a class="headerlink" href="#lesson-08-capstone" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>define precision and recall/accuracy for a classification task</p></li>
-<li><p>state that cross-validation is used in Deep Learning too</p></li>
-<li><p>describe how to split a data set into training/test/validation set</p></li>
-<li><p>describe how to split a data set into training/test/validation set</p></li>
-<li><p>describe how Drop-Out Layers work</p></li>
-<li><p>execute a plot to draw the loss per epoch for training and test set</p></li>
-<li><p>compare values of precision and recall</p></li>
-<li><p>differentiate a overfitting network from a well-behaved network</p></li>
-<li><p>detect when a network is underfitting or overfitting</p></li>
-<li><p>design countermeasures for overfitting (e.g. more dropout layers, reduce model size)</p></li>
-<li><p>design countermeasures for underfitting (e.g. larger model)</p></li>
-<li><p>critique a provided network design</p></li>
+<li><p>experiment with different methods of machine learning</p></li>
+<li><p>structure the project on your own or in a team</p></li>
+<li><p>compare your results in a team</p></li>
 </ul>
 </div>
-<div class="section" id="content">
-<h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>This lesson may be based on ???</p>
-<p>TODOS:</p>
+<div class="section" id="physics">
+<h2>Physics<a class="headerlink" href="#physics" title="Permalink to this headline">¶</a></h2>
+<p>The top quark was the last being discovered. Final states with top quarks remain a very effective field to probe new or known physics. In this capstone project, you are to classify events containing a top quark or not.</p>
+<p>The event signature of top quarks can be quite distinct from other processes. In this capstone project, 2 types of events have been isolated: 1-prong and 3-prong events. 1-prong events mark the background process that is to be discarded. 3-prong events mark the signal process and are to be found.</p>
+<p>For this, two notebooks have been prepared that mark the basis for an analysis:</p>
 <ul class="simple">
-<li><p>search for lesson in keras</p></li>
-<li><p>consider working entirely with images for the time being</p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/TopTagging_1.ipynb">Top Tagging 1 notebook</a> allows you to conduct the analysis using the tabular features of the events only</p></li>
+<li><p><a class="reference external" href="https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/TopTagging_2.ipynb">Top Tagging 2 notebook</a> allows you to conduct the analysis using the events features as images</p></li>
 </ul>
-</div>
-<div class="section" id="check-your-learning">
-<h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-exercise-1 admonition">
-<p class="admonition-title">Exercise 1</p>
-<p><strong>TBA</strong></p>
-<ol class="arabic simple">
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
-<li><p>???</p></li>
-</ol>
-</div>
-</div>
-<div class="section" id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><dl class="simple">
-<dt>through <a class="reference external" href="https://docs.openml.org/Datasets/">OpenML</a> or <a class="reference external" href="https://keras.io/api/datasets/">keras data sets</a></dt><dd><ul>
-<li><p><a class="reference external" href="https://sci2s.ugr.es/keel/datasets.php">https://sci2s.ugr.es/keel/datasets.php</a></p></li>
-<li><p><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table">https://archive.ics.uci.edu/ml/datasets.php?format=&amp;task=cla&amp;att=&amp;area=&amp;numAtt=&amp;numIns=&amp;type=&amp;sort=nameUp&amp;view=table</a></p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
+<p>It is for you to decide which dataset you’d like to experiment with: tabular or image like data. Please compose a classification algorithm that provides a area-under-the-curve of a ROC curve as high as possible.</p>
+<p>More information on the project can be obtained from <a class="reference external" href="https://github.com/dkgithub/wuhan_DL_labs/blob/master/top-tagging/Lab_2nd_week.pdf">the original competition repo</a>.</p>
 </div>
 </div>
 
@@ -115,11 +83,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../lesson05/content.html">Lesson 05: Neural Networks as Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: How did we train</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: CNNs</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 08: Deep Learning is ML too</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 08: Capstone</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#physics">Physics</a></li>
 </ul>
 </li>
 </ul>
