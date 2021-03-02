@@ -80,7 +80,8 @@ Datasets
   * `clustering_data_08.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_08.csv>`_
   * `clustering_data_09.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_09.csv>`_
 
-* `iris plants <https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset>`_ dataset. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this dataset do the following:
+* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-data set>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
+* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-data set>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
 
 .. code-block:: python
 

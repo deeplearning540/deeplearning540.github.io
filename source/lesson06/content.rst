@@ -34,9 +34,11 @@ Check your Learning
 
    The advantage of mini-batched based optimisation is ...
 
-   1. a mini-batch represents the entire dataset and hence is enough to optimize on
+   1. a mini-batch represents the entire data set and hence is enough to optimize on
+   1. a mini-batch represents the entire data set and hence is enough to optimize on
    2. the optimisation converges faster
-   3. the optimisation can be performed in memory independent of the dataset size
+   3. the optimisation can be performed in memory independent of the data set size
+   3. the optimisation can be performed in memory independent of the data set size
    4. the optimisation will converge always into a global optimum
 
 

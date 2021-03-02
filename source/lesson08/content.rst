@@ -6,7 +6,8 @@ Learning Objectives
 
 - define precision and recall/accuracy for a classification task
 - state that cross-validation is used in Deep Learning too
-- describe how to split a dataset into training/test/validation set
+- describe how to split a data set into training/test/validation set
+- describe how to split a data set into training/test/validation set
 - describe how Drop-Out Layers work
 - execute a plot to draw the loss per epoch for training and test set
 - compare values of precision and recall

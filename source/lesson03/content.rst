@@ -86,7 +86,8 @@ The following questions serve as a help for learners to reflect on the content o
       from sklearn.model_selection import train_test_split
       from sklearn.metrics import confusion_matrix
 
-      # ... load dataset ...
+      # ... load data set ...
+      # ... load data set ...
 
       X_train, X_test, y_train, y_test = train_test_split(X, y,
                                                     test_size = 1.5,
@@ -105,12 +106,14 @@ The following questions serve as a help for learners to reflect on the content o
 Exercises
 =========
 
-Use the dataset you used for `lesson02 </source/lesson02/content.rst>`_ or be brave and choose a different one. Complete the following steps in order:
+Use the data set you used for `lesson02 </source/lesson02/content.rst>`_ or be brave and choose a different one. Complete the following steps in order:
+Use the data set you used for `lesson02 </source/lesson02/content.rst>`_ or be brave and choose a different one. Complete the following steps in order:
 
 For part a
 ----------
 
-- Split your dataset into train and test set at a fixed ratio.
+- Split your data set into train and test set at a fixed ratio.
+- Split your data set into train and test set at a fixed ratio.
 
 - Train a kNN classification on the training set with a fixed value of `k`. 
 
@@ -149,7 +152,8 @@ Datasets
   * `clustering_data_08.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_08.csv>`_
   * `clustering_data_09.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_09.csv>`_
 
-* `iris plants <https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-plants-dataset>`_ dataset. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this dataset do the following:
+* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-data set>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
+* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-data set>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
 
 .. code-block:: python
 
