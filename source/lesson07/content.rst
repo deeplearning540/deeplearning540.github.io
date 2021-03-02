@@ -20,7 +20,12 @@ Learning Objectives
 Content
 =======
 
-Adapt
+This lesson will be shared as a video.
+
+* for learners: a stub notebook to get you started can be obtained from `the lesson03 repo <https://github.com/deeplearning540/lesson07/blob/main/lesson07.ipynb>`_.
+* for instructors: the video script is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson07/script.ipynb>`_.
+
+This lesson is based on the wonderful keras introduction by Walter de Back
 - https://gitlab.com/wdeback/dl-keras-tutorial/-/blob/master/notebooks/2-convolution.ipynb
 - https://gitlab.com/wdeback/dl-keras-tutorial/-/blob/master/notebooks/3-cnn-mnist.ipynb
 
@@ -29,18 +34,76 @@ Check your Learning
 
 .. admonition:: Exercise 1
 
-   **TBA**
+   Fill in the blanks to produce a CNN for classification!
 
-   1. ???
-   2. ???
-   3. ???
-   4. ???
+   .. code-block:: python
 
+   from tensorflow import keras  
+   from keras.layers import Input, Dense, Dropout, Flatten, ____2D, _________2D
+
+   #load the data
+
+   #define the network
+   conv1 = Conv2D(16, kernel_size=(3,3), activation='______', input_shape=X_train.shape[1:])
+   conv2 = ______(32, kernel_size=(3,3), activation='relu')
+   mpool = _________(pool_size=(2,2))
+
+   ## MLP layers
+   flat = Flatten()
+   dense1 = Dense(128, _____________)
+   dense2 = Dense(num_classes, __________)
+
+   #compile and train
+   
+   x_inputs = Input(shape=X_train.shape[1:])
+
+   x = conv1(_______)
+   x = ______(x)
+   x = ______(x)
+
+   x = flat(x)
+   x = dense1(x)
+   output_yhat = dense2(x)
+
+   model = keras.Model(inputs = _______, outputs = _______, name="hello-world-cnn")
+
+
+.. admonition:: Exercise 2
+
+   The `Flatten` operation rearranges an input image (or feature map) into a sequence of numbers. How does it perform this?
+
+   1. the pixel intensities are averaged per row and concatenated
+   2. all rows of the input are added and provided as a result
+   3. all columns of the input are concatenated (from top to bottom)
+   4. all rows of the input are concatenated (from top to bottom)
+
+.. admonition:: Exercise 3
+
+   For an input image shape of `28x28` what is the shape of the feature map after running the image through a single `5x5` convolutional filter?
+
+   1. `24x28`
+   2. `20x28`
+   3. `26x26`
+   4. `24x24`
+
+.. admonition:: Exercise 4
+
+   For an MNIST input image, how many parameters does a `Conv2D` layer require when being defined to produce `16` feature maps as output and a `3x3` neighborhood. How many parameters does a `Dense` layer with `16` outputs have? Compute the two parameter counts!
+
+   
 
 Exercises
 =========
 
-* through `OpenML <https://docs.openml.org/Datasets/>`_ or `keras datasets <https://keras.io/api/datasets/>`_
-   * https://sci2s.ugr.es/keel/datasets.php
-   * https://archive.ics.uci.edu/ml/datasets.php?format=&task=cla&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table
+* run the lesson notebook using the `fashionMNIST` dataset. Use the code below to load it. Try to reach a similar accuracy as you saw with the orginal MNIST. Does the same architecture work exactly the same with `fashionMNIST`? 
+
+  .. code-block:: python
+
+  from keras.datasets import fashion_mnist
+
+  (x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
+
+* using the `MNIST` dataset, we saw that overfitting can be problematic. When reducing the size of the network in terms of number of parameters, the downside of this is that our network looses capacity to learn features. Cut the dense layer from `128` neurons to `64` and `32`. What do you observe with these network sizes? Compare the accuracy of the trimmed networks with a network that uses a `drop-out layer <https://keras.io/api/layers/regularization_layers/dropout/>`_ which masks `25%` of the neurons. 
+
+
 
