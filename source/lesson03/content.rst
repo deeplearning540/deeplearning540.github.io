@@ -41,11 +41,11 @@ The following questions serve as a help for learners to reflect on the content o
  
 .. admonition:: Exercise 2
 
-   When going through tutorials and exercises that discuss the k-Nearest-Neighbor (kNN) method, you observe that `k` is typically chosen to be an odd number. Checking the code, `sklearn` also access even numbers for `k`. Why do people tend to choose odd numbers?
+   When going through tutorials and exercises that discuss the k-Nearest-Neighbor (kNN) method, you observe that `k` is typically chosen to be an odd number. Checking the code, `sklearn` also allows even numbers for `k`! Why do people tend to choose odd numbers?
 
    1. tradition that often works best in practice
    
-   2. odd numbers prevent ties from happening with the majaority vote
+   2. odd numbers prevent ties from happening with the majority vote
    
    3. this way, the total number of samples in the neighborhood is always even as one has to add the query sample
    
