@@ -32,13 +32,14 @@ Check your Learning
 
 .. admonition:: Exercise 1
 
-   The advantage of mini-batched based optimisation is ...
+   The advantage of mini-batched based optimisation compared to online gradient descent or full data set gradient descent is ...
 
    1. a mini-batch represents the entire data set and hence is enough to optimize on
-   1. a mini-batch represents the entire data set and hence is enough to optimize on
+
    2. the optimisation converges faster
+
    3. the optimisation can be performed in memory independent of the data set size
-   3. the optimisation can be performed in memory independent of the data set size
+
    4. the optimisation will converge always into a global optimum
 
 
