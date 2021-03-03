@@ -20,6 +20,6 @@ For this, two notebooks have been prepared that mark the basis for an analysis:
 - `Top Tagging 1 notebook <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/TopTagging_1.ipynb>`_ allows you to conduct the analysis using the tabular features of the events only
 - `Top Tagging 2 notebook <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/TopTagging_2.ipynb>`_ allows you to conduct the analysis using the events features as images
 
-It is for you to decide which dataset you'd like to experiment with: tabular or image like data. Please compose a classification algorithm that provides a area-under-the-curve of a ROC curve as high as possible.
+It is for you to decide which data set you'd like to experiment with: tabular or image like data. Please compose a classification algorithm that provides a area-under-the-curve of a ROC curve as high as possible.
 
 More information on the project can be obtained from `the original competition repo <https://github.com/dkgithub/wuhan_DL_labs/blob/master/top-tagging/Lab_2nd_week.pdf>`_.
