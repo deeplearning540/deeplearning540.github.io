@@ -65,4 +65,4 @@ Exercises
   y = df_iris['species'].values
 
 
-* (optional) We built an extremely simple feed-forward network model. To experiment more, load the [MNIST database of handwritten digits](http://keras.io/data sets/) and see if you can beat a standard scikit-learn classifier. Unlike the Iris data set, this is a situation where the power and relative complexity of neural networks is justified. Try it yourself first, but if you get stuck, take a look at [this notebook](https://github.com/wxs/keras-mnist-tutorial/blob/master/MNIST%20in%20Keras.ipynb).
+* (optional) We built an extremely simple feed-forward network model. To experiment more, load the `MNIST database of handwritten digits <http://keras.io/datasets/>`_ and see if you can beat a standard scikit-learn classifier. Unlike the Iris data set, this is a situation where the power and relative complexity of neural networks is justified. Try it yourself first, but if you get stuck, take a look at `this notebook <https://github.com/wxs/keras-mnist-tutorial/blob/master/MNIST%20in%20Keras.ipynb>`_.
