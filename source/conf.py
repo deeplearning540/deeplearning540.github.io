@@ -14,13 +14,13 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-from recommonmark.transform import AutoStructify
+# from recommonmark.transform import AutoStructify
 
-def setup(app):
-    app.add_config_value('recommonmark_config', {
-            'eval_rst': True,
-            }, True)
-    app.add_transform(AutoStructify)
+# def setup(app):
+#     app.add_config_value('recommonmark_config', {
+#             'eval_rst': True,
+#             }, True)
+#     app.add_transform(AutoStructify)
 
 # -- Project information -----------------------------------------------------
 
@@ -35,7 +35,7 @@ author = 'Peter Steinbach'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'recommonmark',
+    'myst_parser',
     'sphinxemoji.sphinxemoji',
     'sphinx_markdown_tables',
 ]

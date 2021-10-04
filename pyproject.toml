@@ -1,20 +1,16 @@
 [tool.poetry]
-name = "infohub"
-version = "0.1.0"
+name = "deeplearning540"
+version = "0.2.0+"
 description = "This project aims to be a community effort to provide documentation for various systems available at HZDR, e.g. HPC."
 authors = [
     "Peter Steinbach <p.steinbach@hzdr.de>",
-    "Daniel Kotik <d.kotik@hzdr.de>",
-    "Henrik Schulz <h.schulz@hzdr.de>",
-    "Tobias Huste <t.huste@hzdr.de>",
-    "Fabian Schlegel <f.schlegel@hzdr.de>",
     "David Pape <d.pape@hzdr.de>",
 ]
 
 [tool.poetry.dependencies]
 python = "^3.6"
-sphinx = "^3.0.0"
-sphinx_rtd_theme = "^0.5.0"
+sphinx = "^4.0.2"
+sphinx_rtd_theme = "^0.5.2"
 sphinx-markdown-tables = "^0.0.15"
-recommonmark = "^0.6.0"
 sphinxemoji = "^0.1.6"
+myst-parser = "*"
