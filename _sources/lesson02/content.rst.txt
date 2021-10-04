@@ -22,7 +22,6 @@ Content
 
 Check your Learning
 ===================
-===================
 
 The following questions serve as a help for learners to reflect on the content of the videos. Answer at least one question. At best you want to answer these questions as a team.
 
@@ -65,7 +64,7 @@ Choose any exercise from the two categories below. Regarding the data set, consu
 
 
 Data sets
-========
+=========
 
 * Data sets for clustering. Each of the following synthetic data sets contains several features `x1`, `x2`, ... and a `label` column which comprises (2 classes).
 

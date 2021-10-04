@@ -6,13 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesson 05: Neural Networks as Code &#8212; deeplearning in 540 minutes  documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lesson 06: How did we train" href="../lesson06/content.html" />
@@ -37,7 +38,6 @@
 <h1>Lesson 05: Neural Networks as Code<a class="headerlink" href="#lesson-05-neural-networks-as-code" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
-<p><strong>To be updated</strong></p>
 <ul class="simple">
 <li><p>A perceptron takes multiple inputs, multiplies each by a weight value and sums the weighted inputs. It then applies an activation function to the sum.</p></li>
 <li><p>Multiple perceptrons can be combined to form a neural network which can solve functions that aren’t linearly separable.</p></li>
@@ -115,7 +115,7 @@ y = df_iris[‘species’].values</p>
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Lesson Modules</span></p>
+<p class="caption" role="heading"><span class="caption-text">Lesson Modules</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../lesson00/content.html">Lesson 00: Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson01/content.html">Lesson 01: Diving into Regression</a></li>
@@ -133,7 +133,7 @@ y = df_iris[‘species’].values</p>
 <li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: CNNs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 08: Capstone</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Extras</span></p>
+<p class="caption" role="heading"><span class="caption-text">Extras</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../extras/design.html">Lesson Design</a></li>
 </ul>
@@ -151,7 +151,7 @@ y = df_iris[‘species’].values</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -173,7 +173,7 @@ y = df_iris[‘species’].values</p>
       &copy;2021, Peter Steinbach.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

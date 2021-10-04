@@ -65,7 +65,7 @@ For this lesson, please complete the following steps in order:
 4. combine the 2 ROC curves in a plot and discuss which classifier is better!
 
 Data sets
-========
+=========
 
 * Data sets for clustering. Each of the following synthetic data sets contains several features `x1`, `x2`, ... and a `label` column which comprises (2 classes).
 

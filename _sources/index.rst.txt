@@ -13,7 +13,7 @@ The content below provides a high level overview on the content to teach.
    :maxdepth: 2
    :caption: Lesson Modules
 
-   lesson*/*
+   lesson0*/*
    
 For Instructors
 ===============
