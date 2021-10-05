@@ -1,5 +1,5 @@
 Deprecated Lesson 08: Capstone
-*******************
+******************************
 
 Learning Objectives
 ===================

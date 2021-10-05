@@ -1,5 +1,5 @@
 Deprecated Lesson 07: CNNs
-*********************
+**************************
 
 Learning Objectives
 ===================
