@@ -1,4 +1,4 @@
-Lesson 06: How did we train
+Deprecated Lesson 06: How did we train
 ***************************
 
 Learning Objectives

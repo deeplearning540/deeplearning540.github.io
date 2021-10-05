@@ -1,4 +1,4 @@
-Lesson 05: Neural Networks as Code
+Deprecated Lesson 05: Neural Networks as Code
 **********************************
 
 Learning Objectives

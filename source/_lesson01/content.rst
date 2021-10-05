@@ -1,4 +1,4 @@
-Lesson 01: Diving into Regression
+Deprecated Lesson 01: Diving into Regression
 *********************************
 
 Learning Objectives

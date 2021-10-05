@@ -14,6 +14,8 @@ The content below provides a high level overview on the content to teach.
    :caption: Lesson Modules
 
    lesson0*/*
+
+
    
 For Instructors
 ===============
@@ -24,6 +26,14 @@ For Instructors
    :caption: Extras
 
    extras/*
+
+.. toctree::
+   :glob:
+   :maxdepth: 2
+   :caption: Deprecated Material
+
+   _lesson0*/*
+
 
 Indices and tables
 ==================

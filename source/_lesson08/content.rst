@@ -1,4 +1,4 @@
-Lesson 08: Capstone
+Deprecated Lesson 08: Capstone
 *******************
 
 Learning Objectives

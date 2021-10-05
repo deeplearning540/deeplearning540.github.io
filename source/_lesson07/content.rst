@@ -1,4 +1,4 @@
-Lesson 07: CNNs
+Deprecated Lesson 07: CNNs
 *********************
 
 Learning Objectives
