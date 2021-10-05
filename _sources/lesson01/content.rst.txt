@@ -1,4 +1,4 @@
-Lesson 00: Preface
+Lesson 01: Preface
 ******************
 
 Learning Objectives
