@@ -33,7 +33,7 @@ For Instructors
 .. toctree::
    :glob:
    :maxdepth: 1
-   :caption: Deprecated Material
+   :caption: Deprecated Material (will be removed in the next release)
 
    _lesson0*/*
 
