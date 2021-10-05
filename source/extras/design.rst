@@ -10,7 +10,9 @@ Each lesson always follows the same structure and is expected to last about 1h.
 2. learners answer the `check your learning` questions as a team (at best in a hackmd/codimd document)
 3. learners dive into the exercise on their own or in small teams 
 
-Instructors help with show stoppers like syntax errors or comprehension questions where they can. **Important** if your learners take longer than 1h for the module, this is not a problem. Try to concentrate on the major learning goals. If you get the feeling that 20% are bored and 60% understood it, you are good.
+Instructors help with show stoppers like syntax errors or comprehension questions where they can.
+
+**Important** If your learners take longer than 1h for the module, this is not a problem. Try to concentrate on the major learning goals. If you get the feeling that 20% are bored and 60% understood it, you are good.
 
 Audience
 ========
