@@ -18,6 +18,7 @@ The content below provides a high level overview on the content to teach.
 
    lesson0*/*
 
+
    
 For Instructors
 ===============
@@ -31,7 +32,7 @@ For Instructors
 
 .. toctree::
    :glob:
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Deprecated Material
 
    _lesson0*/*
