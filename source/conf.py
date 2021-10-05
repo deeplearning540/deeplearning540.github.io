@@ -27,7 +27,7 @@
 project = 'deeplearning in 540 minutes'
 copyright = '2021, Peter Steinbach'
 author = 'Peter Steinbach'
-
+version = '2.0~'
 
 # -- General configuration ---------------------------------------------------
 

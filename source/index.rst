@@ -6,6 +6,9 @@
 Welcome to deeplearning in 540 minutes!
 =======================================
 
+Version |version|
+*****************
+
 The content below provides a high level overview on the content to teach.
 
 .. toctree::
@@ -14,7 +17,6 @@ The content below provides a high level overview on the content to teach.
    :caption: Lesson Modules
 
    lesson0*/*
-
 
    
 For Instructors
@@ -41,3 +43,5 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. _Lesson 04: 
