@@ -15,7 +15,7 @@ Instructors help with show stoppers like syntax errors or comprehension question
 Audience
 ========
 
-Inspired by the `Carpentries' Deciding what to teach <https://cdh.carpentries.org/deciding-what-to-teach.html#target-audience>_`:
+Inspired by the `Carpentries' Deciding what to teach <https://cdh.carpentries.org/deciding-what-to-teach.html#target-audience>`_:
 
 * What is the expected educational level of your audience?
 
@@ -30,19 +30,19 @@ Inspired by the `Carpentries' Deciding what to teach <https://cdh.carpentries.or
 
 * What types of tools do they already use?
 
-  * root and C REPL it provides
-  * (more rare) python based data analysis (`pandas`, `matplotlib`, ...) 
+  * ``root`` and C REPL it provides
+  * (more rare) python based data analysis (``pandas``, ``matplotlib``, ...) 
 
 * What are the pain points they are currently experiencing?
 
   * data analysis is focussed on root
   * knowledge about machine learning is present only as pieces of a puzzle
-  * some students might have seen `keras` through `TMVA`
-  * pattern extraction is limited to the use of `ROOT` based tools (sometimes under the lack of deeper understanding)
+  * some students might have seen ``keras`` through ``TMVA``
+  * pattern extraction is limited to the use of ``ROOT`` based tools (sometimes under the lack of deeper understanding)
 
 * What types of data does your target audience work with? What are the commonalities in the datasets your target audience will encounter?
 
-  * `ROOT` files with `TTree` structures that represent a big table, where each row has the same number of columns, but each column can have different width
+  * ``ROOT`` files with ``TTree`` structures that represent a big table, where each row has the same number of columns, but each column can have different width
   * learners will not be used to working with fixed size tables
   * learners will not be used to working with images
 
