@@ -16,8 +16,13 @@ Learning Objectives
 Content
 =======
 
-* for learners: a stub notebook to get you started can be obtained from `the lesson02 repo <https://github.com/deeplearning540/lesson02/blob/main/lesson.ipynb>`_.
-* for instructors: the video script is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson02/script.ipynb>`_.
+The content is split in 2 parts:
+
+* a notebook to code along `the lesson02 repo <https://github.com/deeplearning540/lesson02/blob/main/lesson.ipynb>`_:
+** `the notebook for part1 <https://github.com/deeplearning540/lesson02/blob/main/part1.ipynb>`_ (introduction to machine learning and a first look at data).
+** `the notebook for part2 <https://github.com/deeplearning540/lesson02/blob/main/part2.ipynb>`_ (introducing and using kMeans clustering).
+
+For instructors: the video script for both parts is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson02/script.ipynb>`_.
 
 
 Check your Learning

@@ -40,13 +40,14 @@
 <ol class="arabic simple">
 <li><p>learners watch the video</p></li>
 <li><p>learners answer the <cite>check your learning</cite> questions as a team (at best in a hackmd/codimd document)</p></li>
-<li><p>learners dive into the exercise on their own</p></li>
+<li><p>learners dive into the exercise on their own or in small teams</p></li>
 </ol>
-<p>Instructors help with show stoppers like syntax errors where they can.</p>
+<p>Instructors help with show stoppers like syntax errors or comprehension questions where they can.</p>
+<p><strong>Important</strong> If your learners take longer than 1h for the module, this is not a problem. Try to concentrate on the major learning goals. If you get the feeling that 20% are bored and 60% understood it, you are good.</p>
 </div>
 <div class="section" id="audience">
 <h2>Audience<a class="headerlink" href="#audience" title="Permalink to this headline">¶</a></h2>
-<p>Inspired by the <cite>Carpentries’ Deciding what to teach &lt;https://cdh.carpentries.org/deciding-what-to-teach.html#target-audience&gt;_</cite>:</p>
+<p>Inspired by the <a class="reference external" href="https://cdh.carpentries.org/deciding-what-to-teach.html#target-audience">Carpentries’ Deciding what to teach</a>:</p>
 <ul class="simple">
 <li><p>What is the expected educational level of your audience?</p>
 <ul>
@@ -63,21 +64,21 @@
 </li>
 <li><p>What types of tools do they already use?</p>
 <ul>
-<li><p>root and C REPL it provides</p></li>
-<li><p>(more rare) python based data analysis (<cite>pandas</cite>, <cite>matplotlib</cite>, …)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">root</span></code> and C REPL it provides</p></li>
+<li><p>(more rare) python based data analysis (<code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, …)</p></li>
 </ul>
 </li>
 <li><p>What are the pain points they are currently experiencing?</p>
 <ul>
 <li><p>data analysis is focussed on root</p></li>
 <li><p>knowledge about machine learning is present only as pieces of a puzzle</p></li>
-<li><p>some students might have seen <cite>keras</cite> through <cite>TMVA</cite></p></li>
-<li><p>pattern extraction is limited to the use of <cite>ROOT</cite> based tools (sometimes under the lack of deeper understanding)</p></li>
+<li><p>some students might have seen <code class="docutils literal notranslate"><span class="pre">keras</span></code> through <code class="docutils literal notranslate"><span class="pre">TMVA</span></code></p></li>
+<li><p>pattern extraction is limited to the use of <code class="docutils literal notranslate"><span class="pre">ROOT</span></code> based tools (sometimes under the lack of deeper understanding)</p></li>
 </ul>
 </li>
 <li><p>What types of data does your target audience work with? What are the commonalities in the datasets your target audience will encounter?</p>
 <ul>
-<li><p><cite>ROOT</cite> files with <cite>TTree</cite> structures that represent a big table, where each row has the same number of columns, but each column can have different width</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ROOT</span></code> files with <code class="docutils literal notranslate"><span class="pre">TTree</span></code> structures that represent a big table, where each row has the same number of columns, but each column can have different width</p></li>
 <li><p>learners will not be used to working with fixed size tables</p></li>
 <li><p>learners will not be used to working with images</p></li>
 </ul>
@@ -88,15 +89,15 @@
 <h2>Pre-Workshop Survey<a class="headerlink" href="#pre-workshop-survey" title="Permalink to this headline">¶</a></h2>
 <p>All learners were offered this pre-workshop survey. Every question is a multiple choice question.</p>
 <ul class="simple">
-<li><p>You are provided with a python list of integer values. The list has length 1024 and you would like to obtain all entries from index 50 to 101. How would you do this?</p></li>
-<li><p>You need to open 102 data files and extract an object from them. For this, you compose a small function to open a single file which requires 3 input parameters. The parameters are a file location, the name of the object to retrieve and a parameter that controls the verbosity of the function. The latter parameter has the default value “False”.</p></li>
+<li><p>You are provided with a Python list of integer values. The list has length 1024 and you would like to obtain all entries from index 50 to 101. How would you do this?</p></li>
+<li><p>You need to open 102 data files and extract an object from them. For this, you compose a small function to open a single file which requires 3 input parameters. The parameters are a file location, the name of the object to retrieve and a parameter that controls the verbosity of the function. The latter parameter has the default value <cite>False</cite>.</p></li>
+<li><p>You call a function in your code that sometimes throws a <cite>ValueError</cite> exception. You’d like to intercept that exception and process the traceback before re-raising the exception. How would you do that?</p></li>
 <li><p>You are provided a list of 512 random float values. These values range between 0 and 100. You would like to remove any entry in this list that is larger than 90 or smaller than 10.</p></li>
-<li><p>You are provided with a CSV file. The file has 35000 rows. The file has 45 columns. Each column is separated by the “,” symbol from the other. You would like to open the file in python, calculate the arithmetic mean, the minimum and maximum of column number 5, 12 and 39.</p></li>
-<li><p>You are provided with a CSV file. The file has 35000 rows. The file has 45 columns. Each column is separated by the “,” symbol from the other. You would like to open the file in python, remove all entries where the value of column 21 is larger than 50. The values removed are to be replaced by 0.</p></li>
-<li><p>You are provided with a CSV file. The file has 35000 rows. The file has 45 columns. Each column is separated by the “,” symbol from the other. When you load the file and plot the histogram of column 40, you are suspicious that the floating point values are not normally distributed. But, the producer of the CSV file assures you that all columns are normally distributed. To make sure, you sit down to code a function which tests any given column if it is normally distributed.</p></li>
-<li><p>You are given a dataset from experiments that you want to use for machine learning (13 columns with 25000 rows). One column is particularly useful and is encoded as real numbers in a range from <cite>-15</cite> to <cite>12</cite>. You would like to normalize this data so that it fits into the range of real numbers between <cite>0</cite> and <cite>1</cite>. How would you do this?</p></li>
-<li><p>Your colleague cries out in joy at his desk. “I get 99% accuracy! I get 99% accuracy!” he says full of joy the entire office of 5 PhD students. When asked what he did differently, he says that he used the entire dataset available for supervised training. To save your colleague you kindly ask “Great. And what is the accuracy on the … set ?” What should be filled for the blank dots?</p></li>
-<li><p>You are helping to organize a conference of more than 1000 attendants. All participants have already paid and are expecting to pick up their conference t-shirt on the first day. Your team is in shock as it discovers that t-shirt sizes have not been recorded during online registration. However, all participants were asked to provide their age, gender, body height and weight. To help out, you sit down to write a python script that predicts the t-shirt size for each participant using a clustering algorithm.</p></li>
+<li><p>You are provided with a CSV file. The file has 35000 rows. The file has 45 columns. Each column is separated by the “,” symbol from the other. You would like to open the file in Python, calculate the arithmetic mean, the minimum and maximum of column number 5, 12 and 39.</p></li>
+<li><p>A probability density function (PDF) in statistics is something very distinct from a probability mass function (PMF). What is the difference?</p></li>
+<li><p>You are given a dataset from experiments that you want to use for machine learning (13 columns with 25000 rows). One column is particularly useful and is encoded as real numbers in a range from -15 to 12. You would like to normalize this data so that it fits into the range of real numbers between 0 and 1. How would you do this?</p></li>
+<li><p>You are presented a training data set of 10000 samples. You would like to train a classifier on this datasets. However, you observe that class 0 dominates the training set at 60%, the other classes equally share 20% of the rows each. How do you prepare your training procedure?</p></li>
+<li><p>You are given a classifier model (neural network) by a colleague. Your peer trained it on a very large dataset. You just need it for inference. You reassure yourself that the model you loaded from disk really contains the weights by running the ‘predict’ function on an unseen (not used in training) validation set by your colleague. The model doesn’t make the same predictions as your colleague told you. What could be the cause?</p></li>
 </ul>
 <p>For any of the above, the learner is allowed to select one possible answer from options such as below:</p>
 <ol class="arabic simple">
