@@ -41,8 +41,7 @@ The following questions serve as a help for learners to reflect on the content o
 
 .. admonition:: Exercise 2
 
-   You are given a data set of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See `this overview plot <https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_data set_scatterplot.svg>`_ for help.
-   You are given a data set of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See `this overview plot <https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_data set_scatterplot.svg>`_ for help.
+   You are given a data set of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See `this overview plot <https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_data set_scatterplot.svg>`_ for help. (Multiple choices possible.)
 
    1. Sepal.Length versus Sepal.Width
    2. Sepal.Length versus Petal.Width
