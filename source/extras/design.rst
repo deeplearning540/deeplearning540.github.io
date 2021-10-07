@@ -5,7 +5,7 @@ Group work organization
 =======================
 
 To provide an optimal learning experience, learners will assign themselves to
-groups of about 10 persons (max) on day 1 of the course. Each groups gets one
+groups of about 10 persons (max) on day 1 of the course. Each group gets one
 mentor assigned who will guide learners through all lessons. That way, groups
 can go through the material at a pace which will fit the majority of
 participants.
