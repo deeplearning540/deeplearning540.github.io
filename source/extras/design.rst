@@ -16,7 +16,7 @@ start their individual work with lesson 02.
 On each subsequent day, all groups (or each group individually) will meet in
 the morning to quickly recap the last day.
 
-If time permits, the end of the last day will provide the opportunity for a
+If time permits, the end of the last day (i.e. end of day 3) will provide the opportunity for a
 "bring your data" type session, where all learners discuss their concrete ML
 use cases among each other and with all mentors.
 
