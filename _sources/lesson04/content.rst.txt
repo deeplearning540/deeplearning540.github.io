@@ -24,7 +24,7 @@ Content
 
 This lesson will be shared as a video.
 
-* for learners: a stub notebook to get you started can be obtained from `the lesson03 repo <https://github.com/deeplearning540/lesson04/blob/main/lesson.ipynb>`_.
+* for learners: a stub notebook to get you started can be obtained from `the lesson04 repo <https://github.com/deeplearning540/lesson04/blob/main/lesson.ipynb>`_.
 * for instructors: the video script is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson04/script.ipynb>`_.
 
 

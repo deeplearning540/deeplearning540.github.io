@@ -17,6 +17,7 @@ The content below provides a high level overview on the content to teach.
    :caption: Lesson Modules
 
    lesson0*/*
+   lessonb01/*
 
 
    
