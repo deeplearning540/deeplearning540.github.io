@@ -10,7 +10,7 @@ The mission that this repo serves:
 - teach deep learning
 
 .. Note::
-   Visit `<https://psteinb.github.io/deeplearning540>`_ to dive into the content.
+   Visit `<https://deeplearning540.github.io>`_ to dive into the content.
 
 
 Build this project locally
@@ -37,8 +37,8 @@ Build steps
 
 .. code-block:: bash
 
-    $ git clone https://github.com/psteinb/deeplearning540.git
-    $ cd ./deeplearning540
+    $ git clone https://github.com/deeplearning540/deeplearning540.github.io.git
+    $ cd deeplearning540.github.io
 
 2. The project's dependencies are managed with `Poetry <https://python-poetry.org>`_.
    To build the project locally run below lines of code in your terminal:
@@ -61,5 +61,8 @@ the last command:
 
 This will place the generated documentation in :code:`build/html`. Open
 :code:`index.html` with the browser of your choice to see the changes you
-made in action.
+made in action, for example:
 
+.. code-block:: bash
+
+    $ firefox build/html/index.html
