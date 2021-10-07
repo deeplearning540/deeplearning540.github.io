@@ -1,14 +1,34 @@
 Lesson Design
 *************
 
+Group work organization
+=======================
+
+To provide an optimal learning experience, learners will assign themselves to
+groups of about 10 persons (max) on day 1 of the course. Each groups gets one
+mentor assigned who will guide learners through all lessons. That way, groups
+can go through the material at a pace which will fit the majority of
+participants.
+
+On day 1, lesson 01 might be taught live to all learners. After that, groups
+start their individual work with lesson 02.
+
+On each subsequent day, all groups (or each group individually) will meet in
+the morning to quickly recap the last day.
+
+If time permits, the end of the last day will provide the opportunity for a
+"bring your data" type session, where all learners discuss their concrete ML
+use cases among each other and with all mentors.
+
 Lesson
 ======
 
 Each lesson always follows the same structure and is expected to last about 1h.
 
-1. learners watch the video
-2. learners answer the `check your learning` questions as a team (at best in a hackmd/codimd document)
-3. learners dive into the exercise on their own or in small teams 
+1. Learners watch the video
+2. Learners answer the `check your learning` questions as a team (at best in a hackmd/codimd document)
+3. Learners dive into the exercise on their own or in small teams
+4. Short Q&A with the mentor
 
 Instructors help with show stoppers like syntax errors or comprehension questions where they can.
 
@@ -33,11 +53,11 @@ Inspired by the `Carpentries' Deciding what to teach <https://cdh.carpentries.or
 * What types of tools do they already use?
 
   * ``root`` and C REPL it provides
-  * (more rare) python based data analysis (``pandas``, ``matplotlib``, ...) 
+  * (more rare) python based data analysis (``pandas``, ``matplotlib``, ...)
 
 * What are the pain points they are currently experiencing?
 
-  * data analysis is focussed on root
+  * data analysis is focused on root
   * knowledge about machine learning is present only as pieces of a puzzle
   * some students might have seen ``keras`` through ``TMVA``
   * pattern extraction is limited to the use of ``ROOT`` based tools (sometimes under the lack of deeper understanding)
@@ -52,7 +72,7 @@ Inspired by the `Carpentries' Deciding what to teach <https://cdh.carpentries.or
 Pre-Workshop Survey
 ===================
 
-All learners were offered this pre-workshop survey. Every question is a multiple choice question. 
+All learners were offered this pre-workshop survey. Every question is a multiple choice question.
 
 * You are provided with a Python list of integer values. The list has length 1024 and you would like to obtain all entries from index 50 to 101. How would you do this?
 
