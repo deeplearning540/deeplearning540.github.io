@@ -61,5 +61,8 @@ the last command:
 
 This will place the generated documentation in :code:`build/html`. Open
 :code:`index.html` with the browser of your choice to see the changes you
-made in action.
+made in action, for example:
 
+.. code-block:: bash
+
+    $ firefox build/html/index.html
