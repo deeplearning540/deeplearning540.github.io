@@ -87,6 +87,7 @@ Data sets
 
 .. code-block:: python
 
+  import numpy as np
   import pandas as pd
   from sklearn.datasets import load_iris
   iris = load_iris()
