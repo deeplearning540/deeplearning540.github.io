@@ -11,16 +11,24 @@ Version |version|
 
 The content below provides a high level overview on the content to teach.
 
+.. Probably a bug in the deploy action (peaceiris/actions-gh-pages@v3): we
+   can't use the folder name "lesson01". Must be something else, "lesson_01"
+   works. "lesson01" works when building html locally, but the GH action build
+   throws a 404 when accessing
+   https://deeplearning540.github.io/lesson01/content.html . All other lessons,
+   e.g. ".../lesson01/content.html" work just fine.
+
 .. toctree::
    :glob:
    :maxdepth: 2
    :caption: Lesson Modules
 
+   lesson_01/*
    lesson0*/*
    lessonb01/*
 
 
-   
+
 For Instructors
 ===============
 
@@ -46,4 +54,4 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-.. _Lesson 04: 
+.. _Lesson 04:
