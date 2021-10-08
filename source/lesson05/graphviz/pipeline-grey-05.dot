@@ -1,14 +1,15 @@
 digraph {
     #configs
 	rankdir=LR;
-    node [shape=rect, style=rounded]
-
+    node [shape=rect, style=rounded, color=grey, fontcolor=grey]
+    edge [color=grey];
+    
     #special nodes
     formulate [label=<<B>Formulate</B><BR/>task>]
     i_o [label=<<B>Identify</B><BR/>inputs and outputs>]
     prepare [label=<<B>Prepare</B><BR/>data>]
 	create_model [label=<<B>Create model </B><BR/>or<BR/>use pretrained model>]
-    loss [label=<<B>Choose</B><BR/>loss and optimizer>]
+    loss [label=<<B>Choose</B><BR/>loss and optimizer>, color=black, fontcolor=black, penwidth=2]
     train [label=<<B>Train</B><BR/>the model>]
     predict [label=<<B>Perform</B><BR/>Prediction>]
     quality [label=<<B>Measure</B><BR/>Performance>]

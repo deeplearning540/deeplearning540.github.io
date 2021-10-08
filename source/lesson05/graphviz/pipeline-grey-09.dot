@@ -1,8 +1,9 @@
 digraph {
     #configs
 	rankdir=LR;
-    node [shape=rect, style=rounded]
-
+    node [shape=rect, style=rounded, color=grey, fontcolor=grey]
+    edge [color=grey];
+    
     #special nodes
     formulate [label=<<B>Formulate</B><BR/>task>]
     i_o [label=<<B>Identify</B><BR/>inputs and outputs>]
@@ -12,7 +13,7 @@ digraph {
     train [label=<<B>Train</B><BR/>the model>]
     predict [label=<<B>Perform</B><BR/>Prediction>]
     quality [label=<<B>Measure</B><BR/>Performance>]
-    tune [label=<<B>Tune</B><BR/>Hyperparameters>]
+    tune [label=<<B>Tune</B><BR/>Hyperparameters>, color=black, fontcolor=black, penwidth=2]
     share [label=<<B>Share</B><BR/>the model>]
     
     subgraph model_only {

@@ -1,8 +1,9 @@
 digraph {
     #configs
 	rankdir=LR;
-    node [shape=rect, style=rounded]
-
+    node [shape=rect, style=rounded, color=grey, fontcolor=grey]
+    edge [color=grey];
+    
     #special nodes
     formulate [label=<<B>Formulate</B><BR/>task>]
     i_o [label=<<B>Identify</B><BR/>inputs and outputs>]
