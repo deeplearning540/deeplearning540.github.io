@@ -18,7 +18,7 @@ Content
 
 The content is split in 2 parts:
 
-* a notebook to code along `the lesson02 repo <https://github.com/deeplearning540/lesson02/blob/main/lesson.ipynb>`_:
+* notebook to code along are available from `the lesson02 repo <https://github.com/deeplearning540/lesson02/>`_:
     * `the notebook for part1 <https://github.com/deeplearning540/lesson02/blob/main/part1.ipynb>`_ (introduction to machine learning and a first look at data).
     * `the notebook for part2 <https://github.com/deeplearning540/lesson02/blob/main/part2.ipynb>`_ (introducing and using kMeans clustering).
 
