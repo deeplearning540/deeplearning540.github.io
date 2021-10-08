@@ -64,7 +64,7 @@ Choose any exercise from the two categories below. Regarding the data set, consu
 
 * Cluster at least one of the synthetic data sets in the `x1` and `x2` plane. 
 
-* Cluster the `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-dataset>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column.
+* Cluster the `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-dataset>`_ data set. Use the columns ``"petal length (cm)"`` vs. ``"petal width (cm)"``. The class label is provided as the ``"target"`` column.
 
 
 Data sets
@@ -83,10 +83,11 @@ Data sets
   * `clustering_data_08.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/main/data/clustering_data_08.csv>`_
   * `clustering_data_09.csv <https://raw.githubusercontent.com/deeplearning540/lesson02/main/data/clustering_data_09.csv>`_
 
-* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-dataset>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
+* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-dataset>`_ data set. Use the columns ``"petal length (cm)"`` vs. ``"petal width (cm)"``. The class label is provided as the ``"target"`` column. To obtain the dataframe from this data set do the following:
 
 .. code-block:: python
 
+  import numpy as np
   import pandas as pd
   from sklearn.datasets import load_iris
   iris = load_iris()
