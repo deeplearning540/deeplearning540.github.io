@@ -16,11 +16,12 @@ The content below provides a high level overview on the content to teach.
    :maxdepth: 2
    :caption: Lesson Modules
 
+   lesson01/foo
    lesson0*/*
    lessonb01/*
 
 
-   
+
 For Instructors
 ===============
 
@@ -46,4 +47,4 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-.. _Lesson 04: 
+.. _Lesson 04:
