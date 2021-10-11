@@ -30,5 +30,3 @@ Content
 =======
 
 slidedeck to be produced `here <https://deeplearning540.github.io/lesson00/>`_.
-
-
