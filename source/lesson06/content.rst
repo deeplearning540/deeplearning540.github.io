@@ -3,11 +3,25 @@ Lesson 06: Classification by a Neural Network using Keras
 
 All content is taken from `here <https://carpentries-incubator.github.io/deep-learning-intro/02-keras/index.html>`_.
 
-* Part 1 starts from the beginning and
-* Part 2 continues to the end of the content
+* **Preface** describing the inner workings of an artificial neural network (Multi-layer perceptron)
+* **Part 1** creates a neural network using the ``keras`` interface in ``tensorflow``
+* **Part 2** continues to look at the training history, performs a prediction and constructs a confusion matrix from it
 
 Check Your Learning
 ===================
+
+.. admonition:: Exercise 1 / Preface
+
+   The architecture presented in the video is often referred to as a feed-forward network. Come up with reasons why this might be the case? Compare your answers with the mentor.
+   
+.. admonition:: Exercise 2 / Preface
+
+   You have created a neural network that takes ``8`` values as input. The network has two hidden (dense) layers of ``10`` neurons each. The output layer has size ``3`` and predicts 3 values. How many parameters does this network have which need to be optimized during training?
+
+   1. 21
+   3. 233
+   2. 210
+   4. 54
 
 .. admonition:: Exercise 1 / Part 1
 

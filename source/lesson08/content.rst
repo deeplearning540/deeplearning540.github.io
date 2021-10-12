@@ -1,4 +1,4 @@
-Lesson 08: Networks are like onions
-***********************************
+Lesson 07: Monitor the training process
+***************************************
 
-All content is taken from `here <https://carpentries-incubator.github.io/deep-learning-intro/04-networks-are-like-onions/index.html>`_.
+All content is taken from `here <https://carpentries-incubator.github.io/deep-learning-intro/03-monitor-the-model/index.html>`_.
