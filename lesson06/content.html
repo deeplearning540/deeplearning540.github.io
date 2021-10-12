@@ -87,7 +87,74 @@
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
-<p>TBA</p>
+<div class="section" id="exercise-1">
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<p>The goal of this exercise is to fit a neural network to predict wine classes from the
+<a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html">sklearn wine dataset</a>.</p>
+<p>Please consider the following aspects when solving this exercise:</p>
+<ol class="arabic simple">
+<li><p>The dataset can be loaded via <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sklearn.datasets</span> <span class="pre">import</span> <span class="pre">load_wine;</span> <span class="pre">dataset</span> <span class="pre">=</span> <span class="pre">load_wine()</span></code>.
+* Consider <code class="docutils literal notranslate"><span class="pre">print(dataset['DESCR'])</span></code> for more information about the dataset.
+* <code class="docutils literal notranslate"><span class="pre">dataset['data']</span></code> contains the features which can be used as input data.
+* <code class="docutils literal notranslate"><span class="pre">dataset['target']</span></code> contains the wine class labels.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pd.get_dummies</span></code> is helpful to obtain a one-hot encoded version of class labels.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> should be performed as usual.</p></li>
+<li><p>When inspecting the features, you will realize that they all have different number ranges.
+Hence, normalizing the data is required.
+The <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html">StandardScaler</a>
+might be handy.</p></li>
+<li><p>Regarding the network architecture, it’s best to start small (in terms of number of layers and
+number of neurons) and only increase if performance is not sufficient. This helps to speed up
+the training process.</p></li>
+<li><p>If you need help with the code to set up and fit the neural network, please consider the lecture notes
+about the penguin dataset; it’s quite similar.</p></li>
+<li><p>Finally, when you are satisfied with the training process, assess the performance of your network
+with help of the test set (confusion matrix, accuracy, etc).</p></li>
+</ol>
+<div class="section" id="bonus-1">
+<h4>Bonus 1<a class="headerlink" href="#bonus-1" title="Permalink to this headline">¶</a></h4>
+<p>It’s great to see the loss decreasing during training, but given a certain loss value, it’s still not
+easy to judge how well the model <em>actually</em> performs.
+It would be nice to observe higher level metrics, such as accuracy for example.
+Fortunately, the <code class="docutils literal notranslate"><span class="pre">model.compile</span></code> method has a parameter which allows for adding such <code class="docutils literal notranslate"><span class="pre">metrics</span></code>.
+These will eventually be stored in the fit <code class="docutils literal notranslate"><span class="pre">history</span></code>, just like the <code class="docutils literal notranslate"><span class="pre">'loss'</span></code>.</p>
+<p>The goal of this exercise is to add accuracy as a metric when fitting the model.
+Then the accuracy can be plotted for each epoch, similar to the loss value.
+For more information, please consider the documentation of the
+<a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/keras/Model#compile">model.compile method</a>.</p>
+<p>What other metrics that are useful for classification could you add?
+Consider <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/keras/metrics">tf.keras.metrics</a>
+for suggestions.</p>
+</div>
+</div>
+<div class="section" id="exercise-2">
+<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<p>The goal of this exercise is to train a neural network to predict binary class labels on a synthetic
+dataset and compare the results to those obtained with a linear classifier.</p>
+<p>The dataset can be found <a class="reference external" href="https://deeplearning540.github.io/lesson06/exc2/data.csv">here</a>.
+It contains 2 columns <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> and an additional <code class="docutils literal notranslate"><span class="pre">target</span></code> column containing the class labels
+(either <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>). The dataset can be visualized via
+<code class="docutils literal notranslate"><span class="pre">sns.scatterplot(data=data_frame,</span> <span class="pre">x='x',</span> <span class="pre">y='y',</span> <span class="pre">hue='target')</span></code>.</p>
+<p>The goal is to train a neural network, similar to Exercise 1, to predict the class labels of the dataset.</p>
+<div class="section" id="id2">
+<h4>Bonus 1<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Try to use a linear classifier, such as
+<a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html">RidgeClassifier</a>
+to make predictions about the class labels. You can use the function below to visualize the predictions and ground truth labels:</p>
+<p>You will find that the performance of the linear classifier is not very good.
+How can we still use a linear classifier and get similarly good performance as for the neural network?</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hint: Similar to how we scaled the input data for the wine dataset using the <code class="docutils literal notranslate"><span class="pre">StandardScaler</span></code>, we are
+free to transform the data before feeding it to the linear classifier. A particular coordinate transformation
+might be useful to make this a linear problem.</p>
+</div>
+<p>In the light of your findings, discuss in what situations a neural network might be more useful than a more
+simple method such as a linear classifier, and vice versa.
+What is a particular advantage of neural networks
+(think about <a class="reference external" href="https://en.wikipedia.org/wiki/Feature_engineering">Feature engineering</a>)?</p>
+</div>
+</div>
 </div>
 </div>
 
