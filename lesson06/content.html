@@ -14,7 +14,7 @@
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lesson 07: Monitor the training process" href="../lesson07/content.html" />
+    <link rel="next" title="Bonus Lesson: How did we train" href="../lesson07/content.html" />
     <link rel="prev" title="Lesson 05: Introduction Deep Learning" href="../lesson05/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -36,12 +36,38 @@
 <h1>Lesson 06: Classification by a Neural Network using Keras<a class="headerlink" href="#lesson-06-classification-by-a-neural-network-using-keras" title="Permalink to this headline">¶</a></h1>
 <p>All content is taken from <a class="reference external" href="https://carpentries-incubator.github.io/deep-learning-intro/02-keras/index.html">here</a>.</p>
 <ul class="simple">
-<li><p>Part 1 starts from the beginning and</p></li>
-<li><p>Part 2 continues to the end of the content</p></li>
+<li><p><strong>Preface</strong> describing the inner workings of an artificial neural network (Multi-layer perceptron)</p></li>
+<li><p><strong>Part 1</strong> creates a neural network using the <code class="docutils literal notranslate"><span class="pre">keras</span></code> interface in <code class="docutils literal notranslate"><span class="pre">tensorflow</span></code></p></li>
+<li><p><strong>Part 2</strong> continues to look at the training history, performs a prediction and constructs a confusion matrix from it</p></li>
 </ul>
 <div class="section" id="check-your-learning">
 <h2>Check Your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-exercise-1-part-1 admonition">
+<div class="admonition-exercise-1-preface admonition">
+<p class="admonition-title">Exercise 1 / Preface</p>
+<p>The architecture presented in the video is often referred to as a feed-forward network. Come up with reasons why this might be the case? Compare your answers with the mentor.</p>
+</div>
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Because the data is fed in a forward fashion through the network, from inputs to outputs.
+</pre></div>
+</div>
+</details><div class="admonition-exercise-2-preface admonition">
+<p class="admonition-title">Exercise 2 / Preface</p>
+<p>You have created a neural network that takes <code class="docutils literal notranslate"><span class="pre">8</span></code> values as input. The network has two hidden (dense) layers of <code class="docutils literal notranslate"><span class="pre">10</span></code> neurons each. The output layer has size <code class="docutils literal notranslate"><span class="pre">3</span></code> and predicts 3 values. How many parameters does this network have which need to be optimized during training?</p>
+<ol class="arabic simple">
+<li><p>21</p></li>
+<li><p>233</p></li>
+<li><p>210</p></li>
+<li><p>54</p></li>
+</ol>
+</div>
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> (please reconsider) you have added all numbers in the exercise
+<span class="m">2.</span> (correct) layer1: 8<span class="ge">*10 + 10 = 80, layer2: 10*</span>10+10=110; output: 10*3+3=33
+<span class="m">3.</span> (please reconsider) you omitted the bias terms
+<span class="m">4.</span> (please reconsider) you have added dimensionalities instead of multiplying them to obtain the size of the matrix
+</pre></div>
+</div>
+</details><div class="admonition-exercise-1-part-1 admonition">
 <p class="admonition-title">Exercise 1 / Part 1</p>
 <p>Take a look at the training and test set we created. Run the <code class="docutils literal notranslate"><span class="pre">sklearn.metrics.train_test_split</span></code> function multiple times with different parameters, e.g. vary the <code class="docutils literal notranslate"><span class="pre">random_state</span></code>, switch <code class="docutils literal notranslate"><span class="pre">stratify</span></code>.</p>
 <ul class="simple">
@@ -94,9 +120,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: Monitor the training process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 08: Networks are like onions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lessonb01/content.html">Bonus Lesson: How did we train</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Bonus Lesson: How did we train</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 07: Monitor the training process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson09/content.html">Lesson 08: Networks are like onions</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Extras</span></p>
 <ul>
@@ -116,7 +142,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
       <li>Previous: <a href="../lesson05/content.html" title="previous chapter">Lesson 05: Introduction Deep Learning</a></li>
-      <li>Next: <a href="../lesson07/content.html" title="next chapter">Lesson 07: Monitor the training process</a></li>
+      <li>Next: <a href="../lesson07/content.html" title="next chapter">Bonus Lesson: How did we train</a></li>
   </ul></li>
 </ul>
 </div>

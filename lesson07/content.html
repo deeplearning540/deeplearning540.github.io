@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 07: Monitor the training process &#8212; deeplearning in 540 minutes  documentation</title>
+    <title>Bonus Lesson: How did we train &#8212; deeplearning in 540 minutes  documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -14,7 +14,7 @@
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lesson 08: Networks are like onions" href="../lesson08/content.html" />
+    <link rel="next" title="Lesson 07: Monitor the training process" href="../lesson08/content.html" />
     <link rel="prev" title="Lesson 06: Classification by a Neural Network using Keras" href="../lesson06/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -32,9 +32,66 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="lesson-07-monitor-the-training-process">
-<h1>Lesson 07: Monitor the training process<a class="headerlink" href="#lesson-07-monitor-the-training-process" title="Permalink to this headline">¶</a></h1>
-<p>All content is taken from <a class="reference external" href="https://carpentries-incubator.github.io/deep-learning-intro/03-monitor-the-model/index.html">here</a>.</p>
+  <div class="section" id="bonus-lesson-how-did-we-train">
+<h1>Bonus Lesson: How did we train<a class="headerlink" href="#bonus-lesson-how-did-we-train" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<p>This lesson takes references to lesson 06.</p>
+<ul class="simple">
+<li><p>list/repeat the three ingredients to a feed forward network: input, hidden layers, output</p></li>
+<li><p>describe training with mini-batched based weight-update rule</p></li>
+<li><p>describe a softmax layer</p></li>
+<li><p>motivate the loss function of categorical crossentropy (information theory vs. statistics)</p></li>
+<li><p>define backpropagation</p></li>
+<li><p>calculate example backpropagation</p></li>
+<li><p>generalize to full network</p></li>
+</ul>
+</div>
+<div class="section" id="content">
+<h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
+<p><strong>The slides</strong> shown in the video can be obtained from <a class="reference external" href="https://github.com/deeplearning540/lesson06/releases/download/v2021.03.03-a/refs.tags.v2021.03.03-a-slides.pdf">the lesson repo</a>.</p>
+<p>This content is based on discussions in <a class="reference external" href="https://mml-book.github.io/">Mathematics for Machine Learning book</a> by Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, as well as the wonderful presentation in Sebastian Raschka’s <a class="reference external" href="https://youtu.be/oY6-i2Ybin4">lecture L6.2 Understanding Automatic Differentiation via Computation Graphs</a>.</p>
+</div>
+<div class="section" id="check-your-learning">
+<h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>The advantage of mini-batched based optimisation compared to online gradient descent or full data set gradient descent is …</p>
+<ol class="arabic simple">
+<li><p>a mini-batch represents the entire data set and hence is enough to optimize on</p></li>
+<li><p>the optimisation converges faster</p></li>
+<li><p>the optimisation can be performed in memory independent of the data set size</p></li>
+<li><p>the optimisation will converge always into a global optimum</p></li>
+</ol>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>Categorical Cross-Entropy is part of a well-known divergence in statistics. A divergence is a method to compare two probability density functions. It provides a large value if two distributions are different and a small value if they are similar. This well-known divergance that spurrs the Categorical Cross-Entropy is …</p>
+<ol class="arabic simple">
+<li><p>Mean-Squared-Error divergence</p></li>
+<li><p>Negative-Log-Likelihood divergence</p></li>
+<li><p>Kullback-Leibler divergence</p></li>
+<li><p>Maximum-Mean-Discreptancy divergence</p></li>
+</ol>
+</div>
+<div class="admonition-exercise-3 admonition">
+<p class="admonition-title">Exercise 3</p>
+<p>The gradient that is required for gradient descent is the gradient …</p>
+<ol class="arabic simple">
+<li><p>of the loss function <cite>L</cite> with respect to the testset input data, <cite>df/dx</cite>, given the network parameters <cite>theta</cite></p></li>
+<li><p>of the network <cite>f</cite> with respect to the input data, <cite>df/dx</cite>, given the network parameters <cite>theta</cite></p></li>
+<li><p>of the network <cite>f</cite> with respect to the network parameters, <cite>df/dtheta</cite>, given the training data <cite>x</cite></p></li>
+<li><p>of the loss function <cite>L</cite> with respect to the network parameters, <cite>df/dtheta</cite>, given the training data <cite>x</cite></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>perform the same single-neuron backpropagation as in the video but using the <a class="reference external" href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoid activation</a> function. Use <cite>b=1</cite>, <cite>x=.5</cite> and <cite>w=3</cite> for the inputs.</p></li>
+<li><p>perform the same single-neuron backpropagation as in the video but include the loss function for the two sample pairs (a) <cite>{y=1, y_hat=1}</cite> and (b) <cite>{y=1, y_hat=0}</cite>. How would your single weight be changed for (b) with respect to (a)?</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -62,9 +119,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../lesson04/content.html">Lesson 04: Classification Performance ROCs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson05/content.html">Lesson 05: Introduction Deep Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: Classification by a Neural Network using Keras</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 07: Monitor the training process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 08: Networks are like onions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lessonb01/content.html">Bonus Lesson: How did we train</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bonus Lesson: How did we train</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson08/content.html">Lesson 07: Monitor the training process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson09/content.html">Lesson 08: Networks are like onions</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Extras</span></p>
 <ul>
@@ -84,7 +147,7 @@
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
       <li>Previous: <a href="../lesson06/content.html" title="previous chapter">Lesson 06: Classification by a Neural Network using Keras</a></li>
-      <li>Next: <a href="../lesson08/content.html" title="next chapter">Lesson 08: Networks are like onions</a></li>
+      <li>Next: <a href="../lesson08/content.html" title="next chapter">Lesson 07: Monitor the training process</a></li>
   </ul></li>
 </ul>
 </div>
