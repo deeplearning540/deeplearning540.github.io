@@ -82,3 +82,62 @@ Then you can try various other (extreme) learning rates, such as ``10`` or ``1e-
 change the model performance during fitting? Discuss your findings.
 
 
+Exercise 2
+----------
+
+The goal of this exercise is to train a neural network to predict binary class labels on a synthetic
+dataset and compare the results to those obtained with a linear classifier.
+
+The dataset can be found `here <https://deeplearning540.github.io/lesson06/exc2/data.csv>`_.
+It contains 2 columns ``x`` and ``y`` and an additional ``target`` column containing the class labels
+(either ``0`` or ``1``). The dataset can be visualized via
+``sns.scatterplot(data=data_frame, x='x', y='y', hue='target')``.
+
+The goal is to train a neural network, similar to Exercise 1, to predict the class labels of the dataset.
+
+Bonus 1
+~~~~~~~
+
+Try to use a linear classifier, such as
+`LogisticRegression <https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html>`_
+to make predictions about the class labels. You can use the function below to visualize the predictions and ground truth labels:
+
+.. code-block:: py
+   import matplotlib.pyplot as plt
+   import pandas as pd
+
+   def plot_prediction(X, y, y_pred, *, title=''):
+       if isinstance(X, pd.DataFrame):
+           X = X.to_numpy()
+       fig, (left, right) = plt.subplots(ncols=2, figsize=(14, 6))
+       fig.suptitle(title)
+       left.set(title='Ground truth labels')
+       left.scatter(*X.transpose(), c=y)
+       right.set(title='Predicted labels')
+       right.scatter(*X.transpose(), c=y_pred)
+       plt.show()
+
+You will find that the performance of the linear classifier is not very good.
+How can we still use a linear classifier and get similarly good performance as for the neural network?
+
+.. note::
+   Hint: Similar to how we scaled the input data for the wine dataset using the ``StandardScaler``, we are
+   free to transform the data before feeding it to the linear classifier. A particular coordinate transformation
+   might be useful to make this a linear problem.
+
+In the light of your findings, discuss in what situations a neural network might be more useful than a more
+simple method such as a linear classifier, and vice versa.
+What is a particular advantage of neural networks
+(think about `Feature engineering <https://en.wikipedia.org/wiki/Feature_engineering>`_)?
+
+Bonus 2
+~~~~~~~
+
+What is the most simple network architecture that still gives reasonable performance?
+Here complexity (or "simple") refers to the number of trainable parameters, which are influenced
+by the number of layers as well as the number of neurons per layer.
+
+Then, revisit Exercise 1 and check what is the most simple network architecture for the wine dataset.
+
+Compare the two findings and try to explain them with properties of the two datasets.
+Pairplots (``sns.pairplot(data_frame, hue='target')``) might be insightful.
