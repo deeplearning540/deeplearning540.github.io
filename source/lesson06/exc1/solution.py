@@ -49,11 +49,17 @@ model.summary()
 model.compile(
     optimizer=keras.optimizers.Adam(learning_rate=1e-3),
     loss=keras.losses.CategoricalCrossentropy(),
+    metrics=['accuracy'],
 )
 history = model.fit(X_train, y_train, epochs=100)
 
-ax = sns.lineplot(x=history.epoch, y=history.history['loss'])
+fig, ax = plt.subplots()
 ax.set(title='Training loss during fitting', xlabel='Epoch', ylabel='Loss')
+ax = sns.lineplot(x=history.epoch, y=history.history['loss'], ax=ax)
+
+fig, ax = plt.subplots()
+ax.set(title='Accuracy during fitting', xlabel='Epoch', ylabel='Accuracy')
+ax = sns.lineplot(x=history.epoch, y=history.history['accuracy'], ax=ax)
 
 
 y_test_hat = model.predict(X_test)
