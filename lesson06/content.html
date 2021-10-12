@@ -34,7 +34,7 @@
             
   <div class="section" id="lesson-06-classification-by-a-neural-network-using-keras">
 <h1>Lesson 06: Classification by a Neural Network using Keras<a class="headerlink" href="#lesson-06-classification-by-a-neural-network-using-keras" title="Permalink to this headline">¶</a></h1>
-<p>All content is taken from <a class="reference external" href="https://carpentries-incubator.github.io/deep-learning-intro/02-keras/index.html">here</a>.</p>
+<p>All content is taken from <a class="reference external" href="https://carpentries-incubator.github.io/deep-learning-intro/02-keras/index.html">this lesson</a>.</p>
 <ul class="simple">
 <li><p><strong>Preface</strong> describing the inner workings of an artificial neural network (Multi-layer perceptron)</p></li>
 <li><p><strong>Part 1</strong> creates a neural network using the <code class="docutils literal notranslate"><span class="pre">keras</span></code> interface in <code class="docutils literal notranslate"><span class="pre">tensorflow</span></code></p></li>
@@ -136,11 +136,26 @@ It contains 2 columns <code class="docutils literal notranslate"><span class="pr
 (either <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>). The dataset can be visualized via
 <code class="docutils literal notranslate"><span class="pre">sns.scatterplot(data=data_frame,</span> <span class="pre">x='x',</span> <span class="pre">y='y',</span> <span class="pre">hue='target')</span></code>.</p>
 <p>The goal is to train a neural network, similar to Exercise 1, to predict the class labels of the dataset.</p>
-<div class="section" id="id2">
-<h4>Bonus 1<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id1">
+<h4>Bonus 1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>Try to use a linear classifier, such as
 <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html">RidgeClassifier</a>
 to make predictions about the class labels. You can use the function below to visualize the predictions and ground truth labels:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">def</span> <span class="nf">plot_prediction</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">left</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ground truth labels&#39;</span><span class="p">)</span>
+    <span class="n">left</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">right</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Predicted labels&#39;</span><span class="p">)</span>
+    <span class="n">right</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">c</span><span class="o">=</span><span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>You will find that the performance of the linear classifier is not very good.
 How can we still use a linear classifier and get similarly good performance as for the neural network?</p>
 <div class="admonition note">

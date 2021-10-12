@@ -1,11 +1,13 @@
+
 Lesson 06: Classification by a Neural Network using Keras
 *********************************************************
 
-All content is taken from `here <https://carpentries-incubator.github.io/deep-learning-intro/02-keras/index.html>`_.
+All content is taken from `this lesson <https://carpentries-incubator.github.io/deep-learning-intro/02-keras/index.html>`_.
 
 * **Preface** describing the inner workings of an artificial neural network (Multi-layer perceptron)
 * **Part 1** creates a neural network using the ``keras`` interface in ``tensorflow``
 * **Part 2** continues to look at the training history, performs a prediction and constructs a confusion matrix from it
+
 
 Check Your Learning
 ===================
@@ -138,6 +140,7 @@ Try to use a linear classifier, such as
 to make predictions about the class labels. You can use the function below to visualize the predictions and ground truth labels:
 
 .. code-block:: py
+
    import matplotlib.pyplot as plt
    import pandas as pd
 
@@ -156,6 +159,7 @@ You will find that the performance of the linear classifier is not very good.
 How can we still use a linear classifier and get similarly good performance as for the neural network?
 
 .. note::
+
    Hint: Similar to how we scaled the input data for the wine dataset using the ``StandardScaler``, we are
    free to transform the data before feeding it to the linear classifier. A particular coordinate transformation
    might be useful to make this a linear problem.
