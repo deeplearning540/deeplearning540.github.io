@@ -99,7 +99,7 @@ Bonus 1
 ~~~~~~~
 
 Try to use a linear classifier, such as
-`LogisticRegression <https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html>`_
+`RidgeClassifier <https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html>`_
 to make predictions about the class labels. You can use the function below to visualize the predictions and ground truth labels:
 
 .. code-block:: py

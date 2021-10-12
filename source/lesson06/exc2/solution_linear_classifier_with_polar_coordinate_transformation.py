@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from sklearn.datasets import load_wine
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import RidgeClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -36,7 +36,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     shuffle=True,
 )
 
-model = LogisticRegression()
+model = RidgeClassifier()
 model.fit(X_train, y_train)
 
 cm_train = confusion_matrix(y_train, model.predict(X_train))
