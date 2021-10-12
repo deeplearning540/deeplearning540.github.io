@@ -28,4 +28,28 @@ Check Your Learning
 Exercises
 =========
 
-TBA
+Exercise 2
+----------
+
+The goal of this exercise is to fit a neural network to predict wine classes from the
+`sklearn wine dataset <https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html>`_.
+
+Please consider the following aspects when solving this exercise:
+
+1. The dataset can be loaded via ``from sklearn.datasets import load_wine; dataset = load_wine()``.
+   * Consider ``print(dataset['DESCR'])`` for more information about the dataset.
+   * ``dataset['data']`` contains the features which can be used as input data.
+   * ``dataset['target']`` contains the wine class labels.
+2. ``pd.get_dummies`` is helpful to obtain a one-hot encoded version of class labels.
+3. ``train_test_split`` should be performed as usual.
+4. When inspecting the features, you will realize that they all have different number ranges.
+   Hence, normalizing the data is required.
+   The `StandardScaler <https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html>`_
+   might be handy.
+5. Regarding the network architecture, it's best to start small (in terms of number of layers and
+   number of neurons) and only increase if performance is not sufficient. This helps to speed up
+   the training process.
+6. If you need help with the code to set up and fit the neural network, please consider the lecture notes
+   about the penguin dataset; it's quite similar.
+7. Finally, when you are satisfied with the training process, assess the performance of your network
+   with help of the test set (confusion matrix, accuracy, etc).
