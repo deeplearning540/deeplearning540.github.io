@@ -129,15 +129,3 @@ In the light of your findings, discuss in what situations a neural network might
 simple method such as a linear classifier, and vice versa.
 What is a particular advantage of neural networks
 (think about `Feature engineering <https://en.wikipedia.org/wiki/Feature_engineering>`_)?
-
-Bonus 2
-~~~~~~~
-
-What is the most simple network architecture that still gives reasonable performance?
-Here complexity (or "simple") refers to the number of trainable parameters, which are influenced
-by the number of layers as well as the number of neurons per layer.
-
-Then, revisit Exercise 1 and check what is the most simple network architecture for the wine dataset.
-
-Compare the two findings and try to explain them with properties of the two datasets.
-Pairplots (``sns.pairplot(data_frame, hue='target')``) might be insightful.
