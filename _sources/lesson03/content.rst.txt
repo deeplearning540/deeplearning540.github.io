@@ -107,22 +107,18 @@ Exercises
 =========
 
 Use the data set you used for `lesson02 </source/lesson02/content.rst>`_ or be brave and choose a different one. Complete the following steps in order:
-Use the data set you used for `lesson02 </source/lesson02/content.rst>`_ or be brave and choose a different one. Complete the following steps in order:
 
 For part a
 ----------
 
 - Split your data set into train and test set at a fixed ratio.
-- Split your data set into train and test set at a fixed ratio.
-
 - Train a kNN classification on the training set with a fixed value of `k`. 
 
 For part b
 ----------
 
 - Run the prediction and compute accuracy, precision, recall.
-
-- Let's vary now and recompute accuracy, precision, recall for each variant:
+- Let's vary parameters now and recompute accuracy, precision, recall for each variant:
 
   - rerun everything with a smaller and a bigger testset for a fixed `k`
   - rerun everything with a different values of `k` with a fixed testset
@@ -152,7 +148,6 @@ Data sets
   * `clustering_data_08.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_08.csv>`_
   * `clustering_data_09.csv <https://github.com/deeplearning540/lesson02/blob/main/data/clustering_data_09.csv>`_
 
-* `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-dataset>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
 * `iris plants <https://scikit-learn.org/stable/data sets/toy_data set.html#iris-plants-dataset>`_ data set. Use the columns `petal_length` vs. `petal_width`. The class label is provided as the `target` column. To obtain the dataframe from this data set do the following:
 
 .. code-block:: python
