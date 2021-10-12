@@ -28,7 +28,7 @@ Check Your Learning
 Exercises
 =========
 
-Exercise 2
+Exercise 1
 ----------
 
 The goal of this exercise is to fit a neural network to predict wine classes from the
@@ -53,3 +53,32 @@ Please consider the following aspects when solving this exercise:
    about the penguin dataset; it's quite similar.
 7. Finally, when you are satisfied with the training process, assess the performance of your network
    with help of the test set (confusion matrix, accuracy, etc).
+
+Bonus 1
+~~~~~~~
+
+It's great to see the loss decreasing during training, but given a certain loss value, it's still not
+easy to judge how well the model *actually* performs.
+It would be nice to observe higher level metrics, such as accuracy for example.
+Fortunately, the ``model.compile`` method has a parameter which allows for adding such ``metrics``.
+These will eventually be stored in the fit ``history``, just like the ``'loss'``.
+
+The goal of this exercise is to add accuracy as a metric when fitting the model.
+Then the accuracy can be plotted for each epoch, similar to the loss value.
+For more information, please consider the documentation of the
+`model.compile method <https://www.tensorflow.org/api_docs/python/tf/keras/Model#compile>`_.
+
+What other metrics that are useful for classification could you add?
+Consider `tf.keras.metrics <https://www.tensorflow.org/api_docs/python/tf/keras/metrics>`_
+for suggestions.
+
+Bonus 2
+~~~~~~~
+
+The optimizer classes from Keras all have an impotant parameter, namely the ``learning_rate``.
+The goal of this exercise is to get a feeling for how the learning rate influences the training process.
+First, recall how and where the learning rate enters the training process (see the lecture slides).
+Then you can try various other (extreme) learning rates, such as ``10`` or ``1e-5``. How does it
+change the model performance during fitting? Discuss your findings.
+
+
