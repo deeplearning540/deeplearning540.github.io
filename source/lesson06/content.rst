@@ -72,15 +72,6 @@ What other metrics that are useful for classification could you add?
 Consider `tf.keras.metrics <https://www.tensorflow.org/api_docs/python/tf/keras/metrics>`_
 for suggestions.
 
-Bonus 2
-~~~~~~~
-
-The optimizer classes from Keras all have an impotant parameter, namely the ``learning_rate``.
-The goal of this exercise is to get a feeling for how the learning rate influences the training process.
-First, recall how and where the learning rate enters the training process (see the lecture slides).
-Then you can try various other (extreme) learning rates, such as ``10`` or ``1e-5``. How does it
-change the model performance during fitting? Discuss your findings.
-
 
 Exercise 2
 ----------
