@@ -13,15 +13,45 @@ Check Your Learning
 .. admonition:: Exercise 1 / Preface
 
    The architecture presented in the video is often referred to as a feed-forward network. Come up with reasons why this might be the case? Compare your answers with the mentor.
-   
+
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   Because the data is fed in a forward fashion through the network, from inputs to outputs.
+
+.. raw:: html
+
+   </details>
+
+
 .. admonition:: Exercise 2 / Preface
 
    You have created a neural network that takes ``8`` values as input. The network has two hidden (dense) layers of ``10`` neurons each. The output layer has size ``3`` and predicts 3 values. How many parameters does this network have which need to be optimized during training?
 
    1. 21
-   3. 233
-   2. 210
+   2. 233
+   3. 210
    4. 54
+
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   1. (please reconsider) you have added all numbers in the exercise  
+   2. (correct) layer1: 8*10 + 10 = 80, layer2: 10*10+10=110; output: 10*3+3=33
+   3. (please reconsider) you omitted the bias terms
+   4. (please reconsider) you have added dimensionalities instead of multiplying them to obtain the size of the matrix
+
+.. raw:: html
+
+   </details>
 
 .. admonition:: Exercise 1 / Part 1
 
