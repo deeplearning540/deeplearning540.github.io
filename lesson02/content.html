@@ -73,7 +73,11 @@
 <li><p>Reinforcement Learning</p></li>
 </ol>
 </div>
-<div class="admonition-exercise-2 admonition">
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Supervised Learning.
+</pre></div>
+</div>
+</details><div class="admonition-exercise-2 admonition">
 <p class="admonition-title">Exercise 2</p>
 <p>You are given a data set of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See <a class="reference external" href="https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_dataset_scatterplot.svg">this overview plot</a> for help. (Multiple choices possible.)</p>
 <ol class="arabic simple">
@@ -83,7 +87,16 @@
 <li><p>Sepal.Width versus Petal.Width</p></li>
 </ol>
 </div>
-<div class="admonition-exercise-3 admonition">
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The solution to this is not so clear cut and will depend effectively on the algorithm of your choice. By eye, we can make the following observations:
+
+<span class="m">1.</span> not well separated, ergo: not suited for clustering
+<span class="m">2.</span> overlap of the clusters is small, ergo: might work for clustering
+<span class="m">3.</span> overlap of the clusters is small, ergo: might work for clustering
+<span class="m">4.</span> not well separated, ergo: not suited for clustering
+</pre></div>
+</div>
+</details><div class="admonition-exercise-3 admonition">
 <p class="admonition-title">Exercise 3</p>
 <p>You are helping to organize a conference of more than 1000 attendants. All participants have already paid and are expecting to pick up their conference t-shirt on the first day. Your team is in shock as it discovers that t-shirt sizes have not been recorded during online registration. However, all participants were asked to provide their age, gender, body height and weight. To help out, you sit down to write a python script that predicts the t-shirt size for each participant using a clustering algorithm. You know that you can only get 7 t-shirt sizes (XS, S, M, L, XL, XXL). This falls into:</p>
 <ol class="arabic simple">
@@ -92,7 +105,11 @@
 <li><p>Reinforcement Learning</p></li>
 </ol>
 </div>
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This is an <span class="gs">**unsupervised problem**</span>. You know that you can expect 7 categories or clusters in the data. But you have no idea how they are spread across <span class="s">``age, gender, body height and weight``</span>. So unsupervised methods will help you here most likely.
+</pre></div>
 </div>
+</details></div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <p>Choose any exercise from the two categories below. Regarding the data set, consult the corresponding section.</p>
