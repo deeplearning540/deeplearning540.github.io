@@ -36,8 +36,64 @@
 <h1>Lesson 08: Monitor the training process<a class="headerlink" href="#lesson-08-monitor-the-training-process" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>All content is taken from <a class="reference external" href="https://carpentries-incubator.github.io/deep-learning-intro/03-monitor-the-model/index.html">here</a>.</p>
+<p>All content is taken from <a class="reference external" href="https://carpentries-incubator.github.io/deep-learning-intro/03-monitor-the-model/index.html">this carpentries incubator project</a>.</p>
 <p>For instructors: the video script for both parts is available <a class="reference external" href="https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/script.ipynb">here</a>.</p>
+</div>
+<div class="section" id="check-your-learning">
+<h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Overfitting describes the situation where …</p>
+<ol class="arabic simple">
+<li><p>a neural network produces predictions that are more precise than the training data set allows</p></li>
+<li><p>a neural network produces random predictions</p></li>
+<li><p>a neural network learns the distribution of the training and test data exactly</p></li>
+<li><p>a neural network learns the distribution of the training data exactly and is incapable to predict the test set well</p></li>
+</ol>
+</div>
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> no, this is describes a situation that rarely occurs but everyone aspires to (you have found a very good predictor!)
+<span class="m">2.</span> no, this is called underfitting - the network is incapable of making any predictions better than random choice
+<span class="m">3.</span> no, this is an unrealistic situation as the network should not be able to predict exactly the test set (unseen data)
+<span class="m">4.</span> yes, overfitting describes the situation where a predictor is incapable to generalize, i.e. it predicts the training set extremely well, but almost performs random predictions on unseen data (i.e. the test set)
+</pre></div>
+</div>
+</details><div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>Overfitting counter-measures include … (multiple answers possible)</p>
+<ol class="arabic simple">
+<li><p>defining a baseline which corresponds to random guessing and comparing current prediction quality to this</p></li>
+<li><p>trying to obtain more data</p></li>
+<li><p>varying the size of the neural network with respect to hidden layers, number of neurons, layers types in use and other hyperparameters</p></li>
+<li><p>ignoring quality measurements on the test or validation sets completely</p></li>
+</ol>
+</div>
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> yes, this is also often called using a dummy predictor
+<span class="m">2.</span> yes, this would potentially help as the training data would then yield more variability which can more closer to reality and help predicting the test set
+<span class="m">3.</span> yes, this would help adopt the capacity of the network to the amount of training data available
+<span class="m">4.</span> no, this will not help at all or change anything
+</pre></div>
+</div>
+</details></div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<p>Repeat the prediction of the sunshine hours using the data from one other city, e.g.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BUDAPEST_sunshine</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DE_BILT_sunshine</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DRESDEN_sunshine</span></code></p></li>
+<li><p>…</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SONNBLICK_sunshine</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">STOCKHOLM_sunshine</span></code></p></li>
+</ul>
+<p>Do you observe a similar situation than with BASEL? To answer this, choose from any of the following aspects to guide your answer:</p>
+<ul class="simple">
+<li><p>How does the situation change if you include <code class="docutils literal notranslate"><span class="pre">5</span></code> years instead of <code class="docutils literal notranslate"><span class="pre">3</span></code>?</p></li>
+<li><p>What are the model configurations that work best for you, e.g. to bring the <code class="docutils literal notranslate"><span class="pre">RMSE</span></code> down below <code class="docutils literal notranslate"><span class="pre">1</span></code> hour?</p></li>
+<li><p>What happens if you choose the <code class="docutils literal notranslate"><span class="pre">sigmoid</span></code> activation?</p></li>
+<li><p>What happens if you choose a larger <code class="docutils literal notranslate"><span class="pre">batch_size</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">64</span></code> or <code class="docutils literal notranslate"><span class="pre">128</span></code>?</p></li>
+</ul>
 </div>
 </div>
 
@@ -69,6 +125,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: How did we train</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 08: Monitor the training process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson09/content.html">Lesson 09: Networks are like onions</a></li>
