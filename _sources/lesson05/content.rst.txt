@@ -36,12 +36,29 @@ Exercises
    4. Identifying people in pictures after being trained only on cats and dogs.
    5. Translating English into French.
 
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   1. yes, a classification problem using images as input
+   2. no, even though it is a regression problem, you'd need tons of training data and still be off by quite a bit
+   3. no, not enough training data available
+   4. no, likely a deep learning model will not be able to do that
+   5. yes, tons of training data available from translated books or wikipedia articles
+
+.. raw:: html
+
+   </details>
+
 .. admonition:: Exercise 2
 
    Think about a problem you’d like to use Deep Learning to solve.
 
-   * What do you want a Deep Learning system to be able to tell you?
-   * What data inputs and outputs will you have?
+   * What do you want a Deep Learning system to be able to predict (or tell you)?
+   * What data inputs and outputs will you need?
    * Do you think you’ll need to train the network or will a pre-trained network be suitable?
    * What data do you have to train with? What preparation will your data need? Consider both the data you are going to predict/classify from and the data you’ll use to train the network.
 

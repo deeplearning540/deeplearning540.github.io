@@ -67,13 +67,24 @@
 <li><p>Reception Occlusion Characteristic</p></li>
 </ol>
 </div>
-<div class="admonition-exercise-2 admonition">
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">3.</span> yes, <span class="s">``Receiver Operating Characteristic``</span>
+I made up the rest.
+</pre></div>
+</div>
+</details><div class="admonition-exercise-2 admonition">
 <p class="admonition-title">Exercise 2</p>
 <p>Fill in the blanks!</p>
-<p>A k-Nearest-Neighbor (kNN) classifier can produce a probability when predicting the class label of an unseen sample <cite>x_q</cite>. This can be achieved by counting class <cite>_______</cite> in the training set neighborhood of this query point.</p>
-<p>For a <cite>k=7</cite> neighborhood, the threshold to decide for any given class in this neighborhood is calculated as <cite>4/__</cite>. In the same setting (<cite>k=7</cite>), let’s assume we find <cite>5</cite> labels for class <cite>1</cite> and <cite>2</cite> labels for class <cite>0</cite>. This means, that we get two probabilities, which are <cite>_____</cite> for class <cite>1</cite> and <cite>_____</cite> for class <cite>0</cite>.</p>
+<p>A k-Nearest-Neighbor (kNN) classifier can produce a probability when predicting the class label of an unseen sample <code class="docutils literal notranslate"><span class="pre">x_q</span></code>. This can be achieved by counting class <code class="docutils literal notranslate"><span class="pre">_______</span></code> in the training set neighborhood of this query point.</p>
+<p>For a <code class="docutils literal notranslate"><span class="pre">k=7</span></code> neighborhood, the threshold to decide for any given class in this neighborhood is calculated as <code class="docutils literal notranslate"><span class="pre">4/__</span></code>. In the same setting (<code class="docutils literal notranslate"><span class="pre">k=7</span></code>), let’s assume we find <code class="docutils literal notranslate"><span class="pre">5</span></code> labels for class <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span></code> labels for class <code class="docutils literal notranslate"><span class="pre">0</span></code>. This means, that we get two probabilities, which are <code class="docutils literal notranslate"><span class="pre">_____</span></code> for class <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">_____</span></code> for class <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 </div>
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>A k-Nearest-Neighbor (kNN) classifier can produce a probability when predicting the class label of an unseen sample <span class="s">``x_q``</span>. This can be achieved by counting class <span class="s">``frequencies``</span> in the training set neighborhood of this query point.
+
+For a <span class="s">``k=7``</span> neighborhood, the threshold to decide for any given class in this neighborhood is calculated as <span class="s">``4/7``</span>. In the same setting (<span class="s">``k=7``</span>), let&#39;s assume we find <span class="s">``5``</span> labels for class <span class="s">``1``</span> and <span class="s">``2``</span> labels for class <span class="s">``0``</span>. This means, that we get two probabilities, which are <span class="s">``5/7 = 0.7143``</span> for class <span class="s">``1``</span> and <span class="s">``2/7 = 0.2857``</span> for class <span class="s">``0``</span>.
+</pre></div>
 </div>
+</details></div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <p>For this lesson, please complete the following steps in order:</p>

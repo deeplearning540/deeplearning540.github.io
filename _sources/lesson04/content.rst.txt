@@ -42,13 +42,42 @@ The following questions serve as a help for learners to reflect on the content o
    3. Receiver Operating Characteristic
    4. Reception Occlusion Characteristic
 
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   3. yes, ``Receiver Operating Characteristic``
+   I made up the rest. 
+
+.. raw:: html
+
+   </details>
+
 .. admonition:: Exercise 2
 
    Fill in the blanks!
 
-   A k-Nearest-Neighbor (kNN) classifier can produce a probability when predicting the class label of an unseen sample `x_q`. This can be achieved by counting class `_______` in the training set neighborhood of this query point.
+   A k-Nearest-Neighbor (kNN) classifier can produce a probability when predicting the class label of an unseen sample ``x_q``. This can be achieved by counting class ``_______`` in the training set neighborhood of this query point.
 
-   For a `k=7` neighborhood, the threshold to decide for any given class in this neighborhood is calculated as `4/__`. In the same setting (`k=7`), let's assume we find `5` labels for class `1` and `2` labels for class `0`. This means, that we get two probabilities, which are `_____` for class `1` and `_____` for class `0`. 
+   For a ``k=7`` neighborhood, the threshold to decide for any given class in this neighborhood is calculated as ``4/__``. In the same setting (``k=7``), let's assume we find ``5`` labels for class ``1`` and ``2`` labels for class ``0``. This means, that we get two probabilities, which are ``_____`` for class ``1`` and ``_____`` for class ``0``. 
+
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   A k-Nearest-Neighbor (kNN) classifier can produce a probability when predicting the class label of an unseen sample ``x_q``. This can be achieved by counting class ``frequencies`` in the training set neighborhood of this query point.
+
+   For a ``k=7`` neighborhood, the threshold to decide for any given class in this neighborhood is calculated as ``4/7``. In the same setting (``k=7``), let's assume we find ``5`` labels for class ``1`` and ``2`` labels for class ``0``. This means, that we get two probabilities, which are ``5/7 = 0.7143`` for class ``1`` and ``2/7 = 0.2857`` for class ``0``. 
+
+.. raw:: html
+
+   </details>
 
 
 Exercises
