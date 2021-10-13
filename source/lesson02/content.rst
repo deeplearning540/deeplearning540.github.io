@@ -38,6 +38,19 @@ The following questions serve as a help for learners to reflect on the content o
    2. Unsupervised Learning
    3. Reinforcement Learning
 
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   Supervised Learning.
+
+.. raw:: html
+
+   </details>
+
 
 .. admonition:: Exercise 2
 
@@ -48,6 +61,24 @@ The following questions serve as a help for learners to reflect on the content o
    3. Petal.Length versus Petal.Width
    4. Sepal.Width versus Petal.Width
 
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   The solution to this is not so clear cut and will depend effectively on the algorithm of your choice. By eye, we can make the following observations:
+
+   1. not well separated, ergo: not suited for clustering
+   2. overlap of the clusters is small, ergo: might work for clustering
+   3. overlap of the clusters is small, ergo: might work for clustering
+   4. not well separated, ergo: not suited for clustering
+
+.. raw:: html
+
+   </details>
+
 .. admonition:: Exercise 3
 
    You are helping to organize a conference of more than 1000 attendants. All participants have already paid and are expecting to pick up their conference t-shirt on the first day. Your team is in shock as it discovers that t-shirt sizes have not been recorded during online registration. However, all participants were asked to provide their age, gender, body height and weight. To help out, you sit down to write a python script that predicts the t-shirt size for each participant using a clustering algorithm. You know that you can only get 7 t-shirt sizes (XS, S, M, L, XL, XXL). This falls into:
@@ -55,6 +86,20 @@ The following questions serve as a help for learners to reflect on the content o
    1. Supervised Learning
    2. Unsupervised Learning
    3. Reinforcement Learning
+
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   This is an **unsupervised problem**. You know that you can expect 7 categories or clusters in the data. But you have no idea how they are spread across ``age, gender, body height and weight``. So unsupervised methods will help you here most likely.
+
+.. raw:: html
+
+   </details>
+
 
 
 Exercises
