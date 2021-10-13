@@ -28,7 +28,7 @@ The following questions serve as a help for learners to reflect on the content o
 
 .. admonition:: Exercise 1
 
-   When using the k-Nearest-Neighbor (kNN) algorithm for classifying a query point `x_q`, the `k` stands for:
+   When using the `k-Nearest-Neighbor (kNN) algorithm for classifying <https://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification>`_ a query point `x_q`, the `k` stands for:
 
    1. the number of neighbors that must have a given label for the query point to get this label assigned
    
@@ -37,8 +37,25 @@ The following questions serve as a help for learners to reflect on the content o
    3. the number of observations that define a neighborhood
 
    4. the number of clusters in the data set
- 
- 
+
+
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   1. no, this is implicetely set once you have the size of the neighborhood defined
+   2. no, this is just a property of the dataset which the algorithm does not rely on
+   3. yes, the number of observations that define a neighborhood (see also `KNeighborsClassifier documentation <https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier>`_)
+   4. no, similar to the number of classes present, this is a property of the dataset
+
+.. raw:: html
+
+   </details>
+
+
 .. admonition:: Exercise 2
 
    When going through tutorials and exercises that discuss the k-Nearest-Neighbor (kNN) method, you observe that `k` is typically chosen to be an odd number. Checking the code, `sklearn` also allows even numbers for `k`! Why do people tend to choose odd numbers?
@@ -51,7 +68,22 @@ The following questions serve as a help for learners to reflect on the content o
    
    4. odd numbers prevent ties from happening with the plurarity vote
    
-   
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   1. no, while perhaps likely, this is not correct
+   2. no, ``kNeighborsClassifier`` work with a plurality vote
+   3. no, the query sample is never part of the voting as we want to predict its class in the first place
+   4. yes, ``kNeighborsclassifier`` relies on a plurality vote and odd-number neighborhoods decrease the probability to create ties (if they occur, the winner is randomly chosen)
+
+.. raw:: html
+
+   </details>
+
 .. admonition:: Exercise 3
 
    What is the majority vote and the plurality vote if the 8 nearest neighbors to your unknown data point are of the following classes:
@@ -63,8 +95,8 @@ The following questions serve as a help for learners to reflect on the content o
    - class 3: 2
    - class 4: 1
 
-   majority vote: `____`
-   plurality vote: `____`
+   majority vote: ``____``
+   plurality vote: ``____``
 
    b)
    
@@ -72,8 +104,22 @@ The following questions serve as a help for learners to reflect on the content o
    - class 2: 2
    - class 3: 1
 
-   majority vote: `____`
-   plurality vote: `____`
+   majority vote: ``____``
+   plurality vote: ``____``
+
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: rst
+
+   a) majority vote: no class exceeds ``50%`` of the votes (a random choice would have to be made), plurality vote: ``class 1``
+   b) majority vote: ``class 1`` exceeds ``50%`` of votes, plurality vote: ``class 1`` as well
+
+.. raw:: html
+
+   </details>
 
 
 .. admonition:: Exercise 4
@@ -99,8 +145,44 @@ The following questions serve as a help for learners to reflect on the content o
       cm = confusion_matrix(y_train, y_test_hat)
 
       accuracy = (cm[0,0]+cm[0,1]) / cm.sum()
-      
 
+
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: python
+
+     from sklearn.neighbors import KNeighborsClassifier as knn
+     from sklearn.model_selection import train_test_split
+     from sklearn.metrics import confusion_matrix
+
+     # ... load data set ...
+     # ... load data set ...
+
+     X_train, X_test, y_train, y_test = train_test_split(X, y,
+     #yikes a value above 1. for test_size! Better choose 0.5 or 0.1 depending on the training set size 
+                                                         test_size = 1.5, 
+                                                         random_state = 42)
+     kmeans = knn(n_neighbors=5)
+     kmeans = kmeans.fit(X_train, y_train)
+
+     #yikes, the prediction is performed on the training set!
+     #better: y_test_hat = kmeans.predict(X_test)
+     y_test_hat = kmeans.predict(X_train)
+
+     #yikes, the training set is used for the confusion matrix
+     #better: cm = confusion_matrix(y_test, y_test_hat)
+     cm = confusion_matrix(y_train, y_test_hat)
+
+     #yikes, accuracy is (tp + tn) / total
+     #better: accuracy = (cm[0,0]+cm[1,1]) / cm.sum()
+     accuracy = (cm[0,0]+cm[0,1]) / cm.sum()
+
+.. raw:: html
+
+   </details>
 
 
 Exercises

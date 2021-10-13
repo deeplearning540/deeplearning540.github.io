@@ -58,7 +58,7 @@
 <p>The following questions serve as a help for learners to reflect on the content of the videos. Answer at least one question. At best you want to answer these questions as a team.</p>
 <div class="admonition-exercise-1 admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>When using the k-Nearest-Neighbor (kNN) algorithm for classifying a query point <cite>x_q</cite>, the <cite>k</cite> stands for:</p>
+<p>When using the <a class="reference external" href="https://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification">k-Nearest-Neighbor (kNN) algorithm for classifying</a> a query point <cite>x_q</cite>, the <cite>k</cite> stands for:</p>
 <ol class="arabic simple">
 <li><p>the number of neighbors that must have a given label for the query point to get this label assigned</p></li>
 <li><p>the number of classes occurring in the data set</p></li>
@@ -66,7 +66,14 @@
 <li><p>the number of clusters in the data set</p></li>
 </ol>
 </div>
-<div class="admonition-exercise-2 admonition">
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> no, this is implicetely set once you have the size of the neighborhood defined
+<span class="m">2.</span> no, this is just a property of the dataset which the algorithm does not rely on
+<span class="m">3.</span> yes, the number of observations that define a neighborhood (see also <span class="s">`KNeighborsClassifier documentation </span><span class="si">&lt;https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier&gt;</span><span class="s">`_</span>)
+<span class="m">4.</span> no, similar to the number of classes present, this is a property of the dataset
+</pre></div>
+</div>
+</details><div class="admonition-exercise-2 admonition">
 <p class="admonition-title">Exercise 2</p>
 <p>When going through tutorials and exercises that discuss the k-Nearest-Neighbor (kNN) method, you observe that <cite>k</cite> is typically chosen to be an odd number. Checking the code, <cite>sklearn</cite> also allows even numbers for <cite>k</cite>! Why do people tend to choose odd numbers?</p>
 <ol class="arabic simple">
@@ -76,7 +83,14 @@
 <li><p>odd numbers prevent ties from happening with the plurarity vote</p></li>
 </ol>
 </div>
-<div class="admonition-exercise-3 admonition">
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> no, while perhaps likely, this is not correct
+<span class="m">2.</span> no, <span class="s">``kNeighborsClassifier``</span> work with a plurality vote
+<span class="m">3.</span> no, the query sample is never part of the voting as we want to predict its class in the first place
+<span class="m">4.</span> yes, <span class="s">``kNeighborsclassifier``</span> relies on a plurality vote and odd-number neighborhoods decrease the probability to create ties (if they occur, the winner is randomly chosen)
+</pre></div>
+</div>
+</details><div class="admonition-exercise-3 admonition">
 <p class="admonition-title">Exercise 3</p>
 <p>What is the majority vote and the plurality vote if the 8 nearest neighbors to your unknown data point are of the following classes:</p>
 <ol class="loweralpha simple">
@@ -88,8 +102,8 @@
 <li><p>class 3: 2</p></li>
 <li><p>class 4: 1</p></li>
 </ul>
-<p>majority vote: <cite>____</cite>
-plurality vote: <cite>____</cite></p>
+<p>majority vote: <code class="docutils literal notranslate"><span class="pre">____</span></code>
+plurality vote: <code class="docutils literal notranslate"><span class="pre">____</span></code></p>
 <ol class="loweralpha simple" start="2">
 <li></li>
 </ol>
@@ -98,10 +112,15 @@ plurality vote: <cite>____</cite></p>
 <li><p>class 2: 2</p></li>
 <li><p>class 3: 1</p></li>
 </ul>
-<p>majority vote: <cite>____</cite>
-plurality vote: <cite>____</cite></p>
+<p>majority vote: <code class="docutils literal notranslate"><span class="pre">____</span></code>
+plurality vote: <code class="docutils literal notranslate"><span class="pre">____</span></code></p>
 </div>
-<div class="admonition-exercise-4 admonition">
+<details>
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>a) majority vote: no class exceeds <span class="s">``50%``</span> of the votes (a random choice would have to be made), plurality vote: <span class="s">``class 1``</span>
+b) majority vote: <span class="s">``class 1``</span> exceeds <span class="s">``50%``</span> of votes, plurality vote: <span class="s">``class 1``</span> as well
+</pre></div>
+</div>
+</details><div class="admonition-exercise-4 admonition">
 <p class="admonition-title">Exercise 4</p>
 <p>Find the four hidden bug(s)!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span> <span class="k">as</span> <span class="n">knn</span>
@@ -124,7 +143,35 @@ plurality vote: <cite>____</cite></p>
 </pre></div>
 </div>
 </div>
+<details>
+<summary>Solution</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span> <span class="k">as</span> <span class="n">knn</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+
+<span class="c1"># ... load data set ...</span>
+<span class="c1"># ... load data set ...</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+<span class="c1">#yikes a value above 1. for test_size! Better choose 0.5 or 0.1 depending on the training set size</span>
+                                                    <span class="n">test_size</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
+                                                    <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">knn</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1">#yikes, the prediction is performed on the training set!</span>
+<span class="c1">#better: y_test_hat = kmeans.predict(X_test)</span>
+<span class="n">y_test_hat</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="c1">#yikes, the training set is used for the confusion matrix</span>
+<span class="c1">#better: cm = confusion_matrix(y_test, y_test_hat)</span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_test_hat</span><span class="p">)</span>
+
+<span class="c1">#yikes, accuracy is (tp + tn) / total</span>
+<span class="c1">#better: accuracy = (cm[0,0]+cm[1,1]) / cm.sum()</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">cm</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">cm</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
 </div>
+</details></div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <p>Use the data set you used for <a class="reference external" href="/source/lesson02/content.rst">lesson02</a> or be brave and choose a different one. Complete the following steps in order:</p>
