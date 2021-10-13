@@ -29,4 +29,4 @@ Learning Objectives
 Content
 =======
 
-slidedeck to be produced `here <https://deeplearning540.github.io/lesson00/>`_.
+slidedeck to be produced `here <https://deeplearning540.github.io/lesson01/>`_.
