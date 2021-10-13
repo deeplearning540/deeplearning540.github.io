@@ -37,8 +37,9 @@ The following questions serve as a help for learners to reflect on the content o
    3. the number of observations that define a neighborhood
 
    4. the number of clusters in the data set
- 
- .. raw:: html
+
+
+.. raw:: html
 
    <details>
    <summary>Solution</summary>
@@ -144,7 +145,8 @@ The following questions serve as a help for learners to reflect on the content o
       cm = confusion_matrix(y_train, y_test_hat)
 
       accuracy = (cm[0,0]+cm[0,1]) / cm.sum()
-      
+
+
 .. raw:: html
 
    <details>
