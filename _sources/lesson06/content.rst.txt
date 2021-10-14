@@ -47,7 +47,7 @@ Check Your Learning
 .. code-block:: rst
 
    1. (please reconsider) you have added all numbers in the exercise  
-   2. (correct) layer1: 8*10 + 10 = 80, layer2: 10*10+10=110; output: 10*3+3=33
+   2. (correct) layer1: 8*10 + 10 = 90, layer2: 10*10+10=110; output: 10*3+3=33
    3. (please reconsider) you omitted the bias terms
    4. (please reconsider) you have added dimensionalities instead of multiplying them to obtain the size of the matrix
 
@@ -125,7 +125,7 @@ Exercise 2
 The goal of this exercise is to train a neural network to predict binary class labels on a synthetic
 dataset and compare the results to those obtained with a linear classifier.
 
-The dataset can be found `here <https://deeplearning540.github.io/lesson06/exc2/data.csv>`_.
+The dataset can be found :download:`here for download </_static/data/csv/lesson06/exc2_data.csv>`.
 It contains 2 columns ``x`` and ``y`` and an additional ``target`` column containing the class labels
 (either ``0`` or ``1``). The dataset can be visualized via
 ``sns.scatterplot(data=data_frame, x='x', y='y', hue='target')``.
