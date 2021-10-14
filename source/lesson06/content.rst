@@ -125,7 +125,7 @@ Exercise 2
 The goal of this exercise is to train a neural network to predict binary class labels on a synthetic
 dataset and compare the results to those obtained with a linear classifier.
 
-The dataset can be found `here <https://deeplearning540.github.io/lesson06/exc2/data.csv>`_.
+The dataset can be found :download:`here for download </_static/data/csv/lesson06/exc2_data.csv>`.
 It contains 2 columns ``x`` and ``y`` and an additional ``target`` column containing the class labels
 (either ``0`` or ``1``). The dataset can be visualized via
 ``sns.scatterplot(data=data_frame, x='x', y='y', hue='target')``.
