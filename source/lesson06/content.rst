@@ -47,7 +47,7 @@ Check Your Learning
 .. code-block:: rst
 
    1. (please reconsider) you have added all numbers in the exercise  
-   2. (correct) layer1: 8*10 + 10 = 80, layer2: 10*10+10=110; output: 10*3+3=33
+   2. (correct) layer1: 8*10 + 10 = 90, layer2: 10*10+10=110; output: 10*3+3=33
    3. (please reconsider) you omitted the bias terms
    4. (please reconsider) you have added dimensionalities instead of multiplying them to obtain the size of the matrix
 
