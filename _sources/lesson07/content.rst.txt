@@ -30,7 +30,7 @@ This content is based on discussions in `Mathematics for Machine Learning book <
 Check your Learning
 ===================
 
-.. admonition:: Exercise 1
+.. admonition:: Question 1
 
    The advantage of mini-batched based optimisation compared to online gradient descent or full data set gradient descent is ...
 
@@ -59,7 +59,7 @@ Check your Learning
    </details>
 
 
-.. admonition:: Exercise 2
+.. admonition:: Question 2
 
    Categorical Cross-Entropy is based in parts on a well-known divergence in statistics. A divergence is a method to compare two probability density functions. It provides a large value if two distributions are different and a small value if they are similar. This well-known divergance that builds the Categorical Cross-Entropy is ...
 
@@ -85,7 +85,7 @@ Check your Learning
    </details>
 
 
-.. admonition:: Exercise 3
+.. admonition:: Question 3
 
    The gradient that is required for gradient descent is the gradient ...
 

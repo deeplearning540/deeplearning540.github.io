@@ -32,7 +32,7 @@ This lesson is based on the wonderful keras introduction by Walter de Back
 Check your Learning
 ===================
 
-.. admonition:: Exercise 1
+.. admonition:: Question 1
 
    Fill in the blanks to produce a CNN for classification!
 
@@ -68,7 +68,7 @@ Check your Learning
    model = keras.Model(inputs = _______, outputs = _______, name="hello-world-cnn")
 
 
-.. admonition:: Exercise 2
+.. admonition:: Question 2
 
    The `Flatten` operation rearranges an input image (or feature map) into a sequence of numbers. How does it perform this?
 
@@ -77,7 +77,7 @@ Check your Learning
    3. all columns of the input are concatenated (from top to bottom)
    4. all rows of the input are concatenated (from top to bottom)
 
-.. admonition:: Exercise 3
+.. admonition:: Question 3
 
    For an input image shape of `28x28` what is the shape of the feature map after running the image through a single `5x5` convolutional filter?
 
@@ -86,7 +86,7 @@ Check your Learning
    3. `26x26`
    4. `24x24`
 
-.. admonition:: Exercise 4
+.. admonition:: Question 4
 
    For an MNIST input image, how many parameters does a `Conv2D` layer require when being defined to produce `16` feature maps as output and a `3x3` neighborhood. How many parameters does a `Dense` layer with `16` outputs have? Compute the two parameter counts!
 

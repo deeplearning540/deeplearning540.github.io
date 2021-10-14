@@ -26,7 +26,7 @@ The Deep Learning Workflow
 Exercises
 =========
 
-.. admonition:: Exercise 1
+.. admonition:: Question 1
 
    Which of the following would you apply Deep Learning to?
 
@@ -53,7 +53,7 @@ Exercises
 
    </details>
 
-.. admonition:: Exercise 2
+.. admonition:: Question 2
 
    Think about a problem you’d like to use Deep Learning to solve.
 

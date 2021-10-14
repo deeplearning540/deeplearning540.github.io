@@ -12,7 +12,7 @@ All content is taken from `this lesson <https://carpentries-incubator.github.io/
 Check Your Learning
 ===================
 
-.. admonition:: Exercise 1 / Preface
+.. admonition:: Question 1 / Preface
 
    The architecture presented in the video is often referred to as a feed-forward network. Come up with reasons why this might be the case? Compare your answers with the mentor.
 
@@ -30,7 +30,7 @@ Check Your Learning
    </details>
 
 
-.. admonition:: Exercise 2 / Preface
+.. admonition:: Question 2 / Preface
 
    You have created a neural network that takes ``8`` values as input. The network has two hidden (dense) layers of ``10`` neurons each. The output layer has size ``3`` and predicts 3 values. How many parameters does this network have which need to be optimized during training?
 
@@ -55,14 +55,14 @@ Check Your Learning
 
    </details>
 
-.. admonition:: Exercise 1 / Part 1
+.. admonition:: Question 1 / Part 1
 
    Take a look at the training and test set we created. Run the ``sklearn.metrics.train_test_split`` function multiple times with different parameters, e.g. vary the ``random_state``, switch ``stratify``. 
 
    - How many samples do the training and test sets have each time?
    - Are the classes in the training set well balanced compared to the output of ``penguin_features.species_.value_counts()``?
 
-.. admonition:: Exercise 2 / Part 1
+.. admonition:: Question 2 / Part 1
 
    With the code snippets in the video, we defined a keras model with 1 hidden layer with 10 neurons and an output layer with 3 neurons.
 

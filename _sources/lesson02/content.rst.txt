@@ -30,7 +30,7 @@ Check your Learning
 
 The following questions serve as a help for learners to reflect on the content of the videos. Answer at least one question. At best you want to answer these questions as a team.
 
-.. admonition:: Exercise 1
+.. admonition:: Question 1
 
    You are provided a table of measurements from a weather station. Each measurements comes with values for temperature, precipation, cloud structure, date, humidity, and a quality ID. The latter tells you if the instrument was performing OK. You'd like to learn an algorithm that is able to predict the quality ID (5 possible integer values from 0 to 4) for any new data coming in. This falls into ...
 
@@ -52,7 +52,7 @@ The following questions serve as a help for learners to reflect on the content o
    </details>
 
 
-.. admonition:: Exercise 2
+.. admonition:: Question 2
 
    You are given a data set of iris flowers. The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Which of the following feature combinations lend themselves for clustering? See `this overview plot <https://en.wikipedia.org/wiki/Iris_flower_data_set#/media/File:Iris_data set_scatterplot.svg>`_ for help. (Multiple choices possible.)
 
@@ -79,7 +79,7 @@ The following questions serve as a help for learners to reflect on the content o
 
    </details>
 
-.. admonition:: Exercise 3
+.. admonition:: Question 3
 
    You are helping to organize a conference of more than 1000 attendants. All participants have already paid and are expecting to pick up their conference t-shirt on the first day. Your team is in shock as it discovers that t-shirt sizes have not been recorded during online registration. However, all participants were asked to provide their age, gender, body height and weight. To help out, you sit down to write a python script that predicts the t-shirt size for each participant using a clustering algorithm. You know that you can only get 7 t-shirt sizes (XS, S, M, L, XL, XXL). This falls into:
 

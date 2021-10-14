@@ -33,7 +33,7 @@ Check your Learning
 
 The following questions serve as a help for learners to reflect on the content of the videos. Answer at least one question. At best you want to answer these questions as a team.
 
-.. admonition:: Exercise 1
+.. admonition:: Question 1
 
    The `ROC` acronym stands for
 
@@ -56,7 +56,7 @@ The following questions serve as a help for learners to reflect on the content o
 
    </details>
 
-.. admonition:: Exercise 2
+.. admonition:: Question 2
 
    Fill in the blanks!
 
