@@ -116,7 +116,7 @@ Check your Learning
 Exercises
 =========
 
-1. Repeat the prediction of the image class using the MNIST or fashionMNIST dataset:
+1. Repeat training a classification network for the image class as discussed in this lesson using the MNIST or fashionMNIST dataset:
 
 * `MNIST <http://yann.lecun.com/exdb/mnist/>`_, handwritten digits classification. More information can be obtained from `keras docs on MNIST <https://keras.io/api/datasets/mnist/>`_.
 
