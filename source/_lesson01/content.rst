@@ -24,7 +24,7 @@ Check your Learning
 
 The following questions serve as a help for learners to reflect on the content of the videos. Answer at least one question. At best you want to answer these questions as a team.
 
-.. admonition:: Exercise 1
+.. admonition:: Question 1
 
    **In the following, the order of steps was confused, please rearrange:**
    
@@ -34,7 +34,7 @@ The following questions serve as a help for learners to reflect on the content o
    4. collect training data, predict new data, fit training data, compute accuracy
 
 
-.. admonition:: Exercise 2
+.. admonition:: Question 2
 
    **The least squares method for an input data pair `x` and `y` derives it's name as it ...**
 
@@ -44,7 +44,7 @@ The following questions serve as a help for learners to reflect on the content o
    4. Minimizes the sum of `y**2` and `x**2`
 
 
-.. admonition:: Exercise 3
+.. admonition:: Question 3
 
    **NaN stands for not-a-number. When loading a data set with `pandas`, NaN values occur in the loaded data because ...**
    **NaN stands for not-a-number. When loading a data set with `pandas`, NaN values occur in the loaded data because ...**

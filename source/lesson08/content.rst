@@ -12,7 +12,7 @@ For instructors: the video script for both parts is available `here <https://git
 Check your Learning
 ===================
 
-.. admonition:: Exercise 1
+.. admonition:: Question 1
 
    Overfitting describes the situation where ...
 
@@ -41,7 +41,7 @@ Check your Learning
    </details>
 
 
-.. admonition:: Exercise 2
+.. admonition:: Question 2
 
    Overfitting counter-measures include ... (multiple answers possible)
 

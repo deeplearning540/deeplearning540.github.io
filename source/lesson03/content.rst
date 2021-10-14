@@ -26,7 +26,7 @@ Check your Learning
 
 The following questions serve as a help for learners to reflect on the content of the videos. Answer at least one question. At best you want to answer these questions as a team.
 
-.. admonition:: Exercise 1
+.. admonition:: Question 1
 
    When using the `k-Nearest-Neighbor (kNN) algorithm for classifying <https://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification>`_ a query point `x_q`, the `k` stands for:
 
@@ -56,7 +56,7 @@ The following questions serve as a help for learners to reflect on the content o
    </details>
 
 
-.. admonition:: Exercise 2
+.. admonition:: Question 2
 
    When going through tutorials and exercises that discuss the k-Nearest-Neighbor (kNN) method, you observe that `k` is typically chosen to be an odd number. Checking the code, `sklearn` also allows even numbers for `k`! Why do people tend to choose odd numbers?
 
@@ -84,7 +84,7 @@ The following questions serve as a help for learners to reflect on the content o
 
    </details>
 
-.. admonition:: Exercise 3
+.. admonition:: Question 3
 
    What is the majority vote and the plurality vote if the 8 nearest neighbors to your unknown data point are of the following classes:
 
@@ -122,7 +122,7 @@ The following questions serve as a help for learners to reflect on the content o
    </details>
 
 
-.. admonition:: Exercise 4
+.. admonition:: Question 4
 
    Find the four hidden bug(s)!
 

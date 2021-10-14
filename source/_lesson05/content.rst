@@ -30,7 +30,7 @@ Check your Learning
 
 The following questions serve as a help for learners to reflect on the content of the videos. Answer at least one question. At best you want to answer these questions as a team.
 
-.. admonition:: Exercise 1
+.. admonition:: Question 1
 
    A hidden layer of an artificial neural network consists a fixed set of parts. These are ...
 
@@ -39,7 +39,7 @@ The following questions serve as a help for learners to reflect on the content o
    3. a bias term :math:`\vec{b}` and a non-linear activation function :math:`F`
    4. weights :math:`W`, a bias term :math:`\vec{b}` and a non-linear activation function :math:`F`
 
-.. admonition:: Exercise 2
+.. admonition:: Question 2
 
    Unlike `scikit-learn`, `keras` is a machine learning framework that ...
 
