@@ -32,7 +32,7 @@ The following questions serve as a help for learners to reflect on the content o
 
 .. admonition:: Question 1
 
-   You are provided a table of measurements from a weather station. Each measurements comes with values for temperature, precipation, cloud structure, date, humidity, and a quality ID. The latter tells you if the instrument was performing OK. You'd like to learn an algorithm that is able to predict the quality ID (5 possible integer values from 0 to 4) for any new data coming in. This falls into ...
+   You are provided a table of measurements from a weather station. Each measurement comes with values for temperature, precipation, cloud structure, date, humidity, and a quality ID. The latter tells you if the instrument was performing OK. You'd like to learn an algorithm that is able to predict the quality ID (5 possible integer values from 0 to 4) for any new data coming in. This falls into ...
 
    1. Supervised Learning
    2. Unsupervised Learning
