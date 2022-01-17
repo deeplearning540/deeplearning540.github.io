@@ -14,7 +14,7 @@ Learning Objectives
 
 * contrast the difference between adding individual points into a ROC plot and producing a ROC curve
 
-* show `plot_roc_curve` in sklearn
+* show `RocCurveDisplay` in sklearn
 
 * discuss extremes of a ROC curve
 
