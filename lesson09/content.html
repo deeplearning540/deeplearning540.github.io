@@ -47,9 +47,10 @@
 </div>
 <details>
 <summary>Solution</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">channels</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">n_hidden_neurons</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">n_bias</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">n_input_items</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+<span class="n">n_input_items</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span> <span class="o">*</span> <span class="n">channels</span>
 <span class="n">n_parameters</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_input_items</span> <span class="o">*</span> <span class="n">n_hidden_neurons</span><span class="p">)</span> <span class="o">+</span> <span class="n">n_bias</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">n_parameters</span><span class="p">)</span>
 
