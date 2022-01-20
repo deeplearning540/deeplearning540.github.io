@@ -14,7 +14,7 @@
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lesson 09: Networks are like onions" href="../lesson09/content.html" />
+    <link rel="next" title="Lesson Design" href="../extras/design.html" />
     <link rel="prev" title="Lesson 07: Monitor the training process" href="../lesson07/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -47,9 +47,10 @@
 </div>
 <details>
 <summary>Solution</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">channels</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">n_hidden_neurons</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">n_bias</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">n_input_items</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+<span class="n">n_input_items</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span> <span class="o">*</span> <span class="n">channels</span>
 <span class="n">n_parameters</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_input_items</span> <span class="o">*</span> <span class="n">n_hidden_neurons</span><span class="p">)</span> <span class="o">+</span> <span class="n">n_bias</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">n_parameters</span><span class="p">)</span>
 
@@ -186,7 +187,6 @@ outputs = keras.layers.Dense(10)(x)</p>
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson09/content.html">Lesson 09: Networks are like onions</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Extras</span></p>
 <ul>
@@ -206,7 +206,7 @@ outputs = keras.layers.Dense(10)(x)</p>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
       <li>Previous: <a href="../lesson07/content.html" title="previous chapter">Lesson 07: Monitor the training process</a></li>
-      <li>Next: <a href="../lesson09/content.html" title="next chapter">Lesson 09: Networks are like onions</a></li>
+      <li>Next: <a href="../extras/design.html" title="next chapter">Lesson Design</a></li>
   </ul></li>
 </ul>
 </div>
