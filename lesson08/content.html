@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 08: Monitor the training process &#8212; deeplearning in 540 minutes  documentation</title>
+    <title>Lesson 08: Networks are like onions &#8212; deeplearning in 540 minutes  documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lesson 09: Networks are like onions" href="../lesson09/content.html" />
-    <link rel="prev" title="Lesson 07: How did we train" href="../lesson07/content.html" />
+    <link rel="prev" title="Lesson 07: Monitor the training process" href="../lesson07/content.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -32,67 +32,124 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="lesson-08-monitor-the-training-process">
-<h1>Lesson 08: Monitor the training process<a class="headerlink" href="#lesson-08-monitor-the-training-process" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lesson-08-networks-are-like-onions">
+<h1>Lesson 08: Networks are like onions<a class="headerlink" href="#lesson-08-networks-are-like-onions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>All content is taken from <a class="reference external" href="https://carpentries-incubator.github.io/deep-learning-intro/03-monitor-the-model/index.html">this carpentries incubator project</a>.</p>
-<p>For instructors: the video script for both parts is available <a class="reference external" href="https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/script.ipynb">here</a>.</p>
+<p>All content is taken from <a class="reference external" href="https://carpentries-incubator.github.io/deep-learning-intro/04-networks-are-like-onions/index.html">here</a>.</p>
+<p>For instructors: the video script for both parts is available <a class="reference external" href="https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson09/script.ipynb">here</a>.</p>
 </div>
 <div class="section" id="check-your-learning">
 <h2>Check your Learning<a class="headerlink" href="#check-your-learning" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-question-1 admonition">
 <p class="admonition-title">Question 1</p>
-<p>Overfitting describes the situation where …</p>
-<ol class="arabic simple">
-<li><p>a neural network produces predictions that are more precise than the training data set allows</p></li>
-<li><p>a neural network produces random predictions</p></li>
-<li><p>a neural network learns the distribution of the training and test data exactly</p></li>
-<li><p>a neural network learns the distribution of the training data exactly and is incapable to predict the test set well</p></li>
-</ol>
+<p>Suppose we create a single Dense (fully connected) layer with 100 hidden units that connect to the input pixels, how many parameters does this layer have?</p>
 </div>
 <details>
-<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> no, this is describes a situation that rarely occurs but everyone aspires to (you have found a very good predictor!)
-<span class="m">2.</span> no, this is called underfitting - the network is incapable of making any predictions better than random choice
-<span class="m">3.</span> no, this is an unrealistic situation as the network should not be able to predict exactly the test set (unseen data)
-<span class="m">4.</span> yes, overfitting describes the situation where a predictor is incapable to generalize, i.e. it predicts the training set extremely well, but almost performs random predictions on unseen data (i.e. the test set)
+<summary>Solution</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">n_hidden_neurons</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">n_bias</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">n_input_items</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+<span class="n">n_parameters</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_input_items</span> <span class="o">*</span> <span class="n">n_hidden_neurons</span><span class="p">)</span> <span class="o">+</span> <span class="n">n_bias</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n_parameters</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;</span> <span class="mi">307300</span>
 </pre></div>
 </div>
 </details><div class="admonition-question-2 admonition">
 <p class="admonition-title">Question 2</p>
-<p>Overfitting counter-measures include … (multiple answers possible)</p>
-<ol class="arabic simple">
-<li><p>defining a baseline which corresponds to random guessing and comparing current prediction quality to this</p></li>
-<li><p>trying to obtain more data</p></li>
-<li><p>varying the size of the neural network with respect to hidden layers, number of neurons, layers types in use and other hyperparameters</p></li>
-<li><p>ignoring quality measurements on the test or validation sets completely</p></li>
-</ol>
+<p>Suppose we apply a convolutional layer with <code class="docutils literal notranslate"><span class="pre">100</span></code> convolution kernels of size <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">3</span></code> (the last dimension applies to the rgb channels) to our images of <code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">*</span> <span class="pre">32</span> <span class="pre">*</span> <span class="pre">3</span></code> pixels. How many parameters do we have? Assume, for simplicity, that the kernels do not use bias terms. Compare this to the answer of the previous exercise</p>
 </div>
 <details>
-<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> yes, this is also often called using a dummy predictor
-<span class="m">2.</span> yes, this would potentially help as the training data would then yield more variability which can more closer to reality and help predicting the test set
-<span class="m">3.</span> yes, this would help adopt the capacity of the network to the amount of training data available
-<span class="m">4.</span> no, this will not help at all or change anything
+<summary>Solution</summary><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>We have 100 matrices with <span class="s">``3 * 3 * 3 = 27``</span> values each so that gives <span class="s">``27 * 100 = 2700``</span> weights. This is a magnitude of <span class="s">``100``</span> less than the fully connected layer with 100 units! Nevertheless, as we will see, convolutional networks work very well for image data. This illustrates the expressiveness of convolutional layers.
+</pre></div>
+</div>
+</details><div class="admonition-question-3 admonition">
+<p class="admonition-title">Question 3</p>
+<p>What, do you think, will be the effect of adding a convolutional layer to your model (see below)? Will this model have more or fewer parameters? Try it out. Create a model that has an additional Conv2d layer with 32 filters after the last MaxPooling2D layer. Train it for 20 epochs and plot the results.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>inputs = keras.Input(shape=train_images.shape[1:])
+x = keras.layers.MaxPooling2D((2, 2))(x)
+x = keras.layers.Conv2D(32, (3, 3), activation=’relu’)(inputs)
+x = keras.layers.Conv2D(32, (3, 3), activation=’relu’)(x)
+x = keras.layers.MaxPooling2D((2, 2))(x)
+# Add your extra layer here
+x = keras.layers.Flatten()(x)
+x = keras.layers.Dense(32, activation=’relu’)(x)
+outputs = keras.layers.Dense(10)(x)</p>
+</div>
+<details>
+<summary>Solution</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Model</span><span class="p">:</span> <span class="s2">&quot;cifar_model&quot;</span>
+ <span class="n">_________________________________________________________________</span>
+ <span class="n">Layer</span> <span class="p">(</span><span class="nb">type</span><span class="p">)</span>                 <span class="n">Output</span> <span class="n">Shape</span>              <span class="n">Param</span> <span class="c1">#</span>
+ <span class="o">=================================================================</span>
+ <span class="n">input_4</span> <span class="p">(</span><span class="n">InputLayer</span><span class="p">)</span>         <span class="p">[(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>       <span class="mi">0</span>
+ <span class="n">_________________________________________________________________</span>
+ <span class="n">conv2d_6</span> <span class="p">(</span><span class="n">Conv2D</span><span class="p">)</span>            <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>        <span class="mi">896</span>
+ <span class="n">_________________________________________________________________</span>
+ <span class="n">max_pooling2d_4</span> <span class="p">(</span><span class="n">MaxPooling2</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>        <span class="mi">0</span>
+ <span class="n">_________________________________________________________________</span>
+ <span class="n">conv2d_7</span> <span class="p">(</span><span class="n">Conv2D</span><span class="p">)</span>            <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>        <span class="mi">9248</span>
+ <span class="n">_________________________________________________________________</span>
+ <span class="n">max_pooling2d_5</span> <span class="p">(</span><span class="n">MaxPooling2</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>          <span class="mi">0</span>
+ <span class="n">_________________________________________________________________</span>
+ <span class="n">conv2d_8</span> <span class="p">(</span><span class="n">Conv2D</span><span class="p">)</span>            <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>          <span class="mi">9248</span>
+ <span class="n">_________________________________________________________________</span>
+ <span class="n">flatten_3</span> <span class="p">(</span><span class="n">Flatten</span><span class="p">)</span>          <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>               <span class="mi">0</span>
+ <span class="n">_________________________________________________________________</span>
+ <span class="n">dense_6</span> <span class="p">(</span><span class="n">Dense</span><span class="p">)</span>              <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>                <span class="mi">16416</span>
+ <span class="n">_________________________________________________________________</span>
+ <span class="n">dense_7</span> <span class="p">(</span><span class="n">Dense</span><span class="p">)</span>              <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>                <span class="mi">330</span>
+ <span class="o">=================================================================</span>
+ <span class="n">Total</span> <span class="n">params</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span><span class="mi">138</span>
+ <span class="n">Trainable</span> <span class="n">params</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span><span class="mi">138</span>
+ <span class="n">Non</span><span class="o">-</span><span class="n">trainable</span> <span class="n">params</span><span class="p">:</span> <span class="mi">0</span>
+ <span class="n">_________________________________________________________________</span>
+
+
+<span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">parameters</span> <span class="n">has</span> <span class="n">decreased</span> <span class="n">by</span> <span class="n">adding</span> <span class="n">this</span> <span class="n">layer</span><span class="o">.</span> <span class="n">We</span> <span class="n">can</span> <span class="n">see</span> <span class="n">that</span> <span class="n">the</span> <span class="n">conv</span> <span class="n">layer</span> <span class="n">decreases</span> <span class="n">the</span> <span class="n">resolution</span> <span class="kn">from</span> <span class="mi">6</span><span class="n">x6</span> <span class="n">to</span> <span class="mi">4</span><span class="n">x4</span><span class="p">,</span> <span class="k">as</span> <span class="n">a</span> <span class="n">result</span><span class="p">,</span> <span class="n">the</span> <span class="nb">input</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Dense</span> <span class="n">layer</span> <span class="ow">is</span> <span class="n">smaller</span> <span class="n">than</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">previous</span> <span class="n">network</span><span class="o">.</span>
 </pre></div>
 </div>
 </details></div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
-<p>Repeat the prediction of the sunshine hours using the data from one other city, e.g.</p>
+<ol class="arabic simple">
+<li><p>Repeat training a classification network for the image class as discussed in this lesson using the MNIST or fashionMNIST dataset:</p></li>
+</ol>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">BUDAPEST_sunshine</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DE_BILT_sunshine</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DRESDEN_sunshine</span></code></p></li>
-<li><p>…</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SONNBLICK_sunshine</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">STOCKHOLM_sunshine</span></code></p></li>
+<li><p><a class="reference external" href="http://yann.lecun.com/exdb/mnist/">MNIST</a>, handwritten digits classification. More information can be obtained from <a class="reference external" href="https://keras.io/api/datasets/mnist/">keras docs on MNIST</a>.</p></li>
 </ul>
-<p>Do you observe a similar situation than with BASEL? To answer this, choose from any of the following aspects to guide your answer:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.keras.datasets</span> <span class="kn">import</span> <span class="n">mnist</span>
+
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">60000</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">x_test</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">60000</span><span class="p">,)</span>
+<span class="k">assert</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10000</span><span class="p">,)</span>
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>How does the situation change if you include <code class="docutils literal notranslate"><span class="pre">5</span></code> years instead of <code class="docutils literal notranslate"><span class="pre">3</span></code>?</p></li>
-<li><p>What are the model configurations that work best for you, e.g. to bring the <code class="docutils literal notranslate"><span class="pre">RMSE</span></code> down below <code class="docutils literal notranslate"><span class="pre">1</span></code> hour?</p></li>
-<li><p>What happens if you choose the <code class="docutils literal notranslate"><span class="pre">sigmoid</span></code> activation?</p></li>
-<li><p>What happens if you choose a larger <code class="docutils literal notranslate"><span class="pre">batch_size</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">64</span></code> or <code class="docutils literal notranslate"><span class="pre">128</span></code>?</p></li>
+<li><p><a class="reference external" href="https://keras.io/api/datasets/fashion_mnist/">fashionMNIST</a>, fashion item classification.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.keras.datasets</span> <span class="kn">import</span> <span class="n">fashion_mnist</span>
+
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">fashion_mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">60000</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">x_test</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">60000</span><span class="p">,)</span>
+<span class="k">assert</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10000</span><span class="p">,)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>When completing the notebook on either FashionMNIST or MNIST, what do you observe:</p></li>
+</ol>
+<ul class="simple">
+<li><p>how does classification accuracy behave?</p></li>
+<li><p>add <a class="reference external" href="https://keras.io/api/metrics/classification_metrics/#precision-class">precision</a> and <a class="reference external" href="https://keras.io/api/metrics/classification_metrics/#recall-class">recall</a> to the list of metrics. How do either behave?</p></li>
+<li><p>does the same model architecture we used for cifar10 overfit on FashionMNIST or MNIST?</p></li>
+<li><p>is the effect of dropout layers just as severe? What happens if you increase the dropout rate?</p></li>
 </ul>
 </div>
 </div>
@@ -122,8 +179,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../lesson04/content.html">Lesson 04: Classification Performance ROCs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson05/content.html">Lesson 05: Introduction Deep Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson06/content.html">Lesson 06: Classification by a Neural Network using Keras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: How did we train</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 08: Monitor the training process</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson07/content.html">Lesson 07: Monitor the training process</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 08: Networks are like onions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#content">Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#check-your-learning">Check your Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
@@ -148,7 +205,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../lesson07/content.html" title="previous chapter">Lesson 07: How did we train</a></li>
+      <li>Previous: <a href="../lesson07/content.html" title="previous chapter">Lesson 07: Monitor the training process</a></li>
       <li>Next: <a href="../lesson09/content.html" title="next chapter">Lesson 09: Networks are like onions</a></li>
   </ul></li>
 </ul>
