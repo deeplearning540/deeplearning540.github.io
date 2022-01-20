@@ -1,30 +1,12 @@
-Lesson 07: How did we train
-******************************
-
-Learning Objectives
-===================
-
-This lesson takes references to lesson 06.
-
-- list/repeat the three ingredients to a feed forward network: input, hidden layers, output
-
-- describe training with mini-batched based weight-update rule
-
-- describe a softmax layer
-- motivate the loss function of categorical crossentropy (information theory vs. statistics)
-
-- define backpropagation
-- calculate example backpropagation
-- generalize to full network
-
+Lesson 08: Monitor the training process
+***************************************
 
 Content
 =======
 
-**The slides** shown in the video can be obtained from `the lesson repo <https://github.com/deeplearning540/lesson06/releases/download/v2021.03.03-a/refs.tags.v2021.03.03-a-slides.pdf>`_.
+All content is taken from `this carpentries incubator project <https://carpentries-incubator.github.io/deep-learning-intro/03-monitor-the-model/index.html>`_.
 
-This content is based on discussions in `Mathematics for Machine Learning book <https://mml-book.github.io/>`_ by Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, as well as the wonderful presentation in Sebastian Raschka's `lecture L6.2 Understanding Automatic Differentiation via Computation Graphs <https://youtu.be/oY6-i2Ybin4>`_.
-
+For instructors: the video script for both parts is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/script.ipynb>`_.
 
 
 Check your Learning
@@ -32,15 +14,15 @@ Check your Learning
 
 .. admonition:: Question 1
 
-   The advantage of mini-batched based optimisation compared to online gradient descent or full data set gradient descent is ...
+   Overfitting describes the situation where ...
 
-   1. a mini-batch represents the entire data set and hence is enough to optimize on
+   1. a neural network produces predictions that are more precise than the training data set allows
 
-   2. the optimisation converges faster
+   2. a neural network produces random predictions
 
-   3. the optimisation can be performed in memory independent of the data set size
+   3. a neural network learns the distribution of the training and test data exactly 
 
-   4. the optimisation will converge always into a global optimum
+   4. a neural network learns the distribution of the training data exactly and is incapable to predict the test set well
 
 .. raw:: html
 
@@ -49,10 +31,10 @@ Check your Learning
 
 .. code-block:: rst
 
-   1. no, the optimisation is done on randomly shuffled mini-batched step-by-step 
-   2. no, we have no evidence/proof for this
-   3. yes, we only have to handle mini-batches in memory and hence can scale well
-   4. no, we have no evidence/proof for this
+   1. no, this is describes a situation that rarely occurs but everyone aspires to (you have found a very good predictor!)
+   2. no, this is called underfitting - the network is incapable of making any predictions better than random choice
+   3. no, this is an unrealistic situation as the network should not be able to predict exactly the test set (unseen data)
+   4. yes, overfitting describes the situation where a predictor is incapable to generalize, i.e. it predicts the training set extremely well, but almost performs random predictions on unseen data (i.e. the test set)
 
 .. raw:: html
 
@@ -61,38 +43,15 @@ Check your Learning
 
 .. admonition:: Question 2
 
-   Categorical Cross-Entropy is based in parts on a well-known divergence in statistics. A divergence is a method to compare two probability density functions. It provides a large value if two distributions are different and a small value if they are similar. This well-known divergance that builds the Categorical Cross-Entropy is ...
+   Overfitting counter-measures include ... (multiple answers possible)
 
-   1. Mean-Squared-Error divergence
-   2. Negative-Log-Likelihood divergence
-   3. Kullback-Leibler divergence
-   4. Maximum-Mean-Discreptancy divergence
+   1. defining a baseline which corresponds to random guessing and comparing current prediction quality to this
 
-.. raw:: html
+   2. trying to obtain more data
 
-   <details>
-   <summary>Solution</summary>
+   3. varying the size of the neural network with respect to hidden layers, number of neurons, layers types in use and other hyperparameters
 
-.. code-block:: rst
-
-   1. no, Categorical Cross-Entropy is used for classification. The MSE is often used for regression.
-   2. no, Negative-Log-Likelihood is a very broad concept 
-   3. yes! 
-   4. no, but this is yet another divergence or metric
-
-.. raw:: html
-
-   </details>
-
-
-.. admonition:: Question 3
-
-   The gradient that is required for gradient descent is the gradient ...
-
-   1. of the loss function ``L`` with respect to the testset input data, ``dL/dx``, given the network parameters ``theta``
-   2. of the network ``f`` with respect to the input data, ``df/dx``, given the network parameters ``theta``
-   3. of the network ``f`` with respect to the network parameters, ``df/dtheta``, given the training data ``x``
-   4. of the loss function ``L`` with respect to the network parameters, ``dL/dtheta``, given the training data ``x``
+   4. ignoring quality measurements on the test or validation sets completely
 
 .. raw:: html
 
@@ -101,10 +60,10 @@ Check your Learning
 
 .. code-block:: rst
 
-   1. no, this would lead us astray for multiple reasons: shape of ``dL/dx`` might not help to update ``theta``, changes with respect to the data do not help to optimize ``theta``
-   2. no, the output of ``f`` has an arbitrary scale and no implications to solve the task (classification/regression)
-   3. no, the output of ``f`` has an arbitrary scale and no implications to solve the task (classification/regression)
-   4. yes! (we are interested in knowing the slope of the loss ``L`` with respect to the parameters ``theta`` so that we know how to alter it accordinly)
+   1. yes, this is also often called using a dummy predictor 
+   2. yes, this would potentially help as the training data would then yield more variability which can more closer to reality and help predicting the test set
+   3. yes, this would help adopt the capacity of the network to the amount of training data available
+   4. no, this will not help at all or change anything
 
 .. raw:: html
 
@@ -114,8 +73,18 @@ Check your Learning
 Exercises
 =========
 
-* perform the same single-neuron backpropagation as in the video but using the `sigmoid activation <https://en.wikipedia.org/wiki/Sigmoid_function>`_ function. Use `b=1`, `x=.5` and `w=3` for the inputs.
+Repeat the prediction of the sunshine hours using the data from one other city, e.g. 
 
-* perform the same single-neuron backpropagation as in the video but include the loss function for the two sample pairs (a) `{y=1, y_hat=1}` and (b) `{y=1, y_hat=0}`. How would your single weight be changed for (b) with respect to (a)? 
+* ``BUDAPEST_sunshine``
+* ``DE_BILT_sunshine``
+* ``DRESDEN_sunshine``
+* ...
+* ``SONNBLICK_sunshine``
+* ``STOCKHOLM_sunshine``
 
+Do you observe a similar situation than with BASEL? To answer this, choose from any of the following aspects to guide your answer:
 
+* How does the situation change if you include ``5`` years instead of ``3``?
+* What are the model configurations that work best for you, e.g. to bring the ``RMSE`` down below ``1`` hour?
+* What happens if you choose the ``sigmoid`` activation?
+* What happens if you choose a larger ``batch_size``, e.g. ``64`` or ``128``?

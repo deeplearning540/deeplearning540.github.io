@@ -1,57 +1,44 @@
-Lesson 08: Monitor the training process
-***************************************
+Lesson 09: Networks are like onions
+***********************************
 
 Content
 =======
 
-All content is taken from `this carpentries incubator project <https://carpentries-incubator.github.io/deep-learning-intro/03-monitor-the-model/index.html>`_.
+All content is taken from `here <https://carpentries-incubator.github.io/deep-learning-intro/04-networks-are-like-onions/index.html>`_.
 
-For instructors: the video script for both parts is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson08/script.ipynb>`_.
-
+For instructors: the video script for both parts is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson09/script.ipynb>`_.
 
 Check your Learning
 ===================
 
 .. admonition:: Question 1
 
-   Overfitting describes the situation where ...
-
-   1. a neural network produces predictions that are more precise than the training data set allows
-
-   2. a neural network produces random predictions
-
-   3. a neural network learns the distribution of the training and test data exactly 
-
-   4. a neural network learns the distribution of the training data exactly and is incapable to predict the test set well
+   Suppose we create a single Dense (fully connected) layer with 100 hidden units that connect to the input pixels, how many parameters does this layer have?
 
 .. raw:: html
 
    <details>
    <summary>Solution</summary>
 
-.. code-block:: rst
+.. code-block:: python
 
-   1. no, this is describes a situation that rarely occurs but everyone aspires to (you have found a very good predictor!)
-   2. no, this is called underfitting - the network is incapable of making any predictions better than random choice
-   3. no, this is an unrealistic situation as the network should not be able to predict exactly the test set (unseen data)
-   4. yes, overfitting describes the situation where a predictor is incapable to generalize, i.e. it predicts the training set extremely well, but almost performs random predictions on unseen data (i.e. the test set)
+   width, height = (32, 32)
+   n_hidden_neurons = 100
+   n_bias = 100
+   n_input_items = width * height
+   n_parameters = (n_input_items * n_hidden_neurons) + n_bias
+   print(n_parameters)
+
+   >> 307300
+
 
 .. raw:: html
 
    </details>
 
-
 .. admonition:: Question 2
 
-   Overfitting counter-measures include ... (multiple answers possible)
-
-   1. defining a baseline which corresponds to random guessing and comparing current prediction quality to this
-
-   2. trying to obtain more data
-
-   3. varying the size of the neural network with respect to hidden layers, number of neurons, layers types in use and other hyperparameters
-
-   4. ignoring quality measurements on the test or validation sets completely
+   Suppose we apply a convolutional layer with ``100`` convolution kernels of size ``3 * 3 * 3`` (the last dimension applies to the rgb channels) to our images of ``32 * 32 * 3`` pixels. How many parameters do we have? Assume, for simplicity, that the kernels do not use bias terms. Compare this to the answer of the previous exercise
 
 .. raw:: html
 
@@ -60,10 +47,66 @@ Check your Learning
 
 .. code-block:: rst
 
-   1. yes, this is also often called using a dummy predictor 
-   2. yes, this would potentially help as the training data would then yield more variability which can more closer to reality and help predicting the test set
-   3. yes, this would help adopt the capacity of the network to the amount of training data available
-   4. no, this will not help at all or change anything
+   We have 100 matrices with ``3 * 3 * 3 = 27`` values each so that gives ``27 * 100 = 2700`` weights. This is a magnitude of ``100`` less than the fully connected layer with 100 units! Nevertheless, as we will see, convolutional networks work very well for image data. This illustrates the expressiveness of convolutional layers.
+
+
+.. raw:: html
+
+   </details>
+
+.. admonition:: Question 3
+
+   What, do you think, will be the effect of adding a convolutional layer to your model (see below)? Will this model have more or fewer parameters? Try it out. Create a model that has an additional Conv2d layer with 32 filters after the last MaxPooling2D layer. Train it for 20 epochs and plot the results.
+
+   .. code-block:: python
+
+   inputs = keras.Input(shape=train_images.shape[1:])
+   x = keras.layers.MaxPooling2D((2, 2))(x)
+   x = keras.layers.Conv2D(32, (3, 3), activation='relu')(inputs)
+   x = keras.layers.Conv2D(32, (3, 3), activation='relu')(x)
+   x = keras.layers.MaxPooling2D((2, 2))(x)
+   # Add your extra layer here
+   x = keras.layers.Flatten()(x)
+   x = keras.layers.Dense(32, activation='relu')(x)
+   outputs = keras.layers.Dense(10)(x)
+
+.. raw:: html
+
+   <details>
+   <summary>Solution</summary>
+
+.. code-block:: python
+
+   Model: "cifar_model"
+    _________________________________________________________________
+    Layer (type)                 Output Shape              Param #
+    =================================================================
+    input_4 (InputLayer)         [(None, 32, 32, 3)]       0
+    _________________________________________________________________
+    conv2d_6 (Conv2D)            (None, 30, 30, 32)        896
+    _________________________________________________________________
+    max_pooling2d_4 (MaxPooling2 (None, 15, 15, 32)        0
+    _________________________________________________________________
+    conv2d_7 (Conv2D)            (None, 13, 13, 32)        9248
+    _________________________________________________________________
+    max_pooling2d_5 (MaxPooling2 (None, 6, 6, 32)          0
+    _________________________________________________________________
+    conv2d_8 (Conv2D)            (None, 4, 4, 32)          9248
+    _________________________________________________________________
+    flatten_3 (Flatten)          (None, 512)               0
+    _________________________________________________________________
+    dense_6 (Dense)              (None, 32)                16416
+    _________________________________________________________________
+    dense_7 (Dense)              (None, 10)                330
+    =================================================================
+    Total params: 36,138
+    Trainable params: 36,138
+    Non-trainable params: 0
+    _________________________________________________________________
+
+
+   The number of parameters has decreased by adding this layer. We can see that the conv layer decreases the resolution from 6x6 to 4x4, as a result, the input of the Dense layer is smaller than in the previous network.
+
 
 .. raw:: html
 
@@ -73,18 +116,35 @@ Check your Learning
 Exercises
 =========
 
-Repeat the prediction of the sunshine hours using the data from one other city, e.g. 
+1. Repeat training a classification network for the image class as discussed in this lesson using the MNIST or fashionMNIST dataset:
 
-* ``BUDAPEST_sunshine``
-* ``DE_BILT_sunshine``
-* ``DRESDEN_sunshine``
-* ...
-* ``SONNBLICK_sunshine``
-* ``STOCKHOLM_sunshine``
+* `MNIST <http://yann.lecun.com/exdb/mnist/>`_, handwritten digits classification. More information can be obtained from `keras docs on MNIST <https://keras.io/api/datasets/mnist/>`_.
 
-Do you observe a similar situation than with BASEL? To answer this, choose from any of the following aspects to guide your answer:
+.. code-block:: python
 
-* How does the situation change if you include ``5`` years instead of ``3``?
-* What are the model configurations that work best for you, e.g. to bring the ``RMSE`` down below ``1`` hour?
-* What happens if you choose the ``sigmoid`` activation?
-* What happens if you choose a larger ``batch_size``, e.g. ``64`` or ``128``?
+   from tensorflow.keras.datasets import mnist
+
+   (x_train, y_train), (x_test, y_test) = mnist.load_data()
+   assert x_train.shape == (60000, 28, 28)
+   assert x_test.shape == (10000, 28, 28)
+   assert y_train.shape == (60000,)
+   assert y_test.shape == (10000,)
+
+* `fashionMNIST <https://keras.io/api/datasets/fashion_mnist/>`_, fashion item classification. 
+
+.. code-block:: python
+
+   from tensorflow.keras.datasets import fashion_mnist
+
+   (x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
+   assert x_train.shape == (60000, 28, 28)
+   assert x_test.shape == (10000, 28, 28)
+   assert y_train.shape == (60000,)
+   assert y_test.shape == (10000,)
+
+2. When completing the notebook on either FashionMNIST or MNIST, what do you observe:
+
+- how does classification accuracy behave?
+- add `precision <https://keras.io/api/metrics/classification_metrics/#precision-class>`_ and `recall <https://keras.io/api/metrics/classification_metrics/#recall-class>`_ to the list of metrics. How do either behave?
+- does the same model architecture we used for cifar10 overfit on FashionMNIST or MNIST?
+- is the effect of dropout layers just as severe? What happens if you increase the dropout rate?
