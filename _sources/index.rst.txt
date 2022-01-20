@@ -25,7 +25,7 @@ The content below provides a high level overview on the content to teach.
 
    lesson_01/*
    lesson0*/*
-   lesson-bonus/
+   lesson-bonus/*
 
 For Instructors
 ===============
