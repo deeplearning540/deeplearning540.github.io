@@ -1,4 +1,4 @@
-Lesson 08: Monitor the training process
+Lesson 07: Monitor the training process
 ***************************************
 
 Content

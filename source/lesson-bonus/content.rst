@@ -1,5 +1,5 @@
-Lesson 07: How did we train
-******************************
+Lesson BONUS: How did we train?
+*******************************
 
 Learning Objectives
 ===================

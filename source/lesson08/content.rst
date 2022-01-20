@@ -1,4 +1,4 @@
-Lesson 09: Networks are like onions
+Lesson 08: Networks are like onions
 ***********************************
 
 Content
