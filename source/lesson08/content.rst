@@ -23,9 +23,10 @@ Check your Learning
 .. code-block:: python
 
    width, height = (32, 32)
+   channels = 3
    n_hidden_neurons = 100
    n_bias = 100
-   n_input_items = width * height
+   n_input_items = width * height * channels
    n_parameters = (n_input_items * n_hidden_neurons) + n_bias
    print(n_parameters)
 
