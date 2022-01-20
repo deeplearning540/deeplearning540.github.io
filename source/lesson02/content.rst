@@ -72,8 +72,11 @@ The following questions serve as a help for learners to reflect on the content o
 
    1. not well separated, ergo: not suited for clustering
    2. overlap of the clusters is small, ergo: might work for clustering
-   3. overlap of the clusters is small, ergo: might work for clustering
-   4. not well separated, ergo: not suited for clustering
+   3. overlap of the clusters is smallish for 2 of 3 clusters,
+   might work for clustering depending on what performance you aspire to
+   4. overlap of the clusters is smallish for 2 of 3 clusters,
+   might work for clustering depending on what performance you aspire to
+   
 
 .. raw:: html
 
