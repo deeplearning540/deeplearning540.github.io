@@ -8,6 +8,7 @@ All content is taken from `this lesson <https://carpentries-incubator.github.io/
 * **Part 1** creates a neural network using the ``keras`` interface in ``tensorflow``
 * **Part 2** continues to look at the training history, performs a prediction and constructs a confusion matrix from it
 
+For instructors: A script aligned to this lesson is available `here <https://github.com/deeplearning540/deeplearning540.github.io/blob/main/source/lesson06/script.ipynb>`_.
 
 Check Your Learning
 ===================
